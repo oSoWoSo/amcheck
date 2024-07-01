@@ -19,6 +19,7 @@ jobs:
         unzip -qq ./dev.zip
         cd AM-dev/programs/x86_64 || exit 1
         for f in *; do
+        sed -i "s#curl -Ls #curl -Ls --header 'authorization: ivan-hc $\{\{ secrets.GITHUB_TOKEN \}\}' #g" "$f"
         if grep -q "^APP=" "$f" 2> /dev/null; then
         APP=$(eval echo "$(grep -i '^APP=' "$f" | head -1 | sed 's/APP=//g')")
         echo "APP=\"$APP\""
