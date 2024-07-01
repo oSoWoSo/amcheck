@@ -1,0 +1,33 @@
+name: Check environment variables from installation scripts
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: true
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: build
+      if: always()
+      run: |
+        wget -q https://github.com/ivan-hc/AM/archive/refs/heads/dev.zip
+        unzip -qq ./dev.zip
+        cd AM-dev/programs/x86_64 || exit 1
+        for f in *; do
+        if grep -q "^APP=" "$f" 2> /dev/null; then eval echo "$(grep -i '^APP=' "$f" | head -1)"; fi
+        if grep -q "^REPO=" "$f" 2> /dev/null; then eval echo "$(grep -i '^REPO=' "$f" | head -1)"; fi
+        if grep -q "^SITE=" "$f" 2> /dev/null; then eval echo "$(grep -i '^SITE=' "$f" | head -1)"; fi
+        if grep -q "^d=" "$f" 2> /dev/null; then eval echo "$(grep -i '^d=' "$f" | head -1)"; fi
+        if grep -q "^dl=" "$f" 2> /dev/null; then eval echo "$(grep -i '^dl=' "$f" | head -1)"; fi
+        if grep -q "^rel=" "$f" 2> /dev/null; then eval echo "$(grep -i '^rel=' "$f" | head -1)"; fi
+        if grep -q "^tag=" "$f" 2> /dev/null; then eval echo "$(grep -i '^tag=' "$f" | head -1)"; fi
+        if grep -q "^v=" "$f" 2> /dev/null; then eval echo "$(grep -i '^v=' "$f" | head -1)"; fi
+        if grep -q "^ver=" "$f" 2> /dev/null; then eval echo "$(grep -i '^ver=' "$f" | head -1)"; fi
+        if grep -q "^version=" "$f" 2> /dev/null; then eval echo "$(grep -i '^version=' "$f" | head -1)"; fi
+        echo '-----------------------------------------------------------------'
+        done
