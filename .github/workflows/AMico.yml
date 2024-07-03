@@ -81,7 +81,7 @@ jobs:
         fi
         fi
         done
-        tar -cvf AMico-scripts-x86_64.tar.gz $(find ./ -type d -name "AMico")
+        tar -czvf AMico-scripts-x86_64.tar.gz -C "$(echo "$(find ./ -type d -name "AMico")"/" .
         mkdir dist
         mv *tar.gz dist/
 
