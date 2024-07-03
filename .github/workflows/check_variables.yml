@@ -19,6 +19,8 @@ jobs:
         unzip -qq ./dev.zip
         cd AM-dev/programs/x86_64 || exit 1
         for f in *; do
+        if grep -q "api.github.com" "$f" 2> /dev/null; then
+        if grep -q "browser_download_url" "$f" 2> /dev/null; then
         sed -i "s#curl -Ls #curl -Ls --header 'authorization: ivan-hc $\{\{ secrets.GITHUB_TOKEN \}\}' #g" "$f"
         if grep -q "^APP=" "$f" 2> /dev/null; then
         APP=$(eval echo "$(grep -i '^APP=' "$f" | head -1 | sed 's/APP=//g')")
@@ -65,4 +67,6 @@ jobs:
         unset SITE 2> /dev/null
         unset version 2> /dev/null
         echo '-----------------------------------------------------------------'
+        fi
+        fi
         done
