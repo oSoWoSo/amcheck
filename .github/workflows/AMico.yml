@@ -65,17 +65,17 @@ jobs:
         
         echo "APP=\"$APP\""
         version=$(eval echo "$(grep -i '^version=' "$f" | head -1 | sed 's/version=//g')")
-        mkdir -p $HOME/Desktop/am-scripts/x86_64
-        wget -q https://raw.githubusercontent.com/ivan-hc/AM/main/templates/AM-SAMPLE-AppImage -O $HOME/Desktop/am-scripts/x86_64/$APP
-        sed -i "s/SAMPLE/$APP/g" $HOME/Desktop/am-scripts/x86_64/$APP
+        mkdir -p AMico
+        wget -q https://raw.githubusercontent.com/ivan-hc/AM/main/templates/AM-SAMPLE-AppImage -O AMico/$APP
+        sed -i "s/SAMPLE/$APP/g" AMico/$APP
         if [ -z "$REPO" ]; then
         RESPONSE="$SITE"
         else
         RESPONSE="$REPO"
         fi
-        sed -i "s#REPLACETHIS#$RESPONSE#g" $HOME/Desktop/am-scripts/x86_64/$APP
+        sed -i "s#REPLACETHIS#$RESPONSE#g" AMico/$APP
         FUNCTION='curl -Ls https://api.github.com/repos/'"$RESPONSE"'/releases | sed '"$q"'s/[()",{} ]/\\n/g'"$q"' | grep -oi "https.*mage$" | grep -vi "i386\|i686\|aarch64\|arm64\|armv7l" | head -1'
-        sed -i "s#FUNCTION)#$FUNCTION)#g" $HOME/Desktop/am-scripts/x86_64/$APP
+        sed -i "s#FUNCTION)#$FUNCTION)#g" AMico/$APP
         
         fi
         
@@ -86,7 +86,7 @@ jobs:
         
         done
         
-        tar -czvf AMico-scripts-x86_64.tar.gz -C $HOME/Desktop/am-scripts/x86_64/ .
+        tar -czvf AMico-scripts-x86_64.tar.gz -C AMico/ .
         mkdir dist
         mv *tar.gz dist/
 
