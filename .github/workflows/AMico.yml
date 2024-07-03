@@ -18,14 +18,11 @@ jobs:
         wget -q https://github.com/ivan-hc/AM/archive/refs/heads/dev.zip
         unzip -qq ./dev.zip
         cd AM-dev/programs/x86_64 || exit 1
-        
         for f in *; do
-        
         if grep -q "api.github.com" "$f" 2> /dev/null; then
         if grep -q "browser_download_url" "$f" 2> /dev/null; then
         if ! grep -q "appimagetool" "$f" 2> /dev/null; then
         if grep -q "mage" "$f" 2> /dev/null; then
-        
         if grep -q "^APP=" "$f" 2> /dev/null; then
         APP=$(eval echo "$(grep -i '^APP=' "$f" | head -1 | sed 's/APP=//g')")
         fi	
@@ -56,13 +53,9 @@ jobs:
         if grep -q "^version=" "$f" 2> /dev/null; then
         version=$(eval echo "$(grep -i '^version=' "$f" | head -1 | sed 's/version=//g')")
         fi
-        
         if [ -z "$version" ]; then
-        
         break
-        
         else
-        
         echo "APP=\"$APP\""
         version=$(eval echo "$(grep -i '^version=' "$f" | head -1 | sed 's/version=//g')")
         mkdir -p AMico
@@ -76,16 +69,12 @@ jobs:
         sed -i "s#REPLACETHIS#$RESPONSE#g" AMico/$APP
         FUNCTION='curl -Ls https://api.github.com/repos/'"$RESPONSE"'/releases | sed '"$q"'s/[()",{} ]/\\n/g'"$q"' | grep -oi "https.*mage$" | grep -vi "i386\|i686\|aarch64\|arm64\|armv7l" | head -1'
         sed -i "s#FUNCTION)#$FUNCTION)#g" AMico/$APP
-        
-        fi
-        
         fi
         fi
         fi
         fi
-        
+        fi
         done
-        
         tar -czvf AMico-scripts-x86_64.tar.gz -C AMico/ .
         mkdir dist
         mv *tar.gz dist/
