@@ -1,4 +1,4 @@
-name: Check and convert installation scripts
+name: AMico - convert installation scripts
 concurrency:
   group: build-${{ github.ref }}
   cancel-in-progress: true
@@ -67,8 +67,14 @@ jobs:
         RESPONSE="$REPO"
         fi
         sed -i "s#REPLACETHIS#$RESPONSE#g" AMico/$APP
+        q="'"
         FUNCTION='curl -Ls https://api.github.com/repos/'"$RESPONSE"'/releases | sed '"$q"'s/[()",{} ]/\\n/g'"$q"' | grep -oi "https.*mage$" | grep -vi "i386\|i686\|aarch64\|arm64\|armv7l" | head -1'
         sed -i "s#FUNCTION)#$FUNCTION)#g" AMico/$APP
+        unset APP 2> /dev/null
+        unset REPO 2> /dev/null
+        unset SITE 2> /dev/null
+        unset version 2> /dev/null
+        echo '-----------------------------------------------------------------'
         fi
         fi
         fi
