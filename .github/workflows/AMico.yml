@@ -81,7 +81,7 @@ jobs:
         fi
         fi
         done
-        tar -czvf AMico-scripts-x86_64.tar.gz -C AM-dev/programs/x86_64/AMico/ .
+        tar -cvf AMico-scripts-x86_64.tar.gz AM-dev/programs/x86_64/AMico
         mkdir dist
         mv *tar.gz dist/
 
