@@ -16,5 +16,10 @@ jobs:
       if: always()
       run: |
         wget https://raw.githubusercontent.com/ivan-hc/AM/main/INSTALL && chmod a+x ./INSTALL && sudo ./INSTALL
+        APP=voicevox
         am --devmode-enable
-        am -i voicevox
+        am -i $APP
+        ls /opt
+        ls /opt/$APP
+        ls /usr/local/share/applications
+        ls /usr/local/bin
