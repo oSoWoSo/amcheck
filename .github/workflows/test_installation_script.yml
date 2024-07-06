@@ -16,4 +16,5 @@ jobs:
       if: always()
       run: |
         wget https://raw.githubusercontent.com/ivan-hc/AM/main/INSTALL && chmod a+x ./INSTALL && sudo ./INSTALL
-        am -i voivevox
+        am --devmode-enable
+        am -i voicevox
