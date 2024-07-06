@@ -19,7 +19,19 @@ jobs:
         APP=voicevox
         am --devmode-enable
         am -i $APP
+        echo "################################################"
+        echo "##### Content of /opt/$APP"
+        echo "################################################"
         ls /opt
+        echo "################################################"
+        echo "##### Content of /opt"
+        echo "################################################"
         ls /opt/$APP
+        echo "################################################"
+        echo "##### Content of /usr/local/share/applications"
+        echo "################################################"
         ls /usr/local/share/applications
+        echo "################################################"
+        echo "##### Content of /usr/local/bin"
+        echo "################################################"
         ls /usr/local/bin
