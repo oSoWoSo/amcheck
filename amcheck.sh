@@ -47,7 +47,7 @@ for f in *; do
 				if grep -q "^version=" "$f" 2>/dev/null; then
 					version=$(eval echo "$(grep -i '^version=' "$f" | head -1 | sed 's/version=//g')")
 					if [ -z "$version" ]; then
-						sed -i 's/\(curl -Ls/\(torsocks curl -Ls/g' "$f"
+						sed -i 's/curl -Ls/torsocks curl -Ls/g' "$f"
 						version=$(eval echo "$(grep -i '^version=' "$f" | head -1 | sed 's/version=//g')")
 						if [ -z "$version" ]; then
 							sudo systemctl restart tor.service
