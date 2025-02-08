@@ -48,10 +48,10 @@ for f in *; do
 				if grep -q "^version=" "$f" 2>/dev/null; then
 					version=$(eval echo "$(grep -i '^version=' "$f" | head -1 | sed 's/version=//g')")
 					if [ -z "$version" ]; then
-						version=$(eval torsocks echo "$(grep -i '^version=' "$f" | head -1 | sed 's/version=//g')")
+						version=$(eval echo "$(torsocks "$(grep -i '^version=' "$f" | head -1 | sed 's/version=//g')")")
 						if [ -z "$version" ]; then
 							sudo systemctl restart tor.service
-							version=$(eval torsocks echo "$(grep -i '^version=' "$f" | head -1 | sed 's/version=//g')")
+							version=$(eval echo "$(torsocks "$(grep -i '^version=' "$f" | head -1 | sed 's/version=//g')")")
 						fi
 					fi
 					[ -n "$version" ] && echo "version=\"$version\"" || exit 0
