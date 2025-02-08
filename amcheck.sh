@@ -8,7 +8,6 @@ for f in *; do
 	if grep -q "api.github.com" "$f" 2>/dev/null; then
 		if ! grep -q "appimagetool" "$f" 2>/dev/null; then
 			if grep -qe "appimage-extract\|mage\$\|tmp/\*mage" "$f" 1>/dev/null; then
-				sed -i "s#curl -Ls #curl -Ls --header 'authorization: ivan-hc $\{\{ secrets.GITHUB_TOKEN \}\}' #g" "$f"
 				if grep -q "^APP=" "$f" 2>/dev/null; then
 					APP=$(eval echo "$(grep -i '^APP=' "$f" | head -1 | sed 's/APP=//g')")
 					echo "APP=\"$APP\""
