@@ -50,7 +50,8 @@ for f in *; do
 						sed -i 's/curl -Ls/torsocks curl -Ls/g' "$f"
 						version=$(eval echo "$(grep -i '^version=' "$f" | head -1 | sed 's/version=//g')")
 						if [ -z "$version" ]; then
-							sudo systemctl restart tor.service
+							sudo systemctl restart tor.service || systemctl restart tor.service
+							wait
 							version=$(eval echo "$(grep -i '^version=' "$f" | head -1 | sed 's/version=//g')")
 						fi
 					fi
