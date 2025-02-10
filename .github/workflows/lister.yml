@@ -1,0 +1,77 @@
+name: "Sync AppImages listing"
+
+on:
+  repository_dispatch:
+    types: [lister]
+
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  actions: write
+  contents: write
+
+env:
+  REPO: ${{ github.repository_owner }}/AM
+  BRANCH: main
+
+jobs:
+  sync-files:
+    name: "Run sync"
+    runs-on: ubuntu-22.04
+    steps:
+      - name: "Checkout"
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: "Checkout AM"
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ env.REPO }}
+          ref: ${{ env.BRANCH }}
+          path: am
+          fetch-depth: 0
+          token: ${{ secrets.TOKEN }}
+
+      - name: "Lister"
+        run: |
+          cd am/programs/
+          ./appimage-lister-uniq.sh
+
+      - name: "Push"
+        run: |
+          cd am
+          git config --global user.name "${{ github.repository_owner }}"
+          git config --global user.email "noreply@github.com"
+          echo "Git add"
+          git add programs
+          echo "Check if changes made"
+          if git diff-index --quiet HEAD; then
+            echo "No changes to commit."
+            echo "No changes to commit." >> $GITHUB_STEP_SUMMARY
+            exit 0
+          else
+            echo "Getting commits"
+            HASH_LIST=$(git log -100 --branches main --grep "Sync files from source repository" --grep "noreply@github.com" --pretty=%H)
+            if [[ -z "$HASH_LIST" ]]; then
+              echo "No more old messages"
+              HASH_LIST=$(git log -100 --branches main --grep "sync AppImages" --grep "noreply@github.com" --pretty=%H)
+            fi
+            echo "Git reset"
+            git reset --mixed $(git merge-base origin/main HEAD)
+            echo "Picking commits"
+            for HASH in $HASH_LIST; do
+              git cherry-pick --no-commit $HASH
+              git add programs
+            done
+            git status
+            git log --oneline -5
+            git diff
+            git add programs
+            git commit -m "sync AppImages"
+            git push --force-with-lease && echo "sync successfull" >> $GITHUB_STEP_SUMMARY || (git diff && git status)
+          fi
