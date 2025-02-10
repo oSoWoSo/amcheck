@@ -1,0 +1,45 @@
+name: "clean: History"
+
+on:
+  repository_dispatch:
+    types: [clean]
+
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  actions: write
+  contents: write
+
+env:
+  REPO: ${{ github.repository_owner }}/AM
+  BRANCH: main-clean
+
+jobs:
+  clean-history:
+    name: "Clean history"
+    runs-on: ubuntu-22.04
+    steps:
+      - name: "Checkout AM"
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ env.REPO }}
+          ref: main
+          fetch-depth: 0
+          token: ${{ secrets.TOKEN }}
+
+      - name: "Clean empty merge commits"
+        run: |
+          git config user.name "${{ github.repository_owner }}"
+          git config user.email "noreply@github.com"
+          git branch -D "${{ env.BRANCH }}" || true
+          git checkout -b "${{ env.BRANCH }}"
+          git rebase --force "${{ env.BRANCH }}" origin/main
+          git push --force origin HEAD:refs/heads/"${{ env.BRANCH }}"
+          #TODO: Use git-filter-repo to remove empty merge commits
+          #git filter-repo --refs "${{ env.BRANCH }}" --prune-degenerate always --force
+          git filter-branch -f --commit-filter ' if git show -s --format=%P $GIT_COMMIT | grep -q " "; then skip_commit "$@"; else git commit-tree "$@"; fi' HEAD
+          git push --force origin HEAD:"${{ env.BRANCH }}" || (git diff && git status)
