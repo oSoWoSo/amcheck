@@ -1,4 +1,4 @@
-name: "Clean Main History"
+name: "clean: History"
 
 on:
   repository_dispatch:
