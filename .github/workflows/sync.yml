@@ -1,0 +1,141 @@
+name: "sync: AppImages listing"
+
+on:
+  repository_dispatch:
+    types: [sync]
+
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  actions: write
+  contents: write
+
+env:
+  REPO: ${{ github.repository_owner }}/AM
+  BRANCH: main
+
+jobs:
+  sync-files:
+    name: "Run sync"
+    runs-on: ubuntu-22.04
+    steps:
+      - name: "Checkout"
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: "Checkout AM"
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ env.REPO }}
+          ref: ${{ env.BRANCH }}
+          path: am
+          fetch-depth: 0
+          token: ${{ secrets.TOKEN }}
+
+      - name: "Lister"
+        run: |
+          cd am/programs/
+          ./appimage-lister-uniq.sh
+
+      - name: "Push"
+        run: |
+          cd am
+          git config --global user.name "${{ github.repository_owner }}"
+          git config --global user.email "noreply@github.com"
+          echo "Git add programs/"
+          git add programs
+          # echo "Check if changes made"
+          # if git diff-index --quiet HEAD; then
+          #   echo "No changes to commit."
+          #   echo "No changes to commit." >> $GITHUB_STEP_SUMMARY
+          #   exit 0
+          # else
+          #   echo "Getting commits"
+          #   HASH_LIST=$(git log -100 --branches main --grep "Sync files from source repository" --grep "noreply@github.com" --pretty=%H)
+          #   if [[ -z "$HASH_LIST" ]]; then
+          #     echo "No more old messages"
+          #     HASH_LIST=$(git log -100 --branches main --grep "sync AppImages" --grep "noreply@github.com" --pretty=%H)
+          #   fi
+          #   echo "Git reset"
+          #   git reset --mixed $(git merge-base origin/main HEAD)
+          #   echo "Picking commits"
+          #   for HASH in $HASH_LIST; do
+          #     git cherry-pick --no-commit $HASH
+          #     git add programs
+          #   done
+          #   git status
+          #   git log --oneline -5
+          #   git diff
+          #   git add programs
+          #   git commit -m "sync AppImages"
+          #   git push --force-with-lease && echo "sync successfull" >> $GITHUB_STEP_SUMMARY || (git diff && git status)
+          # fi
+          # Variables
+          EMAIL="noreply@github.com"   # Target author email
+          COMMIT_MSG="check variables"  # Commit message
+          FILES_TO_COMMIT=""  # Optional: specific files to commit (space-separated)
+          INCLUDE_UNTRACKED=false  # Default: do not include untracked files
+          DRY_RUN=false  # Default: not in dry-run mode
+          # Parse arguments
+          while [[ "$1" != "" ]]; do
+          case "$1" in
+            --include-untracked ) INCLUDE_UNTRACKED=true ;;
+            --dry-run ) DRY_RUN=true ;;  # Enable dry-run mode
+            * ) FILES_TO_COMMIT+="$1 " ;;  # Collect file arguments
+          esac
+          shift
+          done
+          # Dry-run behavior
+          if [[ "$DRY_RUN" == true ]]; then
+            echo "⚠️ Dry-run mode enabled. No changes will be made."
+            DRY="--dry-run -v"
+          else
+            unset DRY
+          fi
+          echo "🔍 Searching for commits from '$EMAIL' with message containing '$COMMIT_MSG'..."
+          # Find matching commits (hashes only)
+          COMMITS=$(git log --author="$EMAIL" --grep="$COMMIT_MSG" --format='%H')
+          # Exit if no commits found
+          if [[ -z "$COMMITS" ]]; then
+            echo "⚠️ No matching commits found."
+            exit 0  # No error, nothing to do
+          fi
+          # Perform a soft reset to merge changes
+          echo "🔄 Merging changes..."
+          if [[ "$DRY_RUN" == true ]]; then
+            echo "(Dry-run)"
+            echo "git reset don't have --dry-run or verbose argument, using command..."
+            git reset --soft "$(echo "$COMMITS" | tail -n 1)^"
+          else
+            git reset --soft "$(echo "$COMMITS" | tail -n 1)^"
+          fi
+          # Handle file staging based on options
+          if [[ -n "$FILES_TO_COMMIT" ]]; then
+            echo "📂 Staging specific files: $FILES_TO_COMMIT"
+            git add "$FILES_TO_COMMIT" $DRY
+          elif [[ "$INCLUDE_UNTRACKED" == true ]]; then
+            echo "📂 Staging all changes including untracked files."
+            git add . $DRY
+          else
+            echo "📂 Staging only modified and deleted files (excluding untracked)."
+            git add -u $DRY
+          fi
+          # Commit the changes with a fixed author
+          echo "📝 Creating a new commit..."
+          git commit --author="$EMAIL" -m "$COMMIT_MSG" $DRY
+          # Pull before pushing
+          echo "🚀 Pulling changes..."
+          git pull $DRY
+          # Push the changes
+          echo "🚀 Pushing changes..."
+          if [[ "$DRY_RUN" == true ]]; then
+            git push origin "$(git rev-parse --abbrev-ref HEAD)" $DRY
+            echo "⚠️ (Dry-run) Ends"
+          else
+            git push origin "$(git rev-parse --abbrev-ref HEAD)" && echo "✅ Done!" || (echo "Warning!" && exit 1)
+          fi
