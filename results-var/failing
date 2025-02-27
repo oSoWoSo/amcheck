@@ -66,6 +66,7 @@ botim
 bottom
 boxxy
 brave
+brave-beta
 brave-nightly
 bridge
 brisk
@@ -115,6 +116,7 @@ corepaint
 corepins
 corerenamer
 coreshot
+corestats
 corestuff
 coreterminal
 coretime
@@ -138,6 +140,7 @@ deeplx
 dezor
 didder
 digikam
+diskonaut
 dissent
 dl-desktop
 doggo
@@ -183,6 +186,7 @@ feidao
 fetchit
 ffdec
 ffdec-nightly
+ffsend
 ffwa-facebook
 ffwa-github
 ffwa-gmail
@@ -211,6 +215,7 @@ fluffychat
 flyctl
 fman
 focus
+focusatwill
 fontbase
 forkgram
 freefilesync
@@ -221,6 +226,7 @@ funkin-legacy
 funkin-psych
 fx
 fynodoro
+fzf
 gaiasky
 gallery-dl
 gemalaya
@@ -274,6 +280,7 @@ hmcl
 hoptodesk
 humanlog
 hyperfine
+hypersomnia
 i3-auto-layout
 i3lock-color
 icecat
@@ -287,10 +294,12 @@ ipuissance-4d
 iqpuzzle
 jabref
 jdappstreamedit
+jddesktopentryedit
 jdminecraftlauncher
 jdmrpackinstaller
 jdnbtexplorer
 jdreplace
+jdtextedit
 jellyfin
 jetbrains-toolbox
 jgrasp
@@ -360,6 +369,7 @@ matm
 mcfly
 mdcat
 mediainfo
+median-xl
 mediathekview
 melonds
 mendeley
@@ -369,6 +379,7 @@ mercury-avx2
 mercury-sse3
 mercury-sse4
 mine-craft.io
+minecraft-launcher
 mission-center
 mk
 mkvtoolnix
@@ -416,12 +427,14 @@ openarena
 openmw
 openrgb
 openxcom
+oras
 ots
 outline-client-wayland
 owncloud
 paclear
 paket
 palemoon
+pastel
 pay-respects
 pboy
 pcsx-redux
@@ -433,6 +446,7 @@ pet
 pfetch-rs
 pget
 pho
+photocrea
 photon
 photoqt
 phototeleport
@@ -448,12 +462,14 @@ play
 playback
 playit
 plexamp
+png2svg
 podman
 pokeget-rs
 pokego
 pop
 prismlauncher-qt5
 procs
+psi+
 publii
 qbittorrent
 qctools
@@ -476,6 +492,7 @@ recoll
 remnote
 revealgo
 riichi-city
+ripcord
 ripgrep
 ripgrep-all
 rock.so
@@ -483,6 +500,7 @@ rocketfetch
 rpcs3
 rrip
 rstudio
+rucola
 ruffle
 rustdict
 rustypaste
@@ -493,6 +511,7 @@ scrite
 sd
 serialplot
 sfp
+shadow-tech
 shell-assistant
 shellcheck
 shellharden
@@ -504,6 +523,7 @@ simtoolkitpro
 sipgate-softphone
 siril
 skyemu
+smart-media-cutter
 smassh
 soar
 soft-serve
@@ -552,17 +572,20 @@ tere
 termshot
 tess
 testdisk
+texmacs
 textnote
 texts
 tgpt
 the-way
 theia-blueprint
+thunderbird
 thunderbird-beta
 thunderbird-nightly
 ticker
 tlock
 tod
 todesktop
+todoist
 toipe
 topgrade
 tor-browser
@@ -582,10 +605,13 @@ typioca
 tzared
 uad-ng
 ultimmc
+unetbootin
 ungoogled-chromium
 unveil
+upgit
 upnote
 urbanterror
+utilso
 uv
 uwufetch
 valentina
@@ -604,6 +630,7 @@ vt
 vtm
 w2vgrep
 walk
+warp-terminal
 waterfox
 waterfox-appimage
 wavebox
@@ -615,6 +642,7 @@ wiznote
 wkp
 wolai
 wonderpen
+wordtsar
 writemonkey
 wtfutil
 x-pixiv
