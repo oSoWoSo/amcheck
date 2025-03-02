@@ -174,8 +174,10 @@ jobs:
             MATRIX="${MATRIX%,}]}"
             echo "matrix=$MATRIX" >> $GITHUB_OUTPUT
             echo "Removing excluded"
+            rm results-apps/excluded
             git rm results-apps/excluded
             git commit -m "Remove excluded"
+            git push
           fi
 
   run-actions:
@@ -330,7 +332,13 @@ jobs:
               echo "$appname" >> results-apps/failing
               echo "$appname" >> results-apps/excluded
             done
-            sort -u results-apps/excluded -o results-apps/excluded
+            if [[ "${{ github.event.inputs.retest_excluded }}" == "true" ]]; then
+              rm -f results-apps/excluded
+              git rm results-apps/excluded
+              git commit -m "Retesting: Remove excluded"
+            else
+              sort -u results-apps/excluded -o results-apps/excluded
+            fi
           else
             echo "Nothing failed? Great!"
           fi
