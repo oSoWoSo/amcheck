@@ -92,7 +92,9 @@ jobs:
           [ -f results-apps/tested ] && tested=$(wc -l < results-apps/tested)
           [ -f results-apps/excluded ] && excluded=$(wc -l < results-apps/excluded)
           echo "tested=$tested" >> $GITHUB_OUTPUT
-          echo "excluded=$excluded" >> $GITHUB_OUTPUT
+          if [[ "${{ github.event.inputs.retest_excluded }}" != "true" ]]; then
+            echo "excluded=$excluded" >> $GITHUB_OUTPUT
+          fi
 
       - name: "Show stats 📊"
         run: |
