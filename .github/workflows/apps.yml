@@ -161,8 +161,9 @@ jobs:
           elif [[ "${{ github.event.inputs.retest_excluded }}" == "true" ]]; then
             #find programs/x86_64/ -maxdepth 1 -type f -printf "%f\n" | sort > appslist
             grep -Fxf results-apps/excluded appslist > retest.list
-            echo "Retesting failed" >> $GITHUB_STEP_SUMMARY
-            echo "$(grep -vFxf appslist results-apps/excluded)" >> $GITHUB_STEP_SUMMARY
+            echo "Retesting failed and removing old failed"
+            rm -f results-apps/excluded
+            #echo "$(grep -vFxf appslist results-apps/excluded)" >> $GITHUB_STEP_SUMMARY
             FILES=$(cat retest.list)
             MATRIX="{\"include\": ["
             for file in $FILES; do
