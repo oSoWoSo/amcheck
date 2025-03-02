@@ -122,6 +122,11 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: appslist
+          
+      - name: "Git Config"
+        run: |
+          git config --global user.name "${{ github.repository_owner }}"
+          git config --global user.email "noreply@github.com"
 
       - name: "Generate Matrix 🏆"
         id: set-matrix
