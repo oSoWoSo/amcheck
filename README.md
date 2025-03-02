@@ -3,7 +3,7 @@ Used by "AM": The package manager for AppImage packages and other portable apps 
 
 ### ["AM" Application Manager](https://github.com/ivan-hc/AM)
 
-Contains:
+# Included actions:
  - Clean Main History: Create main-clean branch with cleaned history
  - Check variables in 250 apps
  - Sync AppImages listing: If programs are changed, will update appimages listings
