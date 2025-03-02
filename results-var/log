@@ -11691,3 +11691,15 @@ APP="yandex-browser-corporate"
 SITE="ivan-hc/Yandex-Browser-appimage"
 version="https://github.com/ivan-hc/Yandex-Browser-appimage/releases/download/continuous/Yandex-Browser-corporate-24.12.4.1094-1-x86_64.AppImage"
 -----------------------------------------------------------------
+GITHUB='yes'
+APPIMAGE='yes'
+APP="kdeconnect"
+SITE="pkgforge-dev/kdeconnect-AppImage"
+version="https://github.com/pkgforge-dev/kdeconnect-AppImage/releases/download/24.12.2-1/kdeconnect-24.12.2-1-anylinux-x86_64.AppImage"
+-----------------------------------------------------------------
+GITHUB='yes'
+APPIMAGE='yes'
+APP="reqable"
+SITE="reqable/reqable-app"
+version="https://github.com/reqable/reqable-app/releases/download/2.32.6/reqable-app-linux-x86_64.AppImage"
+-----------------------------------------------------------------
