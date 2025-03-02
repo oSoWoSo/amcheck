@@ -411,6 +411,7 @@ jobs:
             git status
             git log --oneline -5
             git diff
+            git pull
             git add results-apps
             git commit -m "check apps"
             git push --force-with-lease && echo "sync successfull" >> $GITHUB_STEP_SUMMARY || (git diff && git status)
