@@ -351,19 +351,19 @@ jobs:
           if [ -f 'failing' ]; then
             fail=$(wc -l < failing)
           else
-            fail=0
+            fail="0"
           fi
           count=$(wc -l < appslist)
           remaining=$((count - tested - excluded - fail))
           (( remaining < 0 )) && remaining=0
           echo "### 🏁 $tested tested" >> $GITHUB_STEP_SUMMARY
           echo "## 🛅 $remaining to test" >> $GITHUB_STEP_SUMMARY
-          if [[ "$failing" != '0' ]]; then
+          if (( fail > 0 )); then
             echo ":x: $fail failed now" >> $GITHUB_STEP_SUMMARY
             echo "💀" >> $GITHUB_STEP_SUMMARY
             cat failing >> $GITHUB_STEP_SUMMARY
           fi
-          if [[ "$excluded" != '0' ]]; then
+          if (( excluded > 0 )); then
             echo "😱 $excluded fails listed" >> $GITHUB_STEP_SUMMARY
           fi
 
