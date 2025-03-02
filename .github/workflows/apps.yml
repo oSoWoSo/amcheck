@@ -338,17 +338,17 @@ jobs:
 
       - name: "Show Results 🏁"
         run: |
-          if [ -n 'results-apps/tested' ]; then
+          if [ -f 'results-apps/tested' ]; then
             tested=$(wc -l < results-apps/tested)
           else
             tested=0
           fi
-          if [ -n 'results-apps/excluded' ]; then
+          if [ -f 'results-apps/excluded' ]; then
             excluded=$(wc -l < results-apps/excluded)
           else
             excluded=0
           fi
-          if [ -n 'failing' ]; then
+          if [ -f 'failing' ]; then
             fail=$(wc -l < failing)
           else
             fail=0
