@@ -94,6 +94,7 @@ jobs:
 
       - name: "Count stats 📊"
         id: stats
+        if: github.event.inputs.reset_stats != 'true'
         run: |
           tested=0
           excluded=0
@@ -105,6 +106,7 @@ jobs:
           fi
 
       - name: "Show stats 📊"
+        if: github.event.inputs.reset_stats != 'true'
         run: |
           echo "### 🎬 apps: ${{ steps.count.outputs.all }}" >> $GITHUB_STEP_SUMMARY
           if [ "${{ steps.stats.outputs.tested }}" -ne 0 ]; then
