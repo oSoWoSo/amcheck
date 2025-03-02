@@ -159,11 +159,8 @@ jobs:
             MATRIX="${MATRIX%,}]}"
             echo "matrix=$MATRIX" >> $GITHUB_OUTPUT
           elif [[ "${{ github.event.inputs.retest_excluded }}" == "true" ]]; then
-            #find programs/x86_64/ -maxdepth 1 -type f -printf "%f\n" | sort > appslist
             grep -Fxf results-apps/excluded appslist > retest.list
-            echo "Retesting failed and removing old failed"
-            rm -f results-apps/excluded
-            #echo "$(grep -vFxf appslist results-apps/excluded)" >> $GITHUB_STEP_SUMMARY
+            echo "Retesting failed"
             FILES=$(cat retest.list)
             MATRIX="{\"include\": ["
             for file in $FILES; do
@@ -173,6 +170,7 @@ jobs:
             echo "matrix=$MATRIX" >> $GITHUB_OUTPUT
             echo "Removing excluded"
             git rm results-apps/excluded
+            git commit -m "Remove excluded"
           fi
 
   run-actions:
