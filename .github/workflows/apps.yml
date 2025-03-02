@@ -77,12 +77,20 @@ jobs:
           if-no-files-found: error
           retention-days: 1
           compression-level: 0
+          
+      - name: "Git Config"
+        run: |
+          git config --global user.name "${{ github.repository_owner }}"
+          git config --global user.email "noreply@github.com"
 
       - name: "Reseting stats"
         if: github.event.inputs.reset_stats == 'true'
         run: |
           echo "Reseting stats" >> $GITHUB_STEP_SUMMARY
           rm -rf results-apps
+          git rm results-apps
+          git commit -m "Resetting stats"
+          git push
 
       - name: "Count stats 📊"
         id: stats
