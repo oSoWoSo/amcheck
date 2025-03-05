@@ -389,7 +389,7 @@ jobs:
             echo "This is a Pull Request. Not saving results."
             exit 0
           fi
-          if git diff --quiet; then
+          if git diff-index --quiet HEAD; then
             echo "No changes to commit." >> $GITHUB_STEP_SUMMARY
             exit 0
           else
