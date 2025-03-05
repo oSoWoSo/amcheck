@@ -1,0 +1,19 @@
+Shell completion has been enabled!
+============================================================================
+
+                  [1;34mSTART OF ALL INSTALLATION PROCESSES[0m
+
+============================================================================
+
+ ◆ "FRESHFETCH": starting installation script
+
+1741215401 ERROR torsocks[2845]: Unable to resolve. Status reply: 4 (in socks5_recv_resolve_reply() at socks5.c:677)
+http://: Invalid host name.
+
+ 💀 ERROR DURING INSTALLATION, REMOVED "FRESHFETCH"!
+____________________________________________________________________________
+============================================================================
+
+                  [1;34mEND OF ALL INSTALLATION PROCESSES
+[0m
+============================================================================
