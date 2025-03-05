@@ -278,19 +278,19 @@ jobs:
           fi
 
       - name: "Rename Failed Results ☝️"
-        if: steps.test.outcome == failure
+        if: steps.test.outcome == 'failure'
         run: |
           mv results/log-${{ matrix.file }} results/ko-${{ matrix.file }}
 
       - name: "Upload KO Results ☝️"
-        if: steps.test.outcome == failure
+        if: steps.test.outcome == 'failure'
         uses: actions/upload-artifact@v4
         with:
           name: ko-${{ matrix.file }}
           path: results/ko-${{ matrix.file }}
 
       - name: "Upload OK Results ⬆️"
-        if: steps.test.outcome == success
+        if: steps.test.outcome == 'success'
         uses: actions/upload-artifact@v4
         with:
           name: ok-${{ matrix.file }}
