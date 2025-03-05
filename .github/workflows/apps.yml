@@ -381,6 +381,7 @@ jobs:
             echo "💀" >> $GITHUB_STEP_SUMMARY
             echo "$(cat results-apps/failing)" >> $GITHUB_STEP_SUMMARY
             echo "...to excluded 📕" >> $GITHUB_STEP_SUMMARY
+            rm results-apps/failing
           fi
           if (( excluded > 0 )); then
             echo "😱 $excluded excluded" >> $GITHUB_STEP_SUMMARY
