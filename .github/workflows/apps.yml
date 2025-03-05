@@ -330,6 +330,7 @@ jobs:
             echo "Getting results"
             cat results/ok-* >> results-apps/tested
             sort -u results-apps/tested -o results-apps/tested
+            git add results-apps/tested
           else
             echo "Nothing tested successfully?"
           fi
@@ -341,13 +342,12 @@ jobs:
               echo "$appname" >> results-apps/failing
               echo "$appname" >> results-apps/excluded
             done
+            git add results-apps/excluded
           else
             echo "Nothing failed? Great!"
           fi
           if [[ "$GITHUB_REF" == 'refs/pull/*' ]]; then
             echo "This is a Pull Request. Not saving results."
-          else
-            git add results-apps
           fi
 
       - name: "Show Results 🏁"
@@ -363,7 +363,7 @@ jobs:
             excluded=0
           fi
           if [ -f 'failing' ]; then
-            fail=$(wc -l < failing)
+            fail=$(wc -l < results-apps/failing)
           else
             fail="0"
           fi
@@ -376,8 +376,6 @@ jobs:
             echo ":x: $fail failed now" >> $GITHUB_STEP_SUMMARY
             echo "💀" >> $GITHUB_STEP_SUMMARY
             cat failing >> $GITHUB_STEP_SUMMARY
-            rm results-apps/failling
-            git rm results-apps/failling
           fi
           if (( excluded > 0 )); then
             echo "😱 $excluded fails listed" >> $GITHUB_STEP_SUMMARY
@@ -403,7 +401,7 @@ jobs:
             #git status
             #git log --oneline -5
             #git diff
-            git add results-apps
+            #git add results-apps
             git commit -m "check apps"
             git push --force && echo "sync successfull" >> $GITHUB_STEP_SUMMARY || (git diff && git status)
             #git push --force-with-lease && echo "sync successfull" >> $GITHUB_STEP_SUMMARY || (git diff && git status)
