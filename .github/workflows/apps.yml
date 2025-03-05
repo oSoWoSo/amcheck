@@ -363,7 +363,7 @@ jobs:
           else
             excluded=0
           fi
-          if [ -f 'failing' ]; then
+          if [ -f 'results-apps/failing' ]; then
             fail=$(wc -l < results-apps/failing)
           else
             fail="0"
@@ -375,11 +375,10 @@ jobs:
           echo "## 🛅 $remaining to test" >> $GITHUB_STEP_SUMMARY
           if (( fail > 0 )); then
             echo ":x: $fail failed now" >> $GITHUB_STEP_SUMMARY
-            echo "💀" >> $GITHUB_STEP_SUMMARY
-            cat failing >> $GITHUB_STEP_SUMMARY
+            echo "💀 $(cat results-apps/failing)" >> $GITHUB_STEP_SUMMARY
           fi
           if (( excluded > 0 )); then
-            echo "😱 $excluded fails listed" >> $GITHUB_STEP_SUMMARY
+            echo "😱 $excluded fail listed" >> $GITHUB_STEP_SUMMARY
           fi
 
       - name: "Push"
@@ -404,8 +403,8 @@ jobs:
             #git diff
             #git add results-apps
             git commit -m "check apps"
-            git push --force && echo "sync successfull" >> $GITHUB_STEP_SUMMARY || (git diff && git status)
-            #git push --force-with-lease && echo "sync successfull" >> $GITHUB_STEP_SUMMARY || (git diff && git status)
+            git push --force && echo "sync successfull" || (git diff && git status)
+            #git push --force-with-lease && echo "sync successfull" || (git diff && git status)
           fi
 
 
