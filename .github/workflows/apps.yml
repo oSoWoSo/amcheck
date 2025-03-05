@@ -90,7 +90,7 @@ jobs:
           rm -rf results-apps
           git rm -r results-apps
           git commit -m "check apps"
-          #git push
+          git push
 
       - name: "Count stats 📊"
         id: stats
@@ -178,7 +178,6 @@ jobs:
             echo "matrix=$MATRIX" >> $GITHUB_OUTPUT
           elif [[ "${{ github.event.inputs.retest_excluded }}" == "true" ]]; then
             grep -Fxf results-apps/excluded appslist > retest.list
-            echo "Retesting excluded" >> $GITHUB_STEP_SUMMARY
             FILES=$(cat retest.list)
             MATRIX="{\"include\": ["
             for file in $FILES; do
@@ -190,7 +189,7 @@ jobs:
             rm results-apps/excluded
             git rm results-apps/excluded
             git commit -m "check apps"
-            #git push
+            git push
           fi
 
   run-actions:
@@ -414,7 +413,7 @@ jobs:
             git add results-apps
             echo "Pushing changes"
             git commit -m "check apps"
-            #git push --force && echo "sync successfull" || (git diff && git status) || {
+            git push --force-with-lease && echo "sync successfull" || (git diff && git status) || {
              if git status --porcelain | grep -q "deleted by us.*results-apps/excluded"; then
                echo "Conflict due to results-apps/excluded, removing it."
                rm results-apps/excluded
@@ -424,7 +423,7 @@ jobs:
                git diff
                git status
              fi
-             }
+            }
           fi
 
   already-tested:
