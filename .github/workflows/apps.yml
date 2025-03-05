@@ -235,9 +235,7 @@ jobs:
                ls /opt/platform-tools | tee -a results/log-"${{ matrix.file }}"
             elif test -d /opt/"$pure_arg"; then
                ls /opt/"$pure_arg" | tee -a results/log-"${{ matrix.file }}"
-            elif [ "$pure_arg" = avidemux ]; then
-               echo /opt/avidemux | tee -a results/log-"${{ matrix.file }}"
-            elif [[ "$pure_arg" =~ (bat-extras|code|deadbeef*|libfuse2|libreoffice|microsoft-edge*|mpv|node|npm|swift|wine) ]]; then
+            elif [[ "$pure_arg" =~ (bat-extras|code|deadbeef*|kvrt|libfuse2|libreoffice|microsoft-edge*|mpv|node|npm|oras|suyu|swift|wine) ]]; then
                echo "App not installed, this is a Known error related to GitHub Actions" | tee -a results/log-"${{ matrix.file }}"
             elif test -d /opt/"$pure_arg"*; then
                ls /opt/"$pure_arg"* | tee -a results/log-"${{ matrix.file }}"
@@ -278,19 +276,19 @@ jobs:
           fi
 
       - name: "Rename Failed Results ☝️"
-        if: steps.test.outcome == 'failure'
+        if: failure()
         run: |
           mv results/log-${{ matrix.file }} results/ko-${{ matrix.file }}
 
       - name: "Upload KO Results ☝️"
-        if: steps.test.outcome == 'failure'
+        if: failure()
         uses: actions/upload-artifact@v4
         with:
           name: ko-${{ matrix.file }}
           path: results/ko-${{ matrix.file }}
 
       - name: "Upload OK Results ⬆️"
-        if: steps.test.outcome == 'success'
+        if: success()
         uses: actions/upload-artifact@v4
         with:
           name: ok-${{ matrix.file }}
