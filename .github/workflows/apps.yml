@@ -65,7 +65,7 @@ jobs:
       - name: "Count programs 📊"
         id: count
         run: |
-          find am/programs/x86_64/ -maxdepth 1 -type f -printf "%f\n" | sort > appslist
+          find am/programs/x86_64/ -maxdepth 1 -type f -printf "%f\n" | awk 'NF' | sort -u -o appslist
           x64Count=$(wc -l < appslist)
           echo "all=$x64Count" >> $GITHUB_OUTPUT
 
@@ -329,7 +329,8 @@ jobs:
           if compgen -G "results/ok-*" > /dev/null; then
             echo "Getting results"
             cat results/ok-* >> results-apps/tested
-            sort -u results-apps/tested -o results-apps/tested
+            awk 'NF' results-apps/tested | sort -u -o results-apps/tested
+            #sort -u results-apps/tested -o results-apps/tested
             git add results-apps/tested
           else
             echo "Nothing tested successfully?"
@@ -342,7 +343,7 @@ jobs:
               echo "$appname" >> results-apps/failing
               echo "$appname" >> results-apps/excluded
             done
-            sort -u results-apps/excluded -o results-apps/excluded
+            awk 'NF' results-apps/excluded | sort -u -o results-apps/excluded
             git add results-apps/excluded
           else
             echo "Nothing failed? Great!"
@@ -378,7 +379,7 @@ jobs:
             echo "💀 $(cat results-apps/failing)" >> $GITHUB_STEP_SUMMARY
           fi
           if (( excluded > 0 )); then
-            echo "😱 $excluded fail listed" >> $GITHUB_STEP_SUMMARY
+            echo "😱 $excluded fail(s) listed" >> $GITHUB_STEP_SUMMARY
           fi
 
       - name: "Push"
