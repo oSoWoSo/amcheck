@@ -15,7 +15,7 @@ on:
         default: false
         type: boolean
       retest_excluded:
-        description: "Test excluded again"
+        description: "TEST excluded"
         required: true
         default: false
         type: boolean
@@ -342,7 +342,7 @@ jobs:
               echo "$appname" >> results-apps/failing
               echo "$appname" >> results-apps/excluded
             done
-            sort -u results-apps/excuded -o results-apps/excluded
+            sort -u results-apps/excluded -o results-apps/excluded
             git add results-apps/excluded
           else
             echo "Nothing failed? Great!"
