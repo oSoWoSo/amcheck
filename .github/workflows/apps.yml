@@ -90,7 +90,7 @@ jobs:
           rm -rf results-apps
           git rm -r results-apps
           git commit -m "check apps"
-          git push
+          #git push
 
       - name: "Count stats 📊"
         id: stats
@@ -186,7 +186,7 @@ jobs:
             rm results-apps/excluded
             git rm results-apps/excluded
             git commit -m "check apps"
-            git push
+            #git push
           fi
 
   run-actions:
@@ -394,9 +394,6 @@ jobs:
             exit 0
           else
             HASH_LIST=$(git log -100 --branches main --grep "check apps" --grep "noreply@github.com" --pretty=%H)
-            if [[ -z "$HASH_LIST" ]]; then
-              HASH_LIST=$(git log -100 --branches main --grep "check apps" --grep "noreply@github.com" --pretty=%H)
-            fi
             git reset --soft $(git merge-base origin/main HEAD)
             for HASH in $HASH_LIST; do
               git cherry-pick --no-commit -X ours $HASH
