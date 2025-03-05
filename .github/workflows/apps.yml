@@ -405,7 +405,7 @@ jobs:
             #git diff
             git add results-apps
             git commit -m "check apps"
-            git push --force origin testing && echo "sync successfull" >> $GITHUB_STEP_SUMMARY || (git diff && git status)
+            git push --force && echo "sync successfull" >> $GITHUB_STEP_SUMMARY || (git diff && git status)
             #git push --force-with-lease && echo "sync successfull" >> $GITHUB_STEP_SUMMARY || (git diff && git status)
           fi
 
