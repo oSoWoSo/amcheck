@@ -108,12 +108,16 @@ jobs:
       - name: "Show stats 📊"
         if: github.event.inputs.reset_stats != true
         run: |
-          echo "### 🎬 apps: ${{ steps.count.outputs.all }}" >> $GITHUB_STEP_SUMMARY
-          if [ "${{ steps.stats.outputs.tested }}" -ne 0 ]; then
-            echo "🔨 tested: ${{ steps.stats.outputs.tested }} 🏁" >> $GITHUB_STEP_SUMMARY
-          fi
-          if [ "${{ steps.stats.outputs.excluded }}" -ne 0 ]; then
-            echo "❌ failed: ${{ steps.stats.outputs.excluded }} (excluded)" >> $GITHUB_STEP_SUMMARY
+          if [[ "${{ github.event.inputs.retest_excluded }}" == "true" ]]; then
+            echo "Testing excluded" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "### 🎬 apps: ${{ steps.count.outputs.all }}" >> $GITHUB_STEP_SUMMARY
+            if [ "${{ steps.stats.outputs.tested }}" -ne 0 ]; then
+              echo "🔨 tested: ${{ steps.stats.outputs.tested }} 🏁" >> $GITHUB_STEP_SUMMARY
+            fi
+            if [ "${{ steps.stats.outputs.excluded }}" -ne 0 ]; then
+              echo "❌ failed: ${{ steps.stats.outputs.excluded }} (excluded)" >> $GITHUB_STEP_SUMMARY
+            fi
           fi
 
   generate-matrix:
@@ -375,10 +379,12 @@ jobs:
           echo "## 🛅 $remaining to test" >> $GITHUB_STEP_SUMMARY
           if (( fail > 0 )); then
             echo ":x: $fail failed now" >> $GITHUB_STEP_SUMMARY
-            echo "💀 $(cat results-apps/failing)" >> $GITHUB_STEP_SUMMARY
+            echo "💀" >> $GITHUB_STEP_SUMMARY
+            echo "$(cat results-apps/failing)" >> $GITHUB_STEP_SUMMARY
+            echo "...to excluded 📕" >> $GITHUB_STEP_SUMMARY
           fi
           if (( excluded > 0 )); then
-            echo "😱 $excluded fail(s) listed" >> $GITHUB_STEP_SUMMARY
+            echo "😱 $excluded excluded" >> $GITHUB_STEP_SUMMARY
           fi
 
       - name: "Push"
@@ -408,8 +414,17 @@ jobs:
             git add results-apps
             echo "Pushing changes"
             git commit -m "check apps"
-            #git push --force && echo "sync successfull" || (git diff && git status)
-            git push --force-with-lease && echo "sync successfull" || (git diff && git status && rm results-apps/excluded && git commit --continue && git push --force-with-lease) || (git diff && git status)
+            #git push --force && echo "sync successfull" || (git diff && git status) || {
+             if git status --porcelain | grep -q "deleted by us.*results-apps/excluded"; then
+               echo "Conflict due to results-apps/excluded, removing it."
+               rm results-apps/excluded
+               git commit --continue
+               git push --force-with-lease
+             else
+               git diff
+               git status
+             fi
+             }
           fi
 
   already-tested:
