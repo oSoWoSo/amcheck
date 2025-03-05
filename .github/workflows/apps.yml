@@ -301,6 +301,8 @@ jobs:
     name: "results 📰"
     needs: run-actions
     runs-on: ubuntu-22.04
+    outputs:
+      skip: ${{ steps.logs.outputs.fail }}
     if: always() && needs.generate-matrix.outputs.skip != true
     steps:
       - name: "Checkout repository 🏃"
@@ -325,6 +327,7 @@ jobs:
           git config --global user.email "noreply@github.com"
 
       - name: "Process log results"
+        id: logs
         run: |
           mkdir -p results-apps
           if compgen -G "results/ok-*" > /dev/null; then
@@ -341,13 +344,17 @@ jobs:
             for file in results/ko-*; do
               appname=$(basename "$file" | cut -d'-' -f2-)
               cp "$file" "results-apps/logs/$appname"
-              echo "$appname" >> results-apps/failing
+              echo "$appname" >> failing
               echo "$appname" >> results-apps/excluded
             done
+            fail=$(wc -l < failing)
+            echo "fail=$fail" >> $GITHUB_OUTPUT
+            rm -f failing
             awk 'NF' results-apps/excluded | sort -u -o results-apps/excluded
             git add results-apps/excluded
             git add results-apps/logs
           else
+            echo "fail=0" >> $GITHUB_OUTPUT
             echo "Nothing failed? Great!"
           fi
           if [[ "$GITHUB_REF" == 'refs/pull/*' ]]; then
@@ -366,11 +373,6 @@ jobs:
           else
             excluded=0
           fi
-          if [ -f 'results-apps/failing' ]; then
-            fail=$(wc -l < results-apps/failing)
-          else
-            fail="0"
-          fi
           count=$(wc -l < appslist)
           remaining=$((count - tested - excluded - fail))
           (( remaining < 0 )) && remaining=0
@@ -379,9 +381,8 @@ jobs:
           if (( fail > 0 )); then
             echo ":x: $fail failed now" >> $GITHUB_STEP_SUMMARY
             echo "💀" >> $GITHUB_STEP_SUMMARY
-            echo "$(cat results-apps/failing)" >> $GITHUB_STEP_SUMMARY
+            echo "$(cat results-apps/excluded)" >> $GITHUB_STEP_SUMMARY
             echo "...to excluded 📕" >> $GITHUB_STEP_SUMMARY
-            rm results-apps/failing
           fi
           if (( excluded > 0 )); then
             echo "😱 $excluded excluded" >> $GITHUB_STEP_SUMMARY
