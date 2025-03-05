@@ -89,7 +89,7 @@ jobs:
           echo "Reseting stats" >> $GITHUB_STEP_SUMMARY
           rm -rf results-apps
           git rm -r results-apps
-          git commit -m "Resetting stats"
+          git commit -m "check apps"
           git push
 
       - name: "Count stats 📊"
@@ -185,7 +185,7 @@ jobs:
             echo "Removing excluded"
             rm results-apps/excluded
             git rm results-apps/excluded
-            git commit -m "Remove excluded"
+            git commit -m "check apps"
             git push
           fi
 
@@ -393,18 +393,19 @@ jobs:
             echo "No changes to commit." >> $GITHUB_STEP_SUMMARY
             exit 0
           else
-            #HASH_LIST=$(git log -100 --branches main --grep "update results" --grep "noreply@github.com" --pretty=%H)
-            #if [[ -z "$HASH_LIST" ]]; then
-            #  HASH_LIST=$(git log -100 --branches main --grep "check apps" --grep "noreply@github.com" --pretty=%H)
-            #fi
-            #git reset --soft $(git merge-base origin/main HEAD)
-            #for HASH in $HASH_LIST; do
-            #  git cherry-pick --no-commit -X ours $HASH
-            #done
-            #git status
-            #git log --oneline -5
-            #git diff
-            #git add results-apps
+            HASH_LIST=$(git log -100 --branches main --grep "check apps" --grep "noreply@github.com" --pretty=%H)
+            if [[ -z "$HASH_LIST" ]]; then
+              HASH_LIST=$(git log -100 --branches main --grep "check apps" --grep "noreply@github.com" --pretty=%H)
+            fi
+            git reset --soft $(git merge-base origin/main HEAD)
+            for HASH in $HASH_LIST; do
+              git cherry-pick --no-commit -X ours $HASH
+            done
+            git status
+            git log --oneline -5
+            git diff
+            git add results-apps
+            echo "Pushing changes"
             git commit -m "check apps"
             git push --force && echo "sync successfull" || (git diff && git status)
             #git push --force-with-lease && echo "sync successfull" || (git diff && git status)
