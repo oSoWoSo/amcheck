@@ -113,7 +113,7 @@ jobs:
             echo "🔨 tested: ${{ steps.stats.outputs.tested }} 🏁" >> $GITHUB_STEP_SUMMARY
           fi
           if [ "${{ steps.stats.outputs.excluded }}" -ne 0 ]; then
-            echo "failed: ${{ steps.stats.outputs.excluded }} ❌ (excluded)" >> $GITHUB_STEP_SUMMARY
+            echo "❌ failed: ${{ steps.stats.outputs.excluded }} (excluded)" >> $GITHUB_STEP_SUMMARY
           fi
 
   generate-matrix:
@@ -156,7 +156,7 @@ jobs:
             fi
             if [[ -f results-apps/excluded ]]; then
               comm -23 totest_tmp.list results-apps/excluded > totest.list
-              echo "excluding failed:" >> $GITHUB_STEP_SUMMARY
+              echo "### excluded:" >> $GITHUB_STEP_SUMMARY
               cat results-apps/excluded >> $GITHUB_STEP_SUMMARY
               if [ ! -s totest.list ]; then
                 echo "skip=true" >> $GITHUB_OUTPUT
@@ -342,6 +342,7 @@ jobs:
               echo "$appname" >> results-apps/failing
               echo "$appname" >> results-apps/excluded
             done
+            sort -u results-apps/excuded -o results-apps/excluded
             git add results-apps/excluded
           else
             echo "Nothing failed? Great!"
