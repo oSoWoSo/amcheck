@@ -400,13 +400,13 @@ jobs:
             #for HASH in $HASH_LIST; do
             #  git cherry-pick --no-commit -X ours $HASH
             #done
-            git status
-            git log --oneline -5
-            git diff
-            git pull
+            #git status
+            #git log --oneline -5
+            #git diff
             git add results-apps
             git commit -m "check apps"
-            git push --force-with-lease && echo "sync successfull" >> $GITHUB_STEP_SUMMARY || (git diff && git status)
+            git push --force origin testing && echo "sync successfull" >> $GITHUB_STEP_SUMMARY || (git diff && git status)
+            #git push --force-with-lease && echo "sync successfull" >> $GITHUB_STEP_SUMMARY || (git diff && git status)
           fi
 
 
