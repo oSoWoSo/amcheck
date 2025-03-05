@@ -110,13 +110,10 @@ jobs:
         run: |
           echo "### 🎬 apps: ${{ steps.count.outputs.all }}" >> $GITHUB_STEP_SUMMARY
           if [ "${{ steps.stats.outputs.tested }}" -ne 0 ]; then
-            echo "🔨 tests:" >> $GITHUB_STEP_SUMMARY
-            echo " 🏁 ${{ steps.stats.outputs.tested }}" >> $GITHUB_STEP_SUMMARY
+            echo "🔨 tested: ${{ steps.stats.outputs.tested }} 🏁" >> $GITHUB_STEP_SUMMARY
           fi
           if [ "${{ steps.stats.outputs.excluded }}" -ne 0 ]; then
-            echo "" >> $GITHUB_STEP_SUMMARY
-            echo "failed:" >> $GITHUB_STEP_SUMMARY
-            echo " ❌ ${{ steps.stats.outputs.excluded }} (excluded)" >> $GITHUB_STEP_SUMMARY
+            echo "failed: ${{ steps.stats.outputs.excluded }} ❌ (excluded)" >> $GITHUB_STEP_SUMMARY
           fi
 
   generate-matrix:
@@ -177,7 +174,7 @@ jobs:
             echo "matrix=$MATRIX" >> $GITHUB_OUTPUT
           elif [[ "${{ github.event.inputs.retest_excluded }}" == "true" ]]; then
             grep -Fxf results-apps/excluded appslist > retest.list
-            echo "Retesting failed"
+            echo "Retesting excluded" >> $GITHUB_STEP_SUMMARY
             FILES=$(cat retest.list)
             MATRIX="{\"include\": ["
             for file in $FILES; do
@@ -344,13 +341,6 @@ jobs:
               echo "$appname" >> results-apps/failing
               echo "$appname" >> results-apps/excluded
             done
-            if [[ "${{ github.event.inputs.retest_excluded }}" == "true" ]]; then
-              rm -f results-apps/excluded
-              git rm results-apps/excluded
-              git commit -m "Retesting: Remove excluded"
-            else
-              sort -u results-apps/excluded -o results-apps/excluded
-            fi
           else
             echo "Nothing failed? Great!"
           fi
@@ -402,14 +392,14 @@ jobs:
           elif git diff-index --quiet HEAD; then
             echo "No changes to commit." >> $GITHUB_STEP_SUMMARY
           else
-            HASH_LIST=$(git log -100 --branches main --grep "update results" --grep "noreply@github.com" --pretty=%H)
-            if [[ -z "$HASH_LIST" ]]; then
-              HASH_LIST=$(git log -100 --branches main --grep "check apps" --grep "noreply@github.com" --pretty=%H)
-            fi
-            git reset --soft $(git merge-base origin/main HEAD)
-            for HASH in $HASH_LIST; do
-              git cherry-pick --no-commit -X ours $HASH
-            done
+            #HASH_LIST=$(git log -100 --branches main --grep "update results" --grep "noreply@github.com" --pretty=%H)
+            #if [[ -z "$HASH_LIST" ]]; then
+            #  HASH_LIST=$(git log -100 --branches main --grep "check apps" --grep "noreply@github.com" --pretty=%H)
+            #fi
+            #git reset --soft $(git merge-base origin/main HEAD)
+            #for HASH in $HASH_LIST; do
+            #  git cherry-pick --no-commit -X ours $HASH
+            #done
             git status
             git log --oneline -5
             git diff
