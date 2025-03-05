@@ -394,10 +394,14 @@ jobs:
             exit 0
           else
             HASH_LIST=$(git log -100 --branches main --grep "check apps" --grep "noreply@github.com" --pretty=%H)
-            git reset --soft $(git merge-base origin/main HEAD)
-            for HASH in $HASH_LIST; do
-              git cherry-pick --no-commit -X ours $HASH
-            done
+            if [[ -z "$HASH_LIST" ]]; then
+              echo "No previous relevant commits found."
+            else
+              git reset --soft $(git merge-base origin/main HEAD)
+              for HASH in $HASH_LIST; do
+                git cherry-pick --no-commit -X theirs $HASH || true
+              done
+            fi
             git status
             git log --oneline -5
             git diff
