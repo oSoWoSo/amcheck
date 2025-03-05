@@ -267,8 +267,8 @@ jobs:
             am -R "${{ matrix.file }}" && echo "${{ matrix.file }}" >> results/ok-${{ matrix.file }} || echo "${{ matrix.file }}" >> results/log-${{ matrix.file }}
           else
             if [[ $? -eq 124 ]]; then
-               echo "### 💥 ${{ matrix.file }} timeout!" >> $GITHUB_STEP_SUMMARY
-               echo "Installation timeout in 23 minutes" >> results/log-"${{ matrix.file }}"
+               echo "### 💥 ${{ matrix.file }} $TIMEOUT minutes timeout reached" >> $GITHUB_STEP_SUMMARY
+               echo "Installation timeout in $TIMEOUT minutes" >> results/log-"${{ matrix.file }}"
                echo "${{ matrix.file }}" >> results/log-${{ matrix.file }}
             else
                echo "### 💀 ${{ matrix.file }}" >> $GITHUB_STEP_SUMMARY
@@ -345,6 +345,7 @@ jobs:
             done
             awk 'NF' results-apps/excluded | sort -u -o results-apps/excluded
             git add results-apps/excluded
+            git add results-apps/logs
           else
             echo "Nothing failed? Great!"
           fi
