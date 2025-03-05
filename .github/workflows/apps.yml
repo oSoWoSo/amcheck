@@ -399,7 +399,7 @@ jobs:
             else
               git reset --soft $(git merge-base origin/main HEAD)
               for HASH in $HASH_LIST; do
-                git cherry-pick --no-commit -X theirs $HASH || true
+                git cherry-pick --no-commit -X ours $HASH || true
               done
             fi
             git status
@@ -409,7 +409,7 @@ jobs:
             echo "Pushing changes"
             git commit -m "check apps"
             #git push --force && echo "sync successfull" || (git diff && git status)
-            git push --force-with-lease && echo "sync successfull" || (git diff && git status)
+            git push --force-with-lease && echo "sync successfull" || (git diff && git status && rm results-apps/excluded && git commit --continue && git push --force-with-lease) || (git diff && git status)
           fi
 
   already-tested:
