@@ -407,8 +407,8 @@ jobs:
             git add results-apps
             echo "Pushing changes"
             git commit -m "check apps"
-            git push --force && echo "sync successfull" || (git diff && git status)
-            #git push --force-with-lease && echo "sync successfull" || (git diff && git status)
+            #git push --force && echo "sync successfull" || (git diff && git status)
+            git push --force-with-lease && echo "sync successfull" || (git diff && git status)
           fi
 
   already-tested:
