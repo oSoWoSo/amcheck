@@ -278,19 +278,19 @@ jobs:
           fi
 
       - name: "Rename Failed Results ☝️"
-        if: failure()
+        if: steps.test.outcome == failure
         run: |
           mv results/log-${{ matrix.file }} results/ko-${{ matrix.file }}
 
       - name: "Upload KO Results ☝️"
-        if: failure()
+        if: steps.test.outcome == failure
         uses: actions/upload-artifact@v4
         with:
           name: ko-${{ matrix.file }}
           path: results/ko-${{ matrix.file }}
 
       - name: "Upload OK Results ⬆️"
-        if: success()
+        if: steps.test.outcome == success
         uses: actions/upload-artifact@v4
         with:
           name: ok-${{ matrix.file }}
@@ -389,8 +389,11 @@ jobs:
           git config --global user.email "noreply@github.com"
           if [[ "$GITHUB_REF" == 'refs/pull/*' ]]; then
             echo "This is a Pull Request. Not saving results."
-          elif git diff-index --quiet HEAD; then
+            exit 0
+          fi
+          if git diff --quiet; then
             echo "No changes to commit." >> $GITHUB_STEP_SUMMARY
+            exit 0
           else
             #HASH_LIST=$(git log -100 --branches main --grep "update results" --grep "noreply@github.com" --pretty=%H)
             #if [[ -z "$HASH_LIST" ]]; then
@@ -408,7 +411,6 @@ jobs:
             git push --force && echo "sync successfull" || (git diff && git status)
             #git push --force-with-lease && echo "sync successfull" || (git diff && git status)
           fi
-
 
   already-tested:
     name: "all 🏁"
