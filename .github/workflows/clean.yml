@@ -35,26 +35,27 @@ jobs:
         id: last_commit_clean
         run: |
           # Get the last commit hash from the ${{ env.BRANCH }} branch
-          LAST_COMMIT_CLEAN=$(git rev-parse origin/${{ env.BRANCH }})
+          LAST_COMMIT_ON_CLEAN=$(git rev-parse origin/${{ env.BRANCH }})
           echo "Last commit in ${{ env.BRANCH }}: $LAST_COMMIT_CLEAN"
-          echo "LAST_COMMIT_CLEAN=$LAST_COMMIT_CLEAN" >> $GITHUB_ENV
+          echo "LAST_COMMIT_ON_CLEAN=$LAST_COMMIT_ON_CLEAN" >> $GITHUB_ENV
 
       - name: "Find the last commit in main"
         id: last_commit_main
         run: |
           # Get the last commit hash from the main branch
-          LAST_COMMIT_MAIN=$(git rev-parse origin/main)
-          echo "Last commit in main: $LAST_COMMIT_MAIN"
-          echo "LAST_COMMIT_MAIN=$LAST_COMMIT_MAIN" >> $GITHUB_ENV
+          LAST_COMMIT_ON_MAIN=$(git rev-parse origin/main)
+          echo "Last commit in main: $LAST_COMMIT_ON_MAIN"
+          echo "LAST_COMMIT_ON_MAIN=$LAST_COMMIT_ON_MAIN" >> $GITHUB_ENV
       
       - name: "Find corresponding commit in main"
         id: find_commit
         run: |
           # Find the corresponding commit from main that matches the last commit in main-clean
-          COMMIT_IN_MAIN=$(git merge-base origin/main ${{ env.LAST_COMMIT_CLEAN }})
+          COMMIT_IN_MAIN=$(git merge-base origin/main ${{ env.LAST_COMMIT_ON_CLEAN }})
           echo "Found matching commit in main: $COMMIT_IN_MAIN" && echo "COMMIT_IN_MAIN=$COMMIT_IN_MAIN" >> $GITHUB_ENV || true
 
       - name: "Checkout branch"
+        if: always()
         run: |
           git config user.name "${{ github.repository_owner }}"
           git config user.email "noreply@github.com"
@@ -66,6 +67,7 @@ jobs:
           fi
 
       - name: "Apply changes from $BRANCH to main"
+        if: always()
         run: |
           # Checkout to main branch
           git checkout main
@@ -82,6 +84,7 @@ jobs:
           git push origin "${{ env.BRANCH }}"
 
       - name: "Clean empty merge commits"
+        if: always()
         run: |
           # Only clean up commits after the last known commit
           git filter-branch -f --commit-filter '
