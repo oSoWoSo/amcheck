@@ -10,6 +10,7 @@ abiword
 accessimap-lecteur-der
 acreom
 actual
+adb
 admin-tools
 advanced-passgen
 advanced-rest-client
@@ -51,6 +52,7 @@ amusiz
 anavis
 anchor
 android-knot
+android-messages-desktop
 android-studio
 android-studio-latest
 android-tools
@@ -114,6 +116,7 @@ arkaway
 arma3-unix-launcher
 armagetronad
 armcord
+around
 artifact
 artisan
 artix
@@ -189,6 +192,7 @@ binclock
 binfinder
 bingada
 binglite
+bioanimation
 biplanes-revival
 birds-kitchen
 bitbox-wallet
@@ -199,6 +203,7 @@ biying
 bk
 black-chocobo
 blacknut
+blank
 blastem
 blender
 blender-alpha
@@ -286,6 +291,7 @@ calm-mondrian
 calmly-writer
 camelot
 candycrisis
+capbattleship
 caprine
 carbonyl
 cardo
@@ -417,6 +423,7 @@ cozydrive
 cpeditor
 cpod
 cpu-x
+cpufetch
 crabfetch
 craftos-pc
 crankshaft
@@ -437,6 +444,7 @@ crossmobile
 crow-translate
 cryplicity
 crypter
+cryptocam-companion
 cryptomator
 cryptr
 cscrypto
@@ -566,6 +574,7 @@ elapp
 elcalc
 eldumper
 electorrent
+electrocrud
 electron-app-store
 electron-cash
 electron-mail
@@ -749,6 +758,7 @@ fontforge
 fontlet
 foobar2000
 forkgram
+four
 foxfolio
 fpm
 fractale
@@ -774,6 +784,7 @@ friture
 fromscratch
 frontimer
 fspy
+fukayo
 funkin
 funkin-legacy
 funkin-psych
@@ -798,6 +809,7 @@ gdlauncher
 gdm-settings
 geany
 gedit
+geeqie
 geforcenow-electron
 gemalaya
 gemget
@@ -866,6 +878,7 @@ gooboxfileshare
 goodls
 goofcord
 google-chrome
+google-chrome-beta
 google-chrome-dev
 google-docs
 google-task-tauri
@@ -903,6 +916,7 @@ gron
 gron.awk
 groot
 grx
+gsequencer
 gsubs
 guarda
 guglielmo
@@ -978,6 +992,7 @@ icestudio
 ideamerit
 igdm
 iheartradio-webapp
+imagemagick-clang
 imagemagick-gcc
 imagemosaicwall
 imageplay
@@ -995,6 +1010,7 @@ infinitex
 infra-app
 inkdown
 inkscape
+inkscape-next
 innerbreeze
 insight
 insomnia
@@ -1078,6 +1094,7 @@ katvan
 kbackup
 kblackbox
 kblocks
+kboard
 kbounce
 kbreakout
 kcalc
@@ -1174,6 +1191,7 @@ kwave
 kweather
 kwrite
 labplot
+lagrange
 laidout
 laigter
 lambda-lantern
@@ -1282,6 +1300,7 @@ mapton
 mark-mind
 markflowy
 markman
+marktext
 marlin-conf
 martian
 marvin
@@ -1347,10 +1366,12 @@ mini-diary
 mini-qml
 minififa
 minimal-podcasts-player
+minions
 minizinc-ide
 mira-backup
 mirage
 miru
+mission-center
 miteiru
 mjml-app
 mk
@@ -1373,6 +1394,7 @@ monokle
 monoline
 mood-fi
 moolticute
+moonfm
 moonlight
 moonplayer
 moose
@@ -1436,6 +1458,7 @@ neko
 neohtop
 neon
 neovide
+nepaliunicode
 nerdfetch
 nerimity-desktop
 nest-desktop
@@ -1482,6 +1505,7 @@ notepadnext
 notepadqq
 noter
 notes
+notes-nc
 noteshrink-qt
 notesnook
 novelwriter
@@ -1640,6 +1664,7 @@ pelusica
 pencil
 pennywise
 perl-executing-browser
+permastead
 peruse
 pet
 pext
@@ -1750,6 +1775,7 @@ prisma-studio
 prismlauncher
 prismlauncher-qt5
 privacy.sexy
+privaxy
 procdepmonitor
 procs
 procspin
@@ -1839,6 +1865,7 @@ quick-clone
 quickgui
 quicknote
 quickredis
+quicktwitch
 quickviewer
 quiet
 quokkagit
@@ -1872,9 +1899,11 @@ rebaslight
 rebos
 recoll
 record-compare
+recordscript
 redeclipse
 redis-gui
 redis-viewer
+redminetimetracker
 reliefvalve
 remind-me-again
 remnote
@@ -1934,14 +1963,17 @@ s
 s3drive
 sabaki
 saber
+safe-multisig
 samira
 samrewritten
 saphyr
+satisfactory
 saucedacity
 savvycan
 sayonara
 sbe
 sblauncher
+sc-controller
 scatter
 scavengers
 schilbidi-chat
@@ -2001,6 +2033,7 @@ sigdigger
 sigma-file-manager
 sigmaspectra
 signal
+sigrok-cli
 silex-desktop
 siliconsneaker
 silverkey
@@ -2046,6 +2079,7 @@ smuview
 snake-js
 snapshot-slider
 snes9x
+snippetstore
 snomcontrol
 snowball
 soapy-sdr
@@ -2080,6 +2114,7 @@ speedyloader
 speek
 sphia
 spicy-launcher
+spivak
 spm
 spmp
 spotifetch
@@ -2125,6 +2160,7 @@ storyboarder
 strans
 strata
 strawberry
+streamcapture2
 streamdock
 streamlink
 streamlink-twitch-gui
@@ -2158,6 +2194,7 @@ superproductivity
 superslicer-bin
 superslicer-prerelease-bin
 supertag
+supertux
 supertuxkart
 supertuxkart-appimage
 surrealist
@@ -2244,6 +2281,7 @@ thunderbird-appimage
 thunderbird-beta
 thunderbird-beta-appimage
 thunderbird-nightly
+thunderbird-nightly-appimage
 ticker
 tidal-hifi
 tilde-podcast
@@ -2318,6 +2356,7 @@ uivonim
 ultimmc
 ultragrid
 ultrascreen
+ums
 uncov
 unetbootin
 ungoogled-chromium
@@ -2348,6 +2387,7 @@ uwufetch
 uyou
 v2ray-desktop
 valentina
+valeronoi
 vcloudcam
 vechain
 vegeta
@@ -2430,6 +2470,7 @@ webcatalog
 webcord
 webdesktop
 webkitty
+webrecorder
 weektodo
 westeroscraftlauncher
 wethr
@@ -2508,6 +2549,7 @@ xmedcon
 xnconvert
 xnviewmp
 xonsh
+xournal++
 xournal++nightly
 xpeviewer
 xpipe
@@ -2531,6 +2573,7 @@ ym-desktop
 youtube-download
 youtube-downloader
 youtube-music
+youtube-tui
 youtubeanddownloader
 youtubesearchfilter
 yt-dlandcut
@@ -2568,6 +2611,7 @@ zoom
 zotero
 zoxide
 zramen
+zsync2
 zulip
 zx-poly
 zxinfo-file-browser
