@@ -31,7 +31,23 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.TOKEN }}
 
-      - name: "Prepare branch"
+      - name: "Get last commit from main-clean"
+        id: last_commit
+        run: |
+          # Get the last commit hash from main-clean branch
+          LAST_COMMIT_MAIN_CLEAN=$(git log origin/main-clean -n 1 --pretty=format:"%H")
+          echo "Last commit in main-clean: $LAST_COMMIT_MAIN_CLEAN"
+          echo "last_commit_main_clean=$LAST_COMMIT_MAIN_CLEAN" >> $GITHUB_ENV
+
+      - name: "Find corresponding commit in main"
+        id: find_commit
+        run: |
+          # Find the corresponding commit from main that matches the last commit in main-clean
+          COMMIT_IN_MAIN=$(git merge-base origin/main ${{ env.LAST_COMMIT_MAIN_CLEAN }})
+          echo "Found matching commit in main: $COMMIT_IN_MAIN"
+          echo "commit_in_main=$COMMIT_IN_MAIN" >> $GITHUB_ENV
+
+      - name: "Checkout branch"
         run: |
           git config user.name "${{ github.repository_owner }}"
           git config user.email "noreply@github.com"
@@ -41,10 +57,16 @@ jobs:
           else
             git checkout -b "${{ env.BRANCH }}"
           fi
-          git rebase origin/main || (git rebase --abort && echo "Rebase failed, keeping previous state")
+
+      - name: "Rebase to latest changes from main"
+        run: |
+          # Fetch and rebase from the point where main-clean diverged from main
+          git fetch origin main
+          git rebase --onto ${GITHUB_ENV.commit_in_main} origin/main "${{ env.LAST_COMMIT_MAIN_CLEAN }}"
 
       - name: "Clean empty merge commits"
         run: |
+          # Only clean up commits after the last known commit
           git filter-branch -f --commit-filter '
             if git show -s --format=%P $GIT_COMMIT | grep -q " "; then
               skip_commit "$@";
