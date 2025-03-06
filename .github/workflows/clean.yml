@@ -31,19 +31,19 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.TOKEN }}
 
-      - name: "Get last commit from main-clean"
+      - name: "Find the last commit in main-clean"
         id: last_commit
         run: |
-          # Get the last commit hash from main-clean branch
-          LAST_COMMIT_MAIN_CLEAN=$(git log origin/main-clean -n 1 --pretty=format:"%H")
-          echo "Last commit in main-clean: $LAST_COMMIT_MAIN_CLEAN"
-          echo "last_commit_main_clean=$LAST_COMMIT_MAIN_CLEAN" >> $GITHUB_ENV
-
+          # Get the last commit hash from the main-clean branch
+          LAST_COMMIT=$(git rev-parse origin/${{ env.BRANCH }})
+          echo "Last commit in main-clean: $LAST_COMMIT"
+          echo "LAST_COMMIT=$LAST_COMMIT" >> $GITHUB_ENV
+      
       - name: "Find corresponding commit in main"
         id: find_commit
         run: |
           # Find the corresponding commit from main that matches the last commit in main-clean
-          COMMIT_IN_MAIN=$(git merge-base origin/main ${{ env.LAST_COMMIT_MAIN_CLEAN }})
+          COMMIT_IN_MAIN=$(git merge-base origin/main ${{ env.LAST_COMMIT }})
           echo "Found matching commit in main: $COMMIT_IN_MAIN"
           echo "commit_in_main=$COMMIT_IN_MAIN" >> $GITHUB_ENV
 
@@ -58,11 +58,21 @@ jobs:
             git checkout -b "${{ env.BRANCH }}"
           fi
 
-      - name: "Rebase to latest changes from main"
+      - name: "Apply changes from $BRANCH to main"
         run: |
-          # Fetch and rebase from the point where main-clean diverged from main
-          git fetch origin main
-          git rebase --onto ${GITHUB_ENV.commit_in_main} origin/main "${{ env.LAST_COMMIT_MAIN_CLEAN }}"
+          # Checkout to main branch
+          git checkout main
+          # Fetch latest updates
+          git fetch origin
+          # Get the diff between "${{ env.BRANCH }}" and main
+          git diff ${{ env.COMMIT_IN_MAIN }}..${{ env.LAST_COMMIT }} > changes.diff
+          # Apply the diff to the "${{ env.BRANCH }}" branch
+          git apply changes.diff
+          # Add and commit the changes
+          git add .
+          git commit -m "Apply changes from main"
+          # Push the changes to "${{ env.BRANCH }}"
+          git push origin "${{ env.BRANCH }}"
 
       - name: "Clean empty merge commits"
         run: |
