@@ -147,7 +147,7 @@ jobs:
           if [[ "${{ github.event.inputs.retest_excluded }}" != "true" ]]; then
             mkdir -p results
             if [[ -f results-apps/tested ]]; then
-              if diff -q appslist results-apps/tested; then
+              if ! grep -Fxvf results-apps/tested appslist > totest_tmp.list; then
                 echo "Everything tested" >> $GITHUB_STEP_SUMMARY
                 echo "skip=true" >> $GITHUB_OUTPUT
                 exit 0
