@@ -31,15 +31,31 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.TOKEN }}
 
-      - name: "Clean empty merge commits"
+      - name: "Prepare branch"
         run: |
           git config user.name "${{ github.repository_owner }}"
           git config user.email "noreply@github.com"
-          git branch -D "${{ env.BRANCH }}" || true
-          git checkout -b "${{ env.BRANCH }}"
-          git rebase --force "${{ env.BRANCH }}" origin/main
-          git push --force origin HEAD:refs/heads/"${{ env.BRANCH }}"
-          #TODO: Use git-filter-repo to remove empty merge commits
-          #git filter-repo --refs "${{ env.BRANCH }}" --prune-degenerate always --force
-          git filter-branch -f --commit-filter ' if git show -s --format=%P $GIT_COMMIT | grep -q " "; then skip_commit "$@"; else git commit-tree "$@"; fi' HEAD
-          git push --force origin HEAD:"${{ env.BRANCH }}" || (git diff && git status)
+          if git ls-remote --exit-code --heads origin "${{ env.BRANCH }}"; then
+            git fetch origin "${{ env.BRANCH }}"
+            git checkout "${{ env.BRANCH }}"
+          else
+            git checkout -b "${{ env.BRANCH }}"
+          fi
+          git rebase origin/main || (git rebase --abort && echo "Rebase failed, keeping previous state")
+
+      - name: "Clean empty merge commits"
+        run: |
+          git filter-branch -f --commit-filter '
+            if git show -s --format=%P $GIT_COMMIT | grep -q " "; then
+              skip_commit "$@";
+            else
+              git commit-tree "$@";
+            fi' HEAD || echo "No commits modified"
+
+      - name: "Push changes"
+        run: |
+          if ! git diff --quiet; then
+            git push --force origin HEAD:"${{ env.BRANCH }}"
+          else
+            echo "No changes to push"
+          fi
