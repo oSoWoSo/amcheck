@@ -150,6 +150,7 @@ jobs:
               if ! grep -Fxvf results-apps/tested appslist > totest_tmp.list; then
                 echo "Everything tested" >> $GITHUB_STEP_SUMMARY
                 echo "skip=true" >> $GITHUB_OUTPUT
+                echo "matrix={\"include\": []}" >> $GITHUB_OUTPUT
                 exit 0
               else
                 comm -23 appslist results-apps/tested > totest_tmp.list
@@ -160,10 +161,9 @@ jobs:
             fi
             if [[ -f results-apps/excluded ]]; then
               comm -23 totest_tmp.list results-apps/excluded > totest.list
-              echo "### excluded:" >> $GITHUB_STEP_SUMMARY
-              cat results-apps/excluded >> $GITHUB_STEP_SUMMARY
               if [ ! -s totest.list ]; then
                 echo "skip=true" >> $GITHUB_OUTPUT
+                echo "matrix={\"include\": []}" >> $GITHUB_OUTPUT
                 exit 0
               fi
             else
@@ -178,6 +178,11 @@ jobs:
             echo "matrix=$MATRIX" >> $GITHUB_OUTPUT
           elif [[ "${{ github.event.inputs.retest_excluded }}" == "true" ]]; then
             grep -Fxf results-apps/excluded appslist > retest.list
+            if [ ! -s retest.list ]; then
+              echo "skip=true" >> $GITHUB_OUTPUT
+              echo "matrix={\"include\": []}" >> $GITHUB_OUTPUT
+              exit 0
+            fi
             FILES=$(cat retest.list)
             MATRIX="{\"include\": ["
             for file in $FILES; do
