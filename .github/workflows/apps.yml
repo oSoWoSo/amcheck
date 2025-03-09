@@ -150,7 +150,6 @@ jobs:
               if ! grep -Fxvf results-apps/tested appslist > totest_tmp.list; then
                 echo "Everything tested" >> $GITHUB_STEP_SUMMARY
                 echo "skip=true" >> $GITHUB_OUTPUT
-                echo "matrix={\"include\": []}" >> $GITHUB_OUTPUT
                 exit 0
               else
                 comm -23 appslist results-apps/tested > totest_tmp.list
@@ -163,7 +162,6 @@ jobs:
               comm -23 totest_tmp.list results-apps/excluded > totest.list
               if [ ! -s totest.list ]; then
                 echo "skip=true" >> $GITHUB_OUTPUT
-                echo "matrix={\"include\": []}" >> $GITHUB_OUTPUT
                 exit 0
               fi
             else
@@ -180,7 +178,6 @@ jobs:
             grep -Fxf results-apps/excluded appslist > retest.list
             if [ ! -s retest.list ]; then
               echo "skip=true" >> $GITHUB_OUTPUT
-              echo "matrix={\"include\": []}" >> $GITHUB_OUTPUT
               exit 0
             fi
             FILES=$(cat retest.list)
@@ -308,7 +305,7 @@ jobs:
     runs-on: ubuntu-22.04
     outputs:
       skip: ${{ steps.logs.outputs.fail }}
-    if: always() && needs.generate-matrix.outputs.skip != true
+    if: ${{ always() && needs.generate-matrix.outputs.skip != true }}
     steps:
       - name: "Checkout repository 🏃"
         uses: actions/checkout@v4
@@ -437,7 +434,7 @@ jobs:
     name: "all 🏁"
     runs-on: ubuntu-22.04
     needs: generate-matrix
-    if: needs.generate-matrix.outputs.skip == true
+    if: ${{ needs.generate-matrix.outputs.skip == true }}
     steps:
       - name: "Mark as Successfull"
         run: |
