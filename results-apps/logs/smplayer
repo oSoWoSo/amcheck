@@ -1,0 +1,19 @@
+Shell completion has been enabled!
+============================================================================
+
+                  [1;34mSTART OF ALL INSTALLATION PROCESSES[0m
+
+============================================================================
+
+ ◆ "SMPLAYER": starting installation script
+
+1741827770 ERROR torsocks[2978]: Unable to resolve. Status reply: 4 (in socks5_recv_resolve_reply() at socks5.c:677)
+http://: Invalid host name.
+
+ 💀 ERROR DURING INSTALLATION, REMOVED "SMPLAYER"!
+____________________________________________________________________________
+============================================================================
+
+                  [1;34mEND OF ALL INSTALLATION PROCESSES
+[0m
+============================================================================
