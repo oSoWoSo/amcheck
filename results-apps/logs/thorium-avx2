@@ -1,0 +1,19 @@
+Shell completion has been enabled!
+============================================================================
+
+                  [1;34mSTART OF ALL INSTALLATION PROCESSES[0m
+
+============================================================================
+
+ ◆ "THORIUM-AVX2": starting installation script
+
+1741869672 ERROR torsocks[2936]: Unable to resolve. Status reply: 4 (in socks5_recv_resolve_reply() at socks5.c:677)
+http://: Invalid host name.
+
+ 💀 ERROR DURING INSTALLATION, REMOVED "THORIUM-AVX2"!
+____________________________________________________________________________
+============================================================================
+
+                  [1;34mEND OF ALL INSTALLATION PROCESSES
+[0m
+============================================================================
