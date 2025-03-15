@@ -4432,3 +4432,82 @@ APP="znax"
 SITE="joyrider3774/Znax"
 version="https://github.com/joyrider3774/Znax/releases/download/v1.1/znax-1.1-linux.x86_64.AppImage"
 -----------------------------------------------------------------
+APP="2ship"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="HarbourMasters/2ship2harkinian"
+downVer="https://github.com/HarbourMasters/2ship2harkinian/releases/download/1.1.2/2Ship-Satoko-Charlie-Linux.zip"
+size=11 MB
+version=IS
+-----------------------------------------------------------------
+APP="3d-puzzles"
+APPIMAGE='yes'
+GITHUB='no'
+SITE="volatilflerovium/3D-Puzzles"
+downVer="https://raw.githubusercontent.com/volatilflerovium/3D-Puzzles/main/3D-Puzzles-x86_64.AppImage"
+size=2 MB
+version=IS
+-----------------------------------------------------------------
+APP="432hz-player"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="mysteryx93/NaturalGroundingPlayer"
+downVer="https://github.com/mysteryx93/HanumanInstituteApps/releases/download/v3.3.2/Player432Hz-3.3.2_Linux_x64.AppImage"
+size=16 MB
+version=IS
+-----------------------------------------------------------------
+APP="7zip"
+APPIMAGE='no'
+GITHUB='no'
+SITE="https://www.7-zip.org"
+downVer="https://www.7-zip.org/a/7z2409-linux-x64.tar.xz"
+size=7 MB
+version=IS
+-----------------------------------------------------------------
+APP="aaaaxy"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="divVerent/aaaaxy"
+downVer="https://github.com/divVerent/aaaaxy/releases/download/v1.6.0/AAAAXY-x86_64.AppImage"
+size=34 MB
+version=IS
+-----------------------------------------------------------------
+APP="abiword"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/Abiword-appimage"
+downVer="https://github.com/ivan-hc/Abiword-appimage/releases/download/continuous/AbiWord_3.0.6-2-archimage4.3-x86_64.AppImage"
+size=64 MB
+version=IS
+-----------------------------------------------------------------
+APP="adb"
+APPIMAGE='no'
+GITHUB='no'
+SITE="https://developer.android.com"
+downVer="35.0.2"
+size=18 MB
+version=IS
+-----------------------------------------------------------------
+APP="admin-tools"
+APPIMAGE='yes'
+GITHUB='no'
+SITE="https://download.opensuse.org/repositories/home:/dmulder:/YaST:/AppImage/AppImage/admin-tools-latest-x86_64.AppImage"
+size=84 MB
+version=IS
+-----------------------------------------------------------------
+APP="advanced-passgen"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="CodeDead/Advanced-PassGen"
+downVer="https://github.com/CodeDead/Advanced-PassGen/releases/download/v2.5.2/advanced-passgen_2.5.2_amd64.AppImage"
+size=117 MB
+version=IS
+-----------------------------------------------------------------
+APP="affine-beta"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="toeverything/AFFiNE"
+downVer="https://github.com/toeverything/AFFiNE/releases/download/v0.20.5-beta.1/affine-0.20.5-beta.1-beta-linux-x64.appimage"
+size=178 MB
+version=IS
+-----------------------------------------------------------------
