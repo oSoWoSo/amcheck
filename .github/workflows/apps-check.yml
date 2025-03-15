@@ -362,7 +362,7 @@ jobs:
           fi
 
           # Install the application
-          timeout "$TIMEOUT"m if [ "$pure_arg" = suyu ]; then
+          if [ "$pure_arg" = suyu ]; then
 
             echo "This application cannot be installed on github actions" | tee -a results/log-"${{ matrix.file }}"
             echo "${{ matrix.file }}" >> results/ok-${{ matrix.file }}
@@ -371,7 +371,7 @@ jobs:
 
             if [[ "$pure_arg" =~ (libreoffice|mpv|wine) ]]; then
 
-              echo 1 | am -i "${{ matrix.file }}" --debug 2>&1 | tee -a results/log-"${{ matrix.file }}"
+              echo 1 | timeout "$TIMEOUT"m am -i "${{ matrix.file }}" --debug 2>&1 | tee -a results/log-"${{ matrix.file }}"
               size=$(cat "results/log-${{ matrix.file }}" | tee /dev/null | grep 'OF DISK SPACE' | cut -d'(' -f2 | cut -d' ' -f1,2)
               Preversion=$(cat "results/log-${{ matrix.file }}" | tee /dev/null | grep '◆' | tail -1 | head -1)
               echo "pre version is $Preversion"
@@ -551,7 +551,7 @@ jobs:
           set -uo pipefail
           mkdir -p results
           #echo "Second try" >> $GITHUB_STEP_SUMMARY
-          timeout "$TIMEOUT"m if [ -f results/excluded ]; then
+          if [ -f results/excluded ]; then
             for failed in $(cat results/excluded); do
               # Define the content of the script
               if [ -f "$failed" ]; then
@@ -612,7 +612,7 @@ jobs:
                   echo "version=${version}" | tee -a results/out-"$failed"
                   else
 
-                  echo y | am -i "$failed" --debug 2>&1 \
+                  echo y | timeout "$TIMEOUT"m am -i "$failed" --debug 2>&1 \
                   | tee -a results/log-"$failed" \
                   || sudo systemctl restart tor.service && echo y \
                   | am -i "$failed" --debug 2>&1 \
