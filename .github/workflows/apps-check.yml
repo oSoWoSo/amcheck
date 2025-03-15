@@ -530,7 +530,11 @@ jobs:
           if [ -f results/excluded ]; then
             for failed in $(cat results/excluded); do
               # Define the content of the script
-              script_content=$(cat $failed || echo "App don't exist!" && exit 0)
+              if [ -f "$failed" ]; then
+                script_content=$(cat $failed)
+              else
+                echo "App don't exist" && exit 0
+              fi
               # Define the pure name of the app
               pure_arg=$(echo "$failed" | sed 's/\-appimage$//g' | sed 's:.*/::')
 
