@@ -49,6 +49,7 @@ env:
   REPO: ${{ github.repository_owner }}/AM
   BRANCH: main
   TOTEST: 250
+  TIMEOUT: 23
 
 jobs:
   triggered:
@@ -240,7 +241,7 @@ jobs:
       fail-fast: false
       matrix: ${{ fromJson(needs.generate-matrix.outputs.matrix) }}
     env:
-      TIMEOUT: 23
+      TIMEOUT: 5
     steps:
       - name: "Checkout AM"
         uses: actions/checkout@v4
@@ -361,7 +362,7 @@ jobs:
           fi
 
           # Install the application
-          if [ "$pure_arg" = suyu ]; then
+          timeout "$TIMEOUT"m if [ "$pure_arg" = suyu ]; then
 
             echo "This application cannot be installed on github actions" | tee -a results/log-"${{ matrix.file }}"
             echo "${{ matrix.file }}" >> results/ok-${{ matrix.file }}
@@ -517,6 +518,8 @@ jobs:
     needs: download-results
     if: (always() && github.event.inputs.reset_stats != 'true')
     runs-on: ubuntu-22.04
+    env:
+      TIMEOUT: 23
     steps:
       - name: "Checkout AM"
         uses: actions/checkout@v4
@@ -548,7 +551,7 @@ jobs:
           set -uo pipefail
           mkdir -p results
           #echo "Second try" >> $GITHUB_STEP_SUMMARY
-          if [ -f results/excluded ]; then
+          timeout "$TIMEOUT"m if [ -f results/excluded ]; then
             for failed in $(cat results/excluded); do
               # Define the content of the script
               if [ -f "$failed" ]; then
