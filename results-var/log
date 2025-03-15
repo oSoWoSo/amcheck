@@ -8472,3 +8472,1986 @@ downVer="https://github.com/psadi/ghostty-appimage/releases/download/v1.1.2%2B4/
 size=72 MB
 version=starting
 -----------------------------------------------------------------
+APP="giada"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="monocasual/giada"
+downVer="https://github.com/monocasual/giada/releases/download/1.1.0/Giada-1.1.0-x86_64.AppImage"
+size=20 MB
+version=starting
+-----------------------------------------------------------------
+APP="gibs"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="sierdzio/gibs"
+downVer="https://github.com/sierdzio/gibs/releases/download/v0.0.4/gibs-x86_64-2018-07-14.AppImage"
+size=15 MB
+version=starting
+-----------------------------------------------------------------
+APP="gickup"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="cooperspencer/gickup"
+downVer="https://github.com/cooperspencer/gickup/releases/download/v0.10.36/gickup_0.10.36_linux_amd64.tar.gz"
+size=17 MB
+version=starting
+-----------------------------------------------------------------
+APP="gimp-dev"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/GIMP-appimage"
+downVer="https://github.com/ivan-hc/GIMP-appimage/releases/download/continuous-dev/GNU-Image-Manipulation-Program_DEV_3.0.0rc3-1-archimage3.5-x86_64.AppImage"
+size=212 MB
+version=starting
+-----------------------------------------------------------------
+APP="gimp-git"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/GIMP-appimage"
+downVer="https://github.com/ivan-hc/GIMP-appimage/releases/download/continuous-git/GNU-Image-Manipulation-Program_GIT_54300.e139e016a58-1-archimage4.3-x86_64.AppImage"
+size=194 MB
+version=starting
+-----------------------------------------------------------------
+APP="gingko"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="gingko/client"
+downVer="https://github.com/gingko/client/releases/download/v2.4.15/Gingko-2.4.15.AppImage"
+size=111 MB
+version=starting
+-----------------------------------------------------------------
+APP="git-good"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="weedz/git-good"
+downVer="https://github.com/weedz/git-good/releases/download/v0.1.1/git-good-0.1.1.AppImage"
+size=87 MB
+version=starting
+-----------------------------------------------------------------
+APP="gitify"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="gitify-app/gitify"
+downVer="https://github.com/gitify-app/gitify/releases/download/v6.2.0/Gitify-6.2.0.AppImage"
+size=98 MB
+version=starting
+-----------------------------------------------------------------
+APP="gitleaks"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="gitleaks/gitleaks"
+downVer="https://github.com/gitleaks/gitleaks/releases/download/v8.24.0/gitleaks_8.24.0_linux_x64.tar.gz"
+size=15 MB
+version=starting
+-----------------------------------------------------------------
+APP="gitql"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="filhodanuvem/gitql"
+downVer="https://github.com/filhodanuvem/gitql/releases/download/v2.3.1/gitql_2.3.1_Linux_x86_64.tar.gz"
+size=10 MB
+version=starting
+-----------------------------------------------------------------
+APP="gitqlient"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="francescmm/GitQlient"
+downVer="https://github.com/francescmm/GitQlient/releases/download/dev-latest/GitQlient-bd4f38c4-x86_64.AppImage"
+size=31 MB
+version=starting
+-----------------------------------------------------------------
+APP="glab"
+APPIMAGE='no'
+GITHUB='no'
+SITE="https://gitlab.com/gitlab-org/cli"
+downVer="https://gitlab.com/gitlab-org/cli/-/releases/v1.53.0/downloads/glab_1.53.0_linux_amd64.tar.gz"
+size=27 MB
+version=starting
+-----------------------------------------------------------------
+APP="glaxnimate"
+APPIMAGE='yes'
+GITHUB='no'
+SITE="https://glaxnimate.mattbas.org"
+downVer="0.5.80"
+size=175 MB
+version=starting
+-----------------------------------------------------------------
+APP="glow"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="charmbracelet/glow"
+size=17 MB
+version=starting
+-----------------------------------------------------------------
+APP="gltf-insight"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="lighttransport/gltf-insight"
+downVer="https://github.com/lighttransport/gltf-insight/releases/download/continuous/gltf-insight-7cf61f1-x86_64.AppImage"
+size=2 MB
+version=starting
+-----------------------------------------------------------------
+APP="glyphr-studio-desktop"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="glyphr-studio/Glyphr-Studio-Desktop"
+downVer="https://github.com/glyphr-studio/Glyphr-Studio-Desktop/releases/download/v0.6.0/Glyphr.Studio-0.6.0.AppImage"
+size=147 MB
+version=starting
+-----------------------------------------------------------------
+APP="gm-companion"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="PhilInTheGaps/GM-Companion"
+downVer="https://github.com/PhilInTheGaps/GM-Companion/releases/download/1.2.1/gm-companion_1.2.1_x86_64.AppImage"
+size=67 MB
+version=starting
+-----------------------------------------------------------------
+APP="gnome-boxes"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/Boxes-appimage"
+downVer="https://github.com/ivan-hc/Boxes-appimage/releases/download/continuous/Boxes_47.0-1-archimage4.3-x86_64.AppImage"
+size=182 MB
+version=starting
+-----------------------------------------------------------------
+APP="gnome-tweaks"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/Gnome-tweaks-appimage"
+downVer="https://github.com/ivan-hc/Gnome-tweaks-appimage/releases/download/continuous/Tweaks_46.1-1-archimage3.4.2-x86_64.AppImage"
+size=192 MB
+version=starting
+-----------------------------------------------------------------
+APP="go-spotify-cli"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="Envoy49/go-spotify-cli"
+downVer="https://github.com/Envoy49/go-spotify-cli/releases/download/v1.0.80/go-spotify-cli_linux_amd64.tar.gz"
+size=9 MB
+version=starting
+-----------------------------------------------------------------
+APP="godot"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="godotengine/godot"
+downVer="https://github.com/godotengine/godot/releases/download/4.4-stable/Godot_v4.4-stable_linux.x86_64.zip"
+size=121 MB
+version=starting
+-----------------------------------------------------------------
+APP="gojq"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="itchyny/gojq"
+downVer="https://github.com/itchyny/gojq/releases/download/v0.12.17/gojq_v0.12.17_linux_amd64.tar.gz"
+size=5 MB
+version=starting
+-----------------------------------------------------------------
+APP="goland"
+APPIMAGE='no'
+GITHUB='no'
+SITE="https://www.jetbrains.com"
+downVer="https://download.jetbrains.com/go/goland-2024.3.5.tar.gz"
+size=2857 MB
+version=starting
+-----------------------------------------------------------------
+APP="goldencheetah"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="GoldenCheetah/GoldenCheetah"
+downVer="https://github.com/GoldenCheetah/GoldenCheetah/releases/download/snapshot/GoldenCheetah_v3.7-DEV_x64.AppImage"
+size=245 MB
+version=starting
+-----------------------------------------------------------------
+APP="goldendict"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="Abs62/goldendict"
+downVer="https://github.com/Abs62/goldendict/releases/download/continuous/GoldenDict-661dd4d-x86_64.AppImage"
+size=56 MB
+version=starting
+-----------------------------------------------------------------
+APP="goofcord"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="Milkshiift/GoofCord"
+downVer="https://github.com/Milkshiift/GoofCord/releases/download/v1.8.4/GoofCord-1.8.4-linux-x86_64.AppImage"
+size=105 MB
+version=starting
+-----------------------------------------------------------------
+APP="google-task-tauri"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="codad5/google-task-tauri"
+downVer="https://github.com/codad5/google-task-desktop/releases/download/v0.0.9/google-task_0.0.9_amd64.AppImage"
+size=82 MB
+version=starting
+-----------------------------------------------------------------
+APP="gopass"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="gopasspw/gopass"
+downVer="https://github.com/gopasspw/gopass/releases/download/v1.15.15/gopass-1.15.15-linux-amd64.tar.gz"
+size=20 MB
+version=starting
+-----------------------------------------------------------------
+APP="gopeed"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="GopeedLab/gopeed"
+downVer="https://github.com/GopeedLab/gopeed/releases/download/v1.6.10/Gopeed-v1.6.10-linux-x86_64.AppImage"
+size=23 MB
+version=starting
+-----------------------------------------------------------------
+APP="gost-shred"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="pedroalbanese/gost-shred"
+downVer="https://github.com/pedroalbanese/gost-shred/releases/download/v1.0.0/gost-shred_linux-x86.zip"
+size=2 MB
+version=starting
+-----------------------------------------------------------------
+APP="gotimer"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="nwillc/gotimer"
+downVer="https://github.com/nwillc/gotimer/releases/download/v1.2.3/gotimer_linux_amd64.zip"
+size=6 MB
+version=starting
+-----------------------------------------------------------------
+APP="goto"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="grafviktor/goto"
+downVer="https://docs.github.com/rest"
+size=19 MB
+version=starting
+-----------------------------------------------------------------
+APP="goverlay"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="benjamimgois/goverlay"
+downVer="https://github.com/benjamimgois/goverlay/releases/download/1.3-3/GOverlay-git-anylinux-x86_64.AppImage"
+size=64 MB
+version=starting
+-----------------------------------------------------------------
+APP="gpg-tui"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="orhun/gpg-tui"
+downVer="https://github.com/orhun/gpg-tui/releases/download/v0.11.0/gpg-tui-0.11.0-x86_64-unknown-linux-gnu.tar.gz"
+size=3 MB
+version=starting
+-----------------------------------------------------------------
+APP="gpgfrontend"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="saturneric/GpgFrontend"
+downVer="https://github.com/saturneric/GpgFrontend/releases/download/v2.1.7/GpgFrontend-2.1.7-qt5-linux-x86_64.AppImage"
+size=48 MB
+version=starting
+-----------------------------------------------------------------
+APP="gping"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="orf/gping"
+size=4 MB
+version=starting
+-----------------------------------------------------------------
+APP="gpupad"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="houmain/gpupad"
+downVer="https://github.com/houmain/gpupad/releases/download/1.35.1/GPUpad-1.35.1-x86_64.AppImage"
+size=39 MB
+version=starting
+-----------------------------------------------------------------
+APP="gqrx"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="csete/gqrx"
+downVer="https://github.com/gqrx-sdr/gqrx/releases/download/v2.17.6/Gqrx-2.17.6-x86_64.AppImage"
+size=63 MB
+version=starting
+-----------------------------------------------------------------
+APP="grabscr"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="thepeshka/grabscr"
+downVer="https://github.com/thepeshka/grabscr/releases/download/v0.0.7/GrabSCR-0.0.7-x86_64.AppImage"
+size=33 MB
+version=starting
+-----------------------------------------------------------------
+APP="granatier"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/KDE-games-suite-appimage"
+downVer="https://github.com/ivan-hc/KDE-games-suite-appimage/releases/download/continuous/KDE-games-suite_24.12-2-archimage4.3-x86_64.AppImage"
+size=369 MB
+version=starting
+-----------------------------------------------------------------
+APP="graphql-playground"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="graphcool/graphql-playground"
+downVer="https://github.com/graphql/graphql-playground/releases/download/v1.8.10/graphql-playground-electron-1.8.10-x86_64.AppImage"
+size=75 MB
+version=starting
+-----------------------------------------------------------------
+APP="graviton"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="Graviton-Code-Editor/Graviton-App"
+downVer="https://github.com/Graviton-Code-Editor/Graviton-App/releases/download/v2.3.0/Graviton-Editor_Installer_2.3.0_linux_x86_64.AppImage"
+size=109 MB
+version=starting
+-----------------------------------------------------------------
+APP="greenlight"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="unknownskl/greenlight"
+downVer="https://github.com/unknownskl/greenlight/releases/download/v2.3.1/Greenlight-2.3.1.AppImage"
+size=107 MB
+version=starting
+-----------------------------------------------------------------
+APP="gridea"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="getgridea/gridea"
+downVer="https://github.com/getgridea/gridea/releases/download/v0.9.3/Gridea-0.9.3.AppImage"
+size=77 MB
+version=starting
+-----------------------------------------------------------------
+APP="gridsync"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="gridsync/gridsync"
+downVer="https://github.com/gridsync/gridsync/releases/download/v0.6.1/Gridsync-Linux.AppImage"
+size=89 MB
+version=starting
+-----------------------------------------------------------------
+APP="grinplusplus"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="GrinPlusPlus/GrinPlusPlus"
+downVer="https://github.com/GrinPlusPlus/GrinPlusPlus/releases/download/v1.2.9/GrinPlusPlus-1.2.9.AppImage"
+size=143 MB
+version=starting
+-----------------------------------------------------------------
+APP="groot"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="BehaviorTree/Groot"
+downVer="https://github.com/BehaviorTree/Groot/releases/download/1.0.0/Groot-1.0.0-x86_64.AppImage"
+size=42 MB
+version=starting
+-----------------------------------------------------------------
+APP="guarda"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="guardaco/guarda-desktop-releases"
+downVer="https://github.com/guardaco/guarda-desktop-releases/releases/download/v1.0.20/Guarda-1.0.20.AppImage"
+size=73 MB
+version=starting
+-----------------------------------------------------------------
+APP="gum"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="charmbracelet/gum"
+downVer="https://github.com/charmbracelet/gum/releases/download/v0.16.0/gum_0.16.0_Linux_x86_64.tar.gz"
+size=13 MB
+version=starting
+-----------------------------------------------------------------
+APP="gvim"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="vim/vim-appimage"
+downVer="https://github.com/vim/vim-appimage/releases/download/v9.1.1202/GVim-v9.1.1202.glibc2.29-x86_64.AppImage"
+size=45 MB
+version=starting
+-----------------------------------------------------------------
+APP="hades-emu"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="hades-emu/Hades"
+downVer="https://github.com/hades-emu/Hades/releases/download/v1.0.0/hades-linux-appimage.zip"
+size=42 MB
+version=starting
+-----------------------------------------------------------------
+APP="handlr"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="Anomalocaridid/handlr-regex"
+downVer="https://github.com/Anomalocaridid/handlr-regex/releases/download/v0.12.1/handlr"
+size=3 MB
+version=starting
+-----------------------------------------------------------------
+APP="hapee"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="hugetiny/Hapee"
+downVer="https://github.com/hugetiny/Hapee/releases/download/v0.3.0/Negibox-0.3.0.AppImage"
+size=77 MB
+version=starting
+-----------------------------------------------------------------
+APP="hastyheroes"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="Aveek-Saha/HastyHeroes"
+downVer="https://github.com/Aveek-Saha/HastyHeroes/releases/download/v1.0.0/HastyHeroes-1.0.0-x86_64.AppImage"
+size=48 MB
+version=starting
+-----------------------------------------------------------------
+APP="haveno-reto"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="retoaccess1/haveno-reto"
+downVer="https://github.com/retoaccess1/haveno-reto/releases/download/v1.0.18/haveno-linux-appimage.zip"
+size=271 MB
+version=starting
+-----------------------------------------------------------------
+APP="hctl"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="xx4h/hctl"
+downVer="https://github.com/xx4h/hctl/releases/download/v0.6.0/hctl_linux_x86_64.tar.gz"
+size=12 MB
+version=starting
+-----------------------------------------------------------------
+APP="hdrmerge"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="jcelaya/hdrmerge"
+downVer="https://github.com/jcelaya/hdrmerge/releases/download/nightly/hdrmerge_master_continuous-68-g69e3c5f_20191005.AppImage"
+size=33 MB
+version=starting
+-----------------------------------------------------------------
+APP="heat1d"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ARPA-SIMC/CRITERIA1D"
+downVer="https://github.com/ARPA-SIMC/CRITERIA1D/releases/download/v1.8.7/HEAT1D-x86_64.AppImage"
+size=30 MB
+version=starting
+-----------------------------------------------------------------
+APP="helioslauncher"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="dscalzi/HeliosLauncher"
+downVer="https://github.com/dscalzi/HeliosLauncher/releases/download/v2.2.1/Helios-Launcher-setup-2.2.1.AppImage"
+size=91 MB
+version=starting
+-----------------------------------------------------------------
+APP="helix"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="helix-editor/helix"
+downVer="https://github.com/helix-editor/helix/releases/download/25.01.1/helix-25.01.1-x86_64.AppImage"
+size=25 MB
+version=starting
+-----------------------------------------------------------------
+APP="henson"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="NotAName320/Henson"
+downVer="https://github.com/NotAName320/Henson/releases/download/v1.5.2/henson-linux-x64.zip"
+size=40 MB
+version=starting
+-----------------------------------------------------------------
+APP="hero-display"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="tue-robotics/hero-display"
+downVer="https://github.com/tue-robotics/hero-display/releases/download/v0.8.0/hero-display.AppImage"
+size=94 MB
+version=starting
+-----------------------------------------------------------------
+APP="hexoclient"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="gaoyoubo/hexo-client"
+downVer="https://github.com/gaoyoubo/hexo-client/releases/download/v1.3.6/HexoClient-1.3.6.AppImage"
+size=71 MB
+version=starting
+-----------------------------------------------------------------
+APP="hexoeditor"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="zhuzhuyule/HexoEditor"
+downVer="https://github.com/zhuzhuyule/HexoEditor/releases/download/v1.5.30/HexoEditor_1.5.30_linux_x32.AppImage"
+size=91 MB
+version=starting
+-----------------------------------------------------------------
+APP="heynote"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="heyman/heynote"
+downVer="https://github.com/heyman/heynote/releases/download/v2.1.3/Heynote_2.1.3_x86_64.AppImage"
+size=108 MB
+version=starting
+-----------------------------------------------------------------
+APP="hiddify-next"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="hiddify/hiddify-next"
+downVer="https://github.com/hiddify/hiddify-app/releases/download/v2.5.7/Hiddify-Linux-x64.AppImage"
+size=36 MB
+version=starting
+-----------------------------------------------------------------
+APP="hidpi-fixer"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="alex-spataru/HiDPI-Fixer"
+downVer="https://github.com/alex-spataru/HiDPI-Fixer/releases/download/continuous/HiDPI-Fixer-1.4.0.AppImage"
+size=26 MB
+version=starting
+-----------------------------------------------------------------
+APP="hilbish"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="Rosettea/Hilbish"
+downVer="https://github.com/Rosettea/Hilbish/releases/download/v2.3.4/hilbish-v2.3.4-linux-amd64.tar.gz"
+size=10 MB
+version=starting
+-----------------------------------------------------------------
+APP="himalaya"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="pimalaya/himalaya"
+downVer="https://github.com/pimalaya/himalaya/releases/download/v1.0.0-beta.4/himalaya.x86_64-linux.zip"
+size=57 MB
+version=starting
+-----------------------------------------------------------------
+APP="hmcl"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="HMCL-dev/HMCL"
+downVer="https://github.com/HMCL-dev/HMCL/releases/download/v3.6.11.272/HMCL-3.6.11.272.sh"
+size=6 MB
+version=starting
+-----------------------------------------------------------------
+APP="houdoku"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="xgi/houdoku"
+downVer="https://github.com/xgi/houdoku/releases/download/v2.16.0/Houdoku-2.16.0.AppImage"
+size=167 MB
+version=starting
+-----------------------------------------------------------------
+APP="hsinstall"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="dino-/hsinstall"
+downVer="https://github.com/dino-/hsinstall/releases/download/2.8/hsinstall-2.8-x86_64.AppImage"
+size=6 MB
+version=starting
+-----------------------------------------------------------------
+APP="htop"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="Samueru-sama/htop-AppImage"
+size=3 MB
+version=starting
+-----------------------------------------------------------------
+APP="hugin"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="aferrero2707/hugin-appimage"
+downVer="https://github.com/aferrero2707/hugin-appimage/releases/download/continuous/Hugin_Panorama_Creator-2019.0.0-20190407-x86_64.AppImage"
+size=46 MB
+version=starting
+-----------------------------------------------------------------
+APP="hugor"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="realnc/hugor"
+downVer="https://github.com/realnc/hugor/releases/download/v3.0/Hugor-3.0-Linux-x64.AppImage.tar.gz"
+size=31 MB
+version=starting
+-----------------------------------------------------------------
+APP="humanlog"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="humanlogio/humanlog"
+downVer="https://github.com/humanlogio/humanlog/releases/download/v0.7.8/humanlog_0.7.8_linux_amd64.tar.gz"
+size=18 MB
+version=starting
+-----------------------------------------------------------------
+APP="huwinterpreter"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="huwdp/huwinterpreter"
+downVer="https://github.com/huwdp/huwinterpreter/releases/download/v1.0.0.4/HuwInterpreter-x86_64.AppImage"
+size=44 MB
+version=starting
+-----------------------------------------------------------------
+APP="hw-probe"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="linuxhw/hw-probe"
+downVer="https://github.com/linuxhw/hw-probe/releases/download/1.6/hw-probe-1.6.4-186-x86_64.AppImage"
+size=6 MB
+version=starting
+-----------------------------------------------------------------
+APP="hydra"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="hydralauncher/hydra"
+downVer="https://github.com/hydralauncher/hydra/releases/download/v3.3.0/hydralauncher-3.3.0.AppImage"
+size=193 MB
+version=starting
+-----------------------------------------------------------------
+APP="hyper"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="vercel/hyper"
+downVer="https://github.com/vercel/hyper/releases/download/v4.0.0-canary.5/Hyper-4.0.0-canary.5-x86_64.AppImage"
+size=100 MB
+version=starting
+-----------------------------------------------------------------
+APP="hyperdex"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="lukechilds/hyperdex"
+downVer="https://github.com/atomiclabs/hyperdex/releases/download/v0.4.0/hyperdex-0.4.0-x86_64.AppImage"
+size=81 MB
+version=starting
+-----------------------------------------------------------------
+APP="hyperfine"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="sharkdp/hyperfine"
+size=2 MB
+version=starting
+-----------------------------------------------------------------
+APP="hyperionide"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="HyperionScripting/HyperionIDE"
+downVer="https://github.com/HyperionScripting/HyperionIDE/releases/download/v0.1.1/HyperionIDE-0.1.1-x86_64.AppImage"
+size=51 MB
+version=starting
+-----------------------------------------------------------------
+APP="hyperkeys"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="xurei/hyperkeys"
+downVer="https://github.com/xurei/hyperkeys/releases/download/v1.3.4/HyperKeys-1.3.4.AppImage"
+size=102 MB
+version=starting
+-----------------------------------------------------------------
+APP="hypersomnia"
+APPIMAGE='yes'
+GITHUB='no'
+SITE="https://hypersomnia.xyz"
+downVer="1.2.9167"
+size=30 MB
+version=starting
+-----------------------------------------------------------------
+APP="hyperspace"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="alicerunsonfedora/hyperspace"
+downVer="https://github.com/hyperspacedev/hyperspace-classic/releases/download/0.7.0/Hyperspace.0.7.0.AppImage"
+size=93 MB
+version=starting
+-----------------------------------------------------------------
+APP="hypnotix"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/Hypnotix-appimage"
+downVer="https://github.com/ivan-hc/Hypnotix-appimage/releases/download/continuous/Hypnotix_4.9-1-archimage4.3-x86_64.AppImage"
+size=114 MB
+version=starting
+-----------------------------------------------------------------
+APP="i3-auto-layout"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="pando85/i3-auto-layout"
+size=2 MB
+version=starting
+-----------------------------------------------------------------
+APP="i3lock-color"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="Raymo111/i3lock-color"
+size=1 MB
+version=starting
+-----------------------------------------------------------------
+APP="iagoncloudapp"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="Iagonorg/Iagon-storage-node"
+downVer="https://github.com/Iagonorg/testnet-iagon-storage-node/releases/download/v1.1.0/Iagon-Storage-Node_v1.1.0.AppImage"
+size=126 MB
+version=starting
+-----------------------------------------------------------------
+APP="icalingua++"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="Icalingua-plus-plus/Icalingua-plus-plus"
+downVer="https://github.com/Icalingua-plus-plus/Icalingua-plus-plus/releases/download/v2.12.28/Icalingua%2B%2B-2.12.28.AppImage"
+size=154 MB
+version=starting
+-----------------------------------------------------------------
+APP="icecat"
+APPIMAGE='no'
+GITHUB='no'
+SITE="https://www.gnu.org/software/gnuzilla"
+downVer="https://icecatbrowser.org/assets/icecat/115.21.0/icecat-115.21.0.en-US.linux-x86_64.tar.bz2"
+size=227 MB
+version=starting
+-----------------------------------------------------------------
+APP="icestudio"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="FPGAwars/icestudio"
+downVer="https://github.com/FPGAwars/icestudio/releases/download/v0.12/icestudio-0.12-linux64.AppImage"
+size=236 MB
+version=starting
+-----------------------------------------------------------------
+APP="ideamerit"
+APPIMAGE='yes'
+GITHUB='no'
+SITE="https://www.ideamerit.com"
+downVer="https://www.ideamerit.com/downloads/Ideamerit Designer-2.0.0-x86_64.AppImage"
+size=109 MB
+version=starting
+-----------------------------------------------------------------
+APP="igdm"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ifedapoolarewaju/igdm"
+downVer="https://github.com/igdmapps/igdm/releases/download/v3.0.4/IGdm-3.0.4.AppImage"
+size=89 MB
+version=starting
+-----------------------------------------------------------------
+APP="iheartradio-webapp"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ItzSwirlz/iheartradio-webapp"
+downVer="https://github.com/ItzSwirlz/iheartradio-webapp/releases/download/1.4.0/iHeartRadio-1.4.0.AppImage"
+size=78 MB
+version=starting
+-----------------------------------------------------------------
+APP="imagemagick-clang"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ImageMagick/ImageMagick"
+downVer="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.1-45/ImageMagick-37b3453-clang-x86_64.AppImage"
+size=30 MB
+version=starting
+-----------------------------------------------------------------
+APP="imagemagick-gcc"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ImageMagick/ImageMagick"
+downVer="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.1-45/ImageMagick-37b3453-gcc-x86_64.AppImage"
+size=29 MB
+version=starting
+-----------------------------------------------------------------
+APP="imagemosaicwall"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="scheckmedia/ImageMosaicWall"
+downVer="https://github.com/scheckmedia/ImageMosaicWall/releases/download/v0.3/ImageMosaicWall-x86_64.AppImage"
+size=26 MB
+version=starting
+-----------------------------------------------------------------
+APP="imagine"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="meowtec/Imagine"
+downVer="https://github.com/meowtec/Imagine/releases/download/v0.7.5/Imagine-0.7.5.AppImage"
+size=83 MB
+version=starting
+-----------------------------------------------------------------
+APP="imapsyncclient"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ridaamirini/ImapSyncClient"
+downVer="https://github.com/ridaamirini/ImapSyncClient/releases/download/v1.0.1/ImapSync-Client-1.0.1.AppImage"
+size=72 MB
+version=starting
+-----------------------------------------------------------------
+APP="imgbrd-grabber"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="Bionus/imgbrd-grabber"
+downVer="https://github.com/Bionus/imgbrd-grabber/releases/download/v7.13.0/Grabber_v7.13.0-x86_64.AppImage"
+size=63 MB
+version=starting
+-----------------------------------------------------------------
+APP="imgcat"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="danielgatis/imgcat"
+downVer="https://github.com/danielgatis/imgcat/releases/download/v1.0.20/imgcat_1.0.20_Linux_x86_64.tar.gz"
+size=3 MB
+version=starting
+-----------------------------------------------------------------
+APP="imhex"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="WerWolv/ImHex"
+downVer="https://github.com/WerWolv/ImHex/releases/download/v1.37.4/imhex-1.37.4-x86_64.AppImage"
+size=142 MB
+version=starting
+-----------------------------------------------------------------
+APP="impact"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="lxndr/impact"
+downVer="https://github.com/lxndr/impact/releases/download/1.0.0-alpha.4/impact-1.0.0-alpha.4-x86_64.AppImage"
+size=56 MB
+version=starting
+-----------------------------------------------------------------
+APP="inboxer"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="denysdovhan/inboxer"
+downVer="https://github.com/denysdovhan/inboxer/releases/download/v1.3.2/inboxer-1.3.2-x86_64.AppImage"
+size=63 MB
+version=starting
+-----------------------------------------------------------------
+APP="index-maui"
+APPIMAGE='yes'
+GITHUB='no'
+SITE="https://invent.kde.org/maui/"
+size=315 MB
+version=starting
+-----------------------------------------------------------------
+APP="inkscape"
+APPIMAGE='yes'
+GITHUB='no'
+SITE="https://inkscape.org"
+downVer="1.4"
+size=119 MB
+version=starting
+-----------------------------------------------------------------
+APP="inkscape-next"
+APPIMAGE='yes'
+GITHUB='no'
+SITE="https://inkscape.org"
+downVer="1.4"
+size=177 MB
+version=starting
+-----------------------------------------------------------------
+APP="innerbreeze"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="naoxio/inbreeze"
+downVer="https://github.com/naoxio/inbreeze/releases/download/1.3.9/InnerBreeze-x86_64.AppImage"
+size=12 MB
+version=starting
+-----------------------------------------------------------------
+APP="insomnium"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ArchGPT/insomnium"
+downVer="https://github.com/AnagataCetana/insomnium/releases/download/core%400.2.3-a/Insomnium.Core-0.2.3-a.AppImage"
+size=132 MB
+version=starting
+-----------------------------------------------------------------
+APP="instead"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="instead-hub/instead"
+downVer="https://github.com/instead-hub/instead/releases/download/3.5.2/INSTEAD-3.5.2-x86_64.AppImage"
+size=18 MB
+version=starting
+-----------------------------------------------------------------
+APP="international-doom"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="JNechaevsky/international-doom"
+downVer="https://github.com/JNechaevsky/international-doom/releases/download/8.1/inter-doom-8.1-linux.appimage"
+size=9 MB
+version=starting
+-----------------------------------------------------------------
+APP="intiface"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="intiface/intiface-desktop"
+downVer="https://github.com/intiface/intiface-desktop/releases/download/v27.0.0/intiface-desktop-27.0.0-linux-x86_64.AppImage"
+size=78 MB
+version=starting
+-----------------------------------------------------------------
+APP="invoice-generator"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="bhavyaagg/Invoice-Generator-Electron"
+downVer="https://github.com/bhavyaagg/Invoice-Generator-Electron/releases/download/v1.0.0/invoice-generator-1.0.0-x86_64.AppImage"
+size=61 MB
+version=starting
+-----------------------------------------------------------------
+APP="iota1k"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="xx10t4/iota1k"
+downVer="https://github.com/xx10t4/iotalk/releases/download/0.1.3/iotalk-0.1.3-x86_64.AppImage"
+size=57 MB
+version=starting
+-----------------------------------------------------------------
+APP="ipfs-desktop"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ipfs/ipfs-desktop"
+downVer="https://github.com/ipfs/ipfs-desktop/releases/download/v0.41.2/ipfs-desktop-0.41.2-linux-x86_64.AppImage"
+size=165 MB
+version=starting
+-----------------------------------------------------------------
+APP="iptvnator"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="4gray/iptvnator"
+downVer="https://github.com/4gray/iptvnator/releases/download/app-v1.0.0-5/iptvnator_1.0.0-5_amd64.AppImage"
+size=102 MB
+version=starting
+-----------------------------------------------------------------
+APP="ipuissance-4d"
+APPIMAGE='yes'
+GITHUB='no'
+SITE="https://beroux.com"
+downVer="http://download.beroux.com/iPuissance_4D-x86_64.AppImage"
+size=11 MB
+version=starting
+-----------------------------------------------------------------
+APP="irccloud-desktop"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="irccloud/irccloud-desktop"
+downVer="https://github.com/irccloud/irccloud-desktop/releases/download/v0.16.0/IRCCloud-0.16.0-linux-x86_64.AppImage"
+size=81 MB
+version=starting
+-----------------------------------------------------------------
+APP="irscrutinizer"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="bengtmartensson/harctoolboxbundle"
+downVer="https://github.com/bengtmartensson/IrScrutinizer/releases/download/Version-2.4.2/IrScrutinizer-2.4.2-x86_64.AppImage"
+size=40 MB
+version=starting
+-----------------------------------------------------------------
+APP="isle-editor"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="isle-project/isle-editor"
+downVer="https://github.com/isle-project/isle-editor/releases/download/v0.76.23/isle-editor-0.76.23-x86_64.AppImage"
+size=225 MB
+version=starting
+-----------------------------------------------------------------
+APP="isoimagewriter"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/KDE-utils-appimage"
+downVer="https://github.com/ivan-hc/KDE-utils-appimage/releases/download/continuous/KDE-utils_24.12-2-archimage4.3-x86_64.AppImage"
+size=368 MB
+version=starting
+-----------------------------------------------------------------
+APP="isolate"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="seenaburns/isolate"
+downVer="https://github.com/seenaburns/isolate/releases/download/v2.0.2/isolate-2.0.2-x86_64.AppImage"
+size=49 MB
+version=starting
+-----------------------------------------------------------------
+APP="jazz2"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="deathkiller/jazz2"
+downVer="https://github.com/deathkiller/jazz2/releases/download/3.2.0/Jazz2_3.2.0_Linux.zip"
+size=5 MB
+version=starting
+-----------------------------------------------------------------
+APP="jdappstreamedit"
+APPIMAGE='yes'
+GITHUB='no'
+SITE="https://sourceforge.net/projects/jdappstreamedit"
+downVer="https://sourceforge.net/projects/jdappstreamedit/files/9.2/jdAppStreamEdit-9.2-Linux.AppImage/download"
+size=105 MB
+version=starting
+-----------------------------------------------------------------
+APP="jddesktopentryedit"
+APPIMAGE='yes'
+GITHUB='no'
+SITE="https://sourceforge.net/projects/jddesktopentryedit"
+downVer="https://sourceforge.net/projects/jddesktopentryedit/files/1.5/jdDesktopEntryEdit-1.5-Linux.AppImage/download"
+size=94 MB
+version=starting
+-----------------------------------------------------------------
+APP="jdminecraftlauncher"
+APPIMAGE='yes'
+GITHUB='no'
+SITE="https://sourceforge.net/projects/jdminecraftlauncher"
+downVer="https://sourceforge.net/projects/jdminecraftlauncher/files/6.2/jdMinecraftLauncher-6.2-Linux.AppImage/download"
+size=192 MB
+version=starting
+-----------------------------------------------------------------
+APP="jdmrpackinstaller"
+APPIMAGE='yes'
+GITHUB='no'
+SITE="https://sourceforge.net/projects/jdmrpackinstaller/"
+downVer="https://sourceforge.net/projects/jdmrpackinstaller/files/1.1/jdMrpackInstaller-1.1-Linux.AppImage/download"
+size=94 MB
+version=starting
+-----------------------------------------------------------------
+APP="jdnbtexplorer"
+APPIMAGE='yes'
+GITHUB='no'
+SITE="https://sourceforge.net/projects/jdnbtexplorer"
+downVer="https://sourceforge.net/projects/jdnbtexplorer/files/2.3/jdNBTExplorer-2.3-Linux.AppImage/download"
+size=98 MB
+version=starting
+-----------------------------------------------------------------
+APP="jdtextedit"
+APPIMAGE='yes'
+GITHUB='no'
+SITE="https://sourceforge.net/projects/jdtextedit"
+downVer="https://sourceforge.net/projects/jdtextedit/files/11.2/jdTextEdit-11.2-Linux.AppImage/download"
+size=111 MB
+version=starting
+-----------------------------------------------------------------
+APP="jetbrains-toolbox"
+APPIMAGE='yes'
+GITHUB='no'
+SITE="https://www.jetbrains.com"
+downVer="https://download.jetbrains.com/toolbox/jetbrains-toolbox-2.5.4.38621.tar.gz"
+size=80 MB
+version=starting
+-----------------------------------------------------------------
+APP="jfcord"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="Chicken/JFCord"
+downVer="https://github.com/Chicken/JFCord/releases/download/v4.2.1/jfcord-4.2.1.AppImage"
+size=96 MB
+version=starting
+-----------------------------------------------------------------
+APP="jgrasp"
+APPIMAGE='no'
+GITHUB='no'
+SITE="https://www.jgrasp.org"
+downVer="https://www.jgrasp.org/dl4g/jgrasp/jgrasp_bdl206_17.zip"
+size=379 MB
+version=starting
+-----------------------------------------------------------------
+APP="jira-timer"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="alexcroox/jira-timer-menubar"
+downVer="https://github.com/alexcroox/jira-timer-menubar/releases/download/v1.0.31/jira-timer-1.0.31-x86_64.AppImage"
+size=61 MB
+version=starting
+-----------------------------------------------------------------
+APP="jless"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="PaulJuliusMartinez/jless"
+downVer="https://github.com/PaulJuliusMartinez/jless/releases/download/v0.9.0/jless-v0.9.0-x86_64-unknown-linux-gnu.zip"
+size=3 MB
+version=starting
+-----------------------------------------------------------------
+APP="jnv"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="ynqa/jnv"
+downVer="https://github.com/ynqa/jnv/releases/download/v0.5.0/jnv-x86_64-unknown-linux-gnu.tar.xz"
+size=9 MB
+version=starting
+-----------------------------------------------------------------
+APP="join-desktop"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="joaomgcd/JoinDesktop"
+downVer="https://github.com/joaomgcd/JoinDesktop/releases/download/v1.1.3/Join.Desktop-1.1.3.AppImage"
+size=74 MB
+version=starting
+-----------------------------------------------------------------
+APP="joplin"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="laurent22/joplin"
+downVer="https://github.com/laurent22/joplin/releases/download/v3.2.13/Joplin-3.2.13.AppImage"
+size=216 MB
+version=starting
+-----------------------------------------------------------------
+APP="jottem"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="dogue/jottem"
+downVer="https://github.com/dogue/jottem/releases/download/v0.1.8/jottem-x86_64-unknown-linux-gnu.tar.xz"
+size=12 MB
+version=starting
+-----------------------------------------------------------------
+APP="journalv"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ahme-dev/journalv"
+downVer="https://github.com/ahme-dev/journalv/releases/download/v0.3.0/journal-v_0.3.0_amd64.AppImage"
+size=65 MB
+version=starting
+-----------------------------------------------------------------
+APP="jpg-glitch-electron"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="snorpey/jpg-glitch-electron"
+downVer="https://github.com/snorpey/jpg-glitch-electron/releases/download/v0.1.3/JPG.Glitch-0.1.3.AppImage"
+size=62 MB
+version=starting
+-----------------------------------------------------------------
+APP="jq"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="jqlang/jq"
+downVer="https://github.com/jqlang/jq/releases/download/jq-1.7.1/jq-linux-amd64"
+size=3 MB
+version=starting
+-----------------------------------------------------------------
+APP="jqp"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="noahgorstein/jqp"
+downVer="https://github.com/noahgorstein/jqp/releases/download/v0.7.0/jqp_Linux_x86_64.tar.gz"
+size=12 MB
+version=starting
+-----------------------------------------------------------------
+APP="jreleaser"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="jreleaser/jreleaser-appimage"
+downVer="https://github.com/jreleaser/jreleaser-appimage/releases/download/v1.16.0/jreleaser-1.16.0-x86_64.AppImage"
+size=1 MB
+version=starting
+-----------------------------------------------------------------
+APP="jscad-desktop"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="jscad/jscad-desktop"
+downVer="https://github.com/jscad/jscad-desktop/releases/download/v0.5.0/jscad-desktop-0.5.0-x86_64.AppImage"
+size=51 MB
+version=starting
+-----------------------------------------------------------------
+APP="juggernaut"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="LN-Juggernaut/juggernaut-desktop"
+downVer="https://github.com/LN-Juggernaut/juggernaut-desktop/releases/download/0.1.2/Juggernaut-linux-x86_64-v0.1.2.AppImage"
+size=73 MB
+version=starting
+-----------------------------------------------------------------
+APP="julius"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="bvschaik/julius"
+downVer="https://github.com/bvschaik/julius/releases/download/v1.7.0/julius-1.7.0-linux.AppImage"
+size=5 MB
+version=starting
+-----------------------------------------------------------------
+APP="kade"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="shawnbanasick/kade"
+downVer="https://github.com/shawnbanasick/kade/releases/download/v1.3.1/KADE-1.3.1.AppImage"
+size=146 MB
+version=starting
+-----------------------------------------------------------------
+APP="kage"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="WayzDev/Kage"
+downVer="https://github.com/Zerx0r/Kage/releases/download/v0.1.1-beta/Kage.0.1.1-beta_linux.AppImage"
+size=51 MB
+version=starting
+-----------------------------------------------------------------
+APP="kaidan"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="KaidanIM/Kaidan"
+downVer="https://github.com/KaidanIM/Kaidan/releases/download/v0.3.2/Kaidan-x86_64.AppImage"
+size=53 MB
+version=starting
+-----------------------------------------------------------------
+APP="kajongg"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/KDE-games-suite-appimage"
+downVer="https://github.com/ivan-hc/KDE-games-suite-appimage/releases/download/continuous/KDE-games-suite_24.12-2-archimage4.3-x86_64.AppImage"
+size=369 MB
+version=starting
+-----------------------------------------------------------------
+APP="kalba"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="BrewingWeasel/Kalba"
+downVer="https://github.com/BrewingWeasel/Kalba/releases/download/kalba-v0.3.6/Kalba_0.3.6_amd64.AppImage"
+size=88 MB
+version=starting
+-----------------------------------------------------------------
+APP="kalc"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="bgkillas/kalc"
+downVer="https://github.com/bgkillas/kalc/releases/download/v1.4.2/kalc-x86_64-gnu"
+size=4 MB
+version=starting
+-----------------------------------------------------------------
+APP="kalm"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/KDE-utils-appimage"
+downVer="https://github.com/ivan-hc/KDE-utils-appimage/releases/download/continuous/KDE-utils_24.12-2-archimage4.3-x86_64.AppImage"
+size=368 MB
+version=starting
+-----------------------------------------------------------------
+APP="kando"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="kando-menu/kando"
+downVer="https://github.com/kando-menu/kando/releases/download/v1.7.0/Kando-1.7.0-x86_64.AppImage"
+size=113 MB
+version=starting
+-----------------------------------------------------------------
+APP="kanon"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="gpjp-hades/kanon-app"
+downVer="https://github.com/gpjp-hades/kanon-app/releases/download/1.0.2/Kanon.1.0.2.AppImage"
+size=48 MB
+version=starting
+-----------------------------------------------------------------
+APP="kanri"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="kanriapp/kanri"
+downVer="https://github.com/kanriapp/kanri/releases/download/app-v0.8.0/kanri_0.8.0_amd64.AppImage"
+size=71 MB
+version=starting
+-----------------------------------------------------------------
+APP="kapman"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/KDE-games-suite-appimage"
+downVer="https://github.com/ivan-hc/KDE-games-suite-appimage/releases/download/continuous/KDE-games-suite_24.12-2-archimage4.3-x86_64.AppImage"
+size=369 MB
+version=starting
+-----------------------------------------------------------------
+APP="kardi"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="https://www.kardi.tech"
+downVer="2.1.3"
+size=11 MB
+version=starting
+-----------------------------------------------------------------
+APP="kate"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/KDE-utils-appimage"
+downVer="https://github.com/ivan-hc/KDE-utils-appimage/releases/download/continuous/KDE-utils_24.12-2-archimage4.3-x86_64.AppImage"
+size=368 MB
+version=starting
+-----------------------------------------------------------------
+APP="katomic"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/KDE-games-suite-appimage"
+downVer="https://github.com/ivan-hc/KDE-games-suite-appimage/releases/download/continuous/KDE-games-suite_24.12-2-archimage4.3-x86_64.AppImage"
+size=369 MB
+version=starting
+-----------------------------------------------------------------
+APP="kbackup"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/KDE-utils-appimage"
+downVer="https://github.com/ivan-hc/KDE-utils-appimage/releases/download/continuous/KDE-utils_24.12-2-archimage4.3-x86_64.AppImage"
+size=368 MB
+version=starting
+-----------------------------------------------------------------
+APP="kblocks"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/KDE-games-suite-appimage"
+downVer="https://github.com/ivan-hc/KDE-games-suite-appimage/releases/download/continuous/KDE-games-suite_24.12-2-archimage4.3-x86_64.AppImage"
+size=369 MB
+version=starting
+-----------------------------------------------------------------
+APP="kbreakout"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/KDE-games-suite-appimage"
+downVer="https://github.com/ivan-hc/KDE-games-suite-appimage/releases/download/continuous/KDE-games-suite_24.12-2-archimage4.3-x86_64.AppImage"
+size=369 MB
+version=starting
+-----------------------------------------------------------------
+APP="kcalc"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/KDE-utils-appimage"
+downVer="https://github.com/ivan-hc/KDE-utils-appimage/releases/download/continuous/KDE-utils_24.12-2-archimage4.3-x86_64.AppImage"
+size=368 MB
+version=starting
+-----------------------------------------------------------------
+APP="kcharselect"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/KDE-utils-appimage"
+downVer="https://github.com/ivan-hc/KDE-utils-appimage/releases/download/continuous/KDE-utils_24.12-2-archimage4.3-x86_64.AppImage"
+size=368 MB
+version=starting
+-----------------------------------------------------------------
+APP="kclock"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/KDE-utils-appimage"
+downVer="https://github.com/ivan-hc/KDE-utils-appimage/releases/download/continuous/KDE-utils_24.12-2-archimage4.3-x86_64.AppImage"
+size=368 MB
+version=starting
+-----------------------------------------------------------------
+APP="kcov"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="julien-montmartin/kcov-appimage"
+downVer="https://github.com/julien-montmartin/kcov-appimage/releases/download/v36/kcov-x86_64.AppImage"
+size=8 MB
+version=starting
+-----------------------------------------------------------------
+APP="kdeconnect"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="pkgforge-dev/kdeconnect-AppImage"
+downVer="https://github.com/pkgforge-dev/kdeconnect-AppImage/releases/download/24.12.2-1/kdeconnect-24.12.2-1-anylinux-x86_64.AppImage"
+size=103 MB
+version=starting
+-----------------------------------------------------------------
+APP="kdeutils"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/KDE-utils-appimage"
+downVer="https://github.com/ivan-hc/KDE-utils-appimage/releases/download/continuous/KDE-utils_24.12-2-archimage4.3-x86_64.AppImage"
+size=368 MB
+version=starting
+-----------------------------------------------------------------
+APP="kdf"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/KDE-utils-appimage"
+downVer="https://github.com/ivan-hc/KDE-utils-appimage/releases/download/continuous/KDE-utils_24.12-2-archimage4.3-x86_64.AppImage"
+size=368 MB
+version=starting
+-----------------------------------------------------------------
+APP="kdialog"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/KDE-utils-appimage"
+downVer="https://github.com/ivan-hc/KDE-utils-appimage/releases/download/continuous/KDE-utils_24.12-2-archimage4.3-x86_64.AppImage"
+size=368 MB
+version=starting
+-----------------------------------------------------------------
+APP="kdiamond"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/KDE-games-suite-appimage"
+downVer="https://github.com/ivan-hc/KDE-games-suite-appimage/releases/download/continuous/KDE-games-suite_24.12-2-archimage4.3-x86_64.AppImage"
+size=369 MB
+version=starting
+-----------------------------------------------------------------
+APP="keepassxc"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="keepassxreboot/keepassxc"
+downVer="https://github.com/keepassxreboot/keepassxc/releases/download/2.7.10/KeePassXC-2.7.10-x86_64.AppImage"
+size=47 MB
+version=starting
+-----------------------------------------------------------------
+APP="keepassxc-devel"
+APPIMAGE='yes'
+GITHUB='no'
+SITE="https://snapshot.keepassxc.org/latest/"
+size=110 MB
+version=starting
+-----------------------------------------------------------------
+APP="kettleclient"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="Arquanite/KettleClient"
+downVer="https://github.com/Arquanite/KettleClient/releases/download/continuous/KettleClient-9ce8b6c-x86_64.AppImage"
+size=21 MB
+version=starting
+-----------------------------------------------------------------
+APP="kevedit"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="cknave/kevedit"
+downVer="https://github.com/cknave/kevedit/releases/download/1.2.1/kevedit-1.2.1-x86_64.AppImage"
+size=4 MB
+version=starting
+-----------------------------------------------------------------
+APP="keys"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="keys-pub/app"
+downVer="https://github.com/keys-pub/app/releases/download/v0.2.4/Keys-0.2.4.AppImage"
+size=103 MB
+version=starting
+-----------------------------------------------------------------
+APP="keysmith"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/KDE-utils-appimage"
+downVer="https://github.com/ivan-hc/KDE-utils-appimage/releases/download/continuous/KDE-utils_24.12-2-archimage4.3-x86_64.AppImage"
+size=368 MB
+version=starting
+-----------------------------------------------------------------
+APP="kfind"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/KDE-utils-appimage"
+downVer="https://github.com/ivan-hc/KDE-utils-appimage/releases/download/continuous/KDE-utils_24.12-2-archimage4.3-x86_64.AppImage"
+size=368 MB
+version=starting
+-----------------------------------------------------------------
+APP="kfourinline"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/KDE-games-suite-appimage"
+downVer="https://github.com/ivan-hc/KDE-games-suite-appimage/releases/download/continuous/KDE-games-suite_24.12-2-archimage4.3-x86_64.AppImage"
+size=369 MB
+version=starting
+-----------------------------------------------------------------
+APP="kgpg"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/KDE-utils-appimage"
+downVer="https://github.com/ivan-hc/KDE-utils-appimage/releases/download/continuous/KDE-utils_24.12-2-archimage4.3-x86_64.AppImage"
+size=368 MB
+version=starting
+-----------------------------------------------------------------
+APP="kicad"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="CyberCircuits/kicad-appimage"
+downVer="https://sourceforge.net/projects/kicad-appimage/files/v8/KiCad-8.0.6.glibc2.29-x86_64.AppImage/download"
+size=213 MB
+version=starting
+-----------------------------------------------------------------
+APP="kigo"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/KDE-games-suite-appimage"
+downVer="https://github.com/ivan-hc/KDE-games-suite-appimage/releases/download/continuous/KDE-games-suite_24.12-2-archimage4.3-x86_64.AppImage"
+size=369 MB
+version=starting
+-----------------------------------------------------------------
+APP="kiibohd-configurator"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="kiibohd/configurator"
+downVer="https://github.com/kiibohd/configurator/releases/download/v1.1.0/kiibohd-configurator-1.1.0-linux-x86_64.AppImage"
+size=88 MB
+version=starting
+-----------------------------------------------------------------
+APP="kiku"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="angus6b23/kiku"
+downVer="https://github.com/angus6b23/kiku/releases/download/v0.0.4/kiku-linux-0.0.4.AppImage"
+size=122 MB
+version=starting
+-----------------------------------------------------------------
+APP="killbots"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/KDE-games-suite-appimage"
+downVer="https://github.com/ivan-hc/KDE-games-suite-appimage/releases/download/continuous/KDE-games-suite_24.12-2-archimage4.3-x86_64.AppImage"
+size=369 MB
+version=starting
+-----------------------------------------------------------------
+APP="kimitzu-client"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="kimitzu/kimitzu-client"
+downVer="https://github.com/kimitzu/kimitzu-client/releases/download/v0.4.1-beta/Kimitzu-Client-0.4.1-beta.AppImage"
+size=176 MB
+version=starting
+-----------------------------------------------------------------
+APP="kinopio"
+APPIMAGE='yes'
+GITHUB='no'
+SITE="https://kinopio.club"
+downVer="https://dl.todesktop.com/201223j48l03cxi"
+size=107 MB
+version=starting
+-----------------------------------------------------------------
+APP="kitupiikki"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="artoh/kitupiikki"
+downVer="https://github.com/artoh/kitupiikki/releases/download/v5.8/Kitsas-5.8-x86_64.AppImage"
+size=143 MB
+version=starting
+-----------------------------------------------------------------
+APP="kjumpingcube"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/KDE-games-suite-appimage"
+downVer="https://github.com/ivan-hc/KDE-games-suite-appimage/releases/download/continuous/KDE-games-suite_24.12-2-archimage4.3-x86_64.AppImage"
+size=369 MB
+version=starting
+-----------------------------------------------------------------
+APP="klickety"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/KDE-games-suite-appimage"
+downVer="https://github.com/ivan-hc/KDE-games-suite-appimage/releases/download/continuous/KDE-games-suite_24.12-2-archimage4.3-x86_64.AppImage"
+size=369 MB
+version=starting
+-----------------------------------------------------------------
+APP="klines"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/KDE-games-suite-appimage"
+downVer="https://github.com/ivan-hc/KDE-games-suite-appimage/releases/download/continuous/KDE-games-suite_24.12-2-archimage4.3-x86_64.AppImage"
+size=369 MB
+version=starting
+-----------------------------------------------------------------
+APP="klogg"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="variar/klogg"
+downVer="https://github.com/variar/klogg/releases/download/continuous-linux/klogg-24.11.0.1685-x86_64.AppImage"
+size=43 MB
+version=starting
+-----------------------------------------------------------------
+APP="kmahjongg"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/KDE-games-suite-appimage"
+downVer="https://github.com/ivan-hc/KDE-games-suite-appimage/releases/download/continuous/KDE-games-suite_24.12-2-archimage4.3-x86_64.AppImage"
+size=369 MB
+version=starting
+-----------------------------------------------------------------
+APP="kmines"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/KDE-games-suite-appimage"
+downVer="https://github.com/ivan-hc/KDE-games-suite-appimage/releases/download/continuous/KDE-games-suite_24.12-2-archimage4.3-x86_64.AppImage"
+size=369 MB
+version=starting
+-----------------------------------------------------------------
+APP="kmonad"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="kmonad/kmonad"
+downVer="https://github.com/kmonad/kmonad/releases/download/0.4.3/kmonad"
+size=14 MB
+version=starting
+-----------------------------------------------------------------
+APP="knavalbattle"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/KDE-games-suite-appimage"
+downVer="https://github.com/ivan-hc/KDE-games-suite-appimage/releases/download/continuous/KDE-games-suite_24.12-2-archimage4.3-x86_64.AppImage"
+size=369 MB
+version=starting
+-----------------------------------------------------------------
+APP="knetwalk"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/KDE-games-suite-appimage"
+downVer="https://github.com/ivan-hc/KDE-games-suite-appimage/releases/download/continuous/KDE-games-suite_24.12-2-archimage4.3-x86_64.AppImage"
+size=369 MB
+version=starting
+-----------------------------------------------------------------
+APP="knights"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/KDE-games-suite-appimage"
+downVer="https://github.com/ivan-hc/KDE-games-suite-appimage/releases/download/continuous/KDE-games-suite_24.12-2-archimage4.3-x86_64.AppImage"
+size=369 MB
+version=starting
+-----------------------------------------------------------------
+APP="knowledge"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="KnowledgeCanvas/knowledge"
+downVer="https://knowledge-canvas.s3.us-west-2.amazonaws.com/Knowledge-0.8.5.AppImage"
+size=116 MB
+version=starting
+-----------------------------------------------------------------
+APP="knowte"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="digimezzo/knowte-electron"
+downVer="https://github.com/digimezzo/knowte/releases/download/v3.0.0/Knowte-3.0.0.AppImage"
+size=144 MB
+version=starting
+-----------------------------------------------------------------
+APP="koishi-desktop"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="koishijs/koishi-desktop"
+downVer="https://github.com/koishijs/koishi-desktop/releases/download/v1.1.3/koishi-desktop-linux-x64-v1.1.3.AppImage"
+size=54 MB
+version=starting
+-----------------------------------------------------------------
+APP="kolf"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/KDE-games-suite-appimage"
+downVer="https://github.com/ivan-hc/KDE-games-suite-appimage/releases/download/continuous/KDE-games-suite_24.12-2-archimage4.3-x86_64.AppImage"
+size=369 MB
+version=starting
+-----------------------------------------------------------------
+APP="kondo"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="tbillington/kondo"
+downVer="https://github.com/tbillington/kondo/releases/download/v0.8/kondo-x86_64-unknown-linux-musl.tar.gz"
+size=6 MB
+version=starting
+-----------------------------------------------------------------
+APP="konquest"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/KDE-games-suite-appimage"
+downVer="https://github.com/ivan-hc/KDE-games-suite-appimage/releases/download/continuous/KDE-games-suite_24.12-2-archimage4.3-x86_64.AppImage"
+size=369 MB
+version=starting
+-----------------------------------------------------------------
+APP="kopia"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="kopia/kopia"
+downVer="https://github.com/kopia/kopia/releases/download/v0.19.0/KopiaUI-0.19.0.AppImage"
+size=121 MB
+version=starting
+-----------------------------------------------------------------
+APP="koreader"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="koreader/koreader"
+downVer="https://github.com/koreader/koreader/releases/download/v2024.11/koreader-appimage-x86_64-linux-gnu-v2024.11.AppImage"
+size=44 MB
+version=starting
+-----------------------------------------------------------------
+APP="kpat"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/KDE-games-suite-appimage"
+downVer="https://github.com/ivan-hc/KDE-games-suite-appimage/releases/download/continuous/KDE-games-suite_24.12-2-archimage4.3-x86_64.AppImage"
+size=369 MB
+version=starting
+-----------------------------------------------------------------
+APP="krecorder"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/KDE-utils-appimage"
+downVer="https://github.com/ivan-hc/KDE-utils-appimage/releases/download/continuous/KDE-utils_24.12-2-archimage4.3-x86_64.AppImage"
+size=368 MB
+version=starting
+-----------------------------------------------------------------
+APP="kreversi"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/KDE-games-suite-appimage"
+downVer="https://github.com/ivan-hc/KDE-games-suite-appimage/releases/download/continuous/KDE-games-suite_24.12-2-archimage4.3-x86_64.AppImage"
+size=369 MB
+version=starting
+-----------------------------------------------------------------
+APP="krita"
+APPIMAGE='yes'
+GITHUB='no'
+SITE="https://krita.org"
+downVer="https://download.kde.org/stable/krita/5.2.9/krita-5.2.9-x86_64.AppImage"
+size=351 MB
+version=starting
+-----------------------------------------------------------------
+APP="krunker"
+APPIMAGE='yes'
+GITHUB='no'
+SITE="https://krunker.io"
+downVer="https://client2.krunker.io/setup.AppImage"
+size=73 MB
+version=starting
+-----------------------------------------------------------------
+APP="ksirk"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/KDE-games-suite-appimage"
+downVer="https://github.com/ivan-hc/KDE-games-suite-appimage/releases/download/continuous/KDE-games-suite_24.12-2-archimage4.3-x86_64.AppImage"
+size=369 MB
+version=starting
+-----------------------------------------------------------------
+APP="ksnakeduel"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/KDE-games-suite-appimage"
+downVer="https://github.com/ivan-hc/KDE-games-suite-appimage/releases/download/continuous/KDE-games-suite_24.12-2-archimage4.3-x86_64.AppImage"
+size=369 MB
+version=starting
+-----------------------------------------------------------------
+APP="ksnip"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="DamirPorobic/ksnip"
+downVer="https://github.com/ksnip/ksnip/releases/download/continuous/ksnip-1.11.0-continuous-x86_64.AppImage"
+size=32 MB
+version=starting
+-----------------------------------------------------------------
+APP="kspaceduel"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/KDE-games-suite-appimage"
+downVer="https://github.com/ivan-hc/KDE-games-suite-appimage/releases/download/continuous/KDE-games-suite_24.12-2-archimage4.3-x86_64.AppImage"
+size=369 MB
+version=starting
+-----------------------------------------------------------------
+APP="ksquares"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/KDE-games-suite-appimage"
+downVer="https://github.com/ivan-hc/KDE-games-suite-appimage/releases/download/continuous/KDE-games-suite_24.12-2-archimage4.3-x86_64.AppImage"
+size=369 MB
+version=starting
+-----------------------------------------------------------------
+APP="ksudoku"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/KDE-games-suite-appimage"
+downVer="https://github.com/ivan-hc/KDE-games-suite-appimage/releases/download/continuous/KDE-games-suite_24.12-2-archimage4.3-x86_64.AppImage"
+size=369 MB
+version=starting
+-----------------------------------------------------------------
+APP="kubrick"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/KDE-games-suite-appimage"
+downVer="https://github.com/ivan-hc/KDE-games-suite-appimage/releases/download/continuous/KDE-games-suite_24.12-2-archimage4.3-x86_64.AppImage"
+size=369 MB
+version=starting
+-----------------------------------------------------------------
+APP="kure"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="GGP1/kure"
+downVer="https://github.com/GGP1/kure/releases/download/v1.2.1/kure_v1.2.1_linux_amd64.tar.gz"
+size=13 MB
+version=starting
+-----------------------------------------------------------------
+APP="kuro"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="davidsmorais/kuro"
+downVer="https://github.com/davidsmorais/kuro/releases/download/v9.0.0/Kuro-9.0.0.AppImage"
+size=93 MB
+version=starting
+-----------------------------------------------------------------
+APP="kwrite"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/KDE-utils-appimage"
+downVer="https://github.com/ivan-hc/KDE-utils-appimage/releases/download/continuous/KDE-utils_24.12-2-archimage4.3-x86_64.AppImage"
+size=368 MB
+version=starting
+-----------------------------------------------------------------
+APP="laigter"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="azagaya/laigter"
+downVer="https://github.com/azagaya/laigter/releases/download/1.12.1/Laigter-x86_64.AppImage"
+size=35 MB
+version=starting
+-----------------------------------------------------------------
+APP="lan-mouse"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="feschber/lan-mouse"
+downVer="https://api.github.com/repos/feschber/lan-mouse/releases/184233338"
+size=10 MB
+version=starting
+-----------------------------------------------------------------
+APP="landrop"
+APPIMAGE='yes'
+GITHUB='no'
+SITE="https://landrop.app"
+downVer="2.7.2"
+size=113 MB
+version=starting
+-----------------------------------------------------------------
+APP="lapce"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="lapce/lapce"
+downVer="https://github.com/lapce/lapce/releases/download/v0.4.2/lapce-linux-amd64.tar.gz"
+size=56 MB
+version=starting
+-----------------------------------------------------------------
+APP="laravel-kit"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="tarequemdhanif/laravel-kit"
+downVer="https://github.com/tmdh/laravel-kit/releases/download/v2.0.9/Laravel-Kit-2.0.9.AppImage"
+size=105 MB
+version=starting
+-----------------------------------------------------------------
+APP="launcher"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="martinribelotta/launcher"
+downVer="https://github.com/martinribelotta/launcher/releases/download/continuous/Application_Launcher-166f94e-x86_64.AppImage"
+size=22 MB
+version=starting
+-----------------------------------------------------------------
+APP="ldtk"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="deepnight/ldtk"
+downVer="https://github.com/deepnight/ldtk/releases/download/v1.5.3/ubuntu-distribution.zip"
+size=109 MB
+version=starting
+-----------------------------------------------------------------
+APP="ldview"
+APPIMAGE='yes'
+GITHUB='no'
+SITE="https://download.opensuse.org/repositories/home:/pbartfai"
+downVer="https://download.opensuse.org/repositories/home:/pbartfai/AppImage.15.4/ldview-0-Build1103.9.glibc2.29-x86_64.AppImage"
+size=27 MB
+version=starting
+-----------------------------------------------------------------
+APP="leaflet"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="PotatoProject/Leaflet"
+downVer="https://github.com/PotatoProject/Leaflet/releases/download/2.0.0%2B20/Leaflet-2.0.0-x86_64.AppImage"
+size=53 MB
+version=starting
+-----------------------------------------------------------------
+APP="leapp"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="https://asset.noovolari.com"
+downVer="https://asset.noovolari.com/latest/Leapp-0.26.1.AppImage"
+size=141 MB
+version=starting
+-----------------------------------------------------------------
+APP="left"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="aquaspy/Left"
+downVer="https://github.com/aquaspy/Left/releases/download/131/Left-131-x64.AppImage"
+size=68 MB
+version=starting
+-----------------------------------------------------------------
+APP="legcord"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="Legcord/Legcord"
+downVer="https://github.com/Legcord/Legcord/releases/download/v1.1.0/Legcord-1.1.0-linux-x86_64.AppImage"
+size=117 MB
+version=starting
+-----------------------------------------------------------------
+APP="lemon"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="iotang/Project_LemonLime"
+downVer="https://github.com/Project-LemonLime/Project_LemonLime/releases/download/0.2.8/Lemon.0.2.8.linux-x64.AppImage"
+size=29 MB
+version=starting
+-----------------------------------------------------------------
+APP="lens"
+APPIMAGE='yes'
+GITHUB='no'
+SITE="https://k8slens.dev"
+downVer="https://api.k8slens.dev/binaries/Lens-2025.2.141554-latest.x86_64.AppImage"
+size=332 MB
+version=starting
+-----------------------------------------------------------------
+APP="leocad"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="leozide/leocad"
+downVer="https://github.com/leozide/leocad/releases/download/continuous/LeoCAD-Linux-228fb796-x86_64.AppImage"
+size=142 MB
+version=starting
+-----------------------------------------------------------------
+APP="lepton"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="hackjutsu/Lepton"
+downVer="https://github.com/hackjutsu/Lepton/releases/download/v1.10.0/Lepton-1.10.0.AppImage"
+size=94 MB
+version=starting
+-----------------------------------------------------------------
+APP="levior"
+APPIMAGE='yes'
+GITHUB='no'
+SITE="https://gitlab.com/api/v4/projects/37138263"
+downVer="https://gitlab.com/cipres/levior/-/releases/continuous-master/downloads/levior-latest-x86_64.AppImage"
+size=41 MB
+version=starting
+-----------------------------------------------------------------
+APP="lf"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="gokcehan/lf"
+size=6 MB
+version=starting
+-----------------------------------------------------------------
+APP="librecad"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="LibreCAD/LibreCAD"
+downVer="https://github.com/LibreCAD/LibreCAD/releases/download/2.2.1.1_rc-latest/LibreCAD-v2.2.1.1-9-g5ad9b999-x86_64.AppImage"
+size=37 MB
+version=starting
+-----------------------------------------------------------------
+APP="libreoffice"
+APPIMAGE='yes'
+GITHUB='no'
+SITE="https://www.libreoffice.org"
+downVer="LibreOffice-25.2.1.2.standard.help-x86_64.AppImage"
+size=274 MB
+version=starting
+-----------------------------------------------------------------
+APP="librepcb"
+APPIMAGE='yes'
+GITHUB='no'
+SITE="https://librepcb.org"
+downVer="https://download.librepcb.org/releases/1.2.0/librepcb-1.2.0-linux-x86_64.AppImage"
+size=73 MB
+version=starting
+-----------------------------------------------------------------
+APP="lightning"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="lightninglabs/lightning-app"
+downVer="https://github.com/lightninglabs/lightning-app/releases/download/v0.5.9-alpha/Lightning-linux-x86_64v0.5.9-alpha.AppImage"
+size=118 MB
+version=starting
+-----------------------------------------------------------------
+APP="lightning-peach-wallet"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="LightningPeach/lightning-peach-wallet"
+downVer="https://github.com/LightningPeach/peach-wallet-desktop/releases/download/v0.5.0-mainnet-beta/peach-wallet-desktop-0.5.0-mainnet-beta-x86_64.AppImage"
+size=316 MB
+version=starting
+-----------------------------------------------------------------
+APP="liground"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ml-research/liground"
+downVer="https://github.com/ml-research/liground/releases/download/0.4.0/liground-0.4.0-linux.AppImage"
+size=99 MB
+version=starting
+-----------------------------------------------------------------
+APP="liketaskmanager"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="rejuce/LikeTaskManager"
+downVer="https://github.com/rejuce/LikeTaskManager/releases/download/v2.3/LikeTaskManager-x86_64.AppImage"
+size=33 MB
+version=starting
+-----------------------------------------------------------------
