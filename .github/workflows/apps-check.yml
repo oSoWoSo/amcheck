@@ -102,10 +102,10 @@ jobs:
         if: github.event.inputs.reset_stats == 'true'
         run: |
           echo "### stats RESET" >> $GITHUB_STEP_SUMMARY
-          rm -rf results-var
+          rm -rf results
           git config --global user.name "${{ github.repository_owner }}"
           git config --global user.email "noreply@github.com"
-          git rm -r results-var
+          git rm -r results
           git commit -m "reset stats"
           git push --force
           git clean -f
@@ -114,13 +114,13 @@ jobs:
         if: github.event.inputs.reset_stats != 'true'
         id: stats
         run: |
-          if [ -f results-var/tested ]; then
-            tested=$(wc -l < results-var/tested)
+          if [ -f results/tested ]; then
+            tested=$(wc -l < results/tested)
           else
             tested='0'
           fi
-          if [ -f results-var/excluded ]; then
-            excluded=$(wc -l < results-var/excluded)
+          if [ -f results/excluded ]; then
+            excluded=$(wc -l < results/excluded)
           else
             excluded='0'
           fi
@@ -161,23 +161,23 @@ jobs:
         id: set-matrix
         if: github.event.inputs.retest_excluded != 'true'
         run: |
-          if [[ -f results-var/tested ]]; then
+          if [[ -f results/tested ]]; then
             echo "tested exist"
-            if diff -q appslist results-var/tested; then
+            if diff -q appslist results/tested; then
               echo "Everything checked"
               echo "skip=true" >> $GITHUB_OUTPUT
               exit 0
             else
               echo "Getting temp list"
-              comm -23 appslist results-var/tested > totest_tmp.list
+              comm -23 appslist results/tested > totest_tmp.list
             fi
           else
             echo "First run!"
             cp appslist totest_tmp.list
           fi
-          if [[ -f results-var/excluded ]]; then
+          if [[ -f results/excluded ]]; then
             echo "Excluded exists"
-            comm -23 totest_tmp.list results-var/excluded > totest.list
+            comm -23 totest_tmp.list results/excluded > totest.list
             if [ ! -s totest.list ]; then
               echo "List is empty"
               echo " 🏁 Nothing to test 🏁" >> $GITHUB_STEP_SUMMARY
@@ -372,7 +372,7 @@ jobs:
 
               echo 1 | am -i "${{ matrix.file }}" --debug 2>&1 | tee -a results/log-"${{ matrix.file }}"
               size=$(cat "results/log-${{ matrix.file }}" | tee /dev/null | grep 'OF DISK SPACE' | cut -d'(' -f2 | cut -d' ' -f1,2)
-              Preversion=$(cat "results/log-${{ matrix.file }}" | tee /dev/null | grep '◆' | tail -2 | head -1)
+              Preversion=$(cat "results/log-${{ matrix.file }}" | tee /dev/null | grep '◆' | tail -1 | head -1)
               echo "pre version is $Preversion"
               version=$(echo "$Preversion" | awk '{print $3}')
               echo "version is $version"
@@ -382,7 +382,7 @@ jobs:
             elif [[ "$pure_arg" =~ (bat-extras) ]]; then
               echo 1 | am -i "$pure_arg" --debug 2>&1 | tee -a results/log-"${{ matrix.file }}"
               size=$(cat "results/log-${{ matrix.file }}" | tee /dev/null | grep 'OF DISK SPACE' | cut -d'(' -f2 | cut -d' ' -f1,2 | tail -1)
-              Preversion=$(cat "results/log-${{ matrix.file }}" | tee /dev/null | grep '◆' | tail -3 | head -1)
+              Preversion=$(cat "results/log-${{ matrix.file }}" | tee /dev/null | grep '◆' | tail -2 | head -1)
               echo "pre version is $Preversion"
               version=$(echo "$Preversion" | awk '{print $3}' | cut -d'.' -f1-3)
               echo "version is $version"
@@ -392,7 +392,7 @@ jobs:
 
               echo y | am -i "${{ matrix.file }}" --debug 2>&1 | tee -a results/log-"${{ matrix.file }}"
               size=$(cat "results/log-${{ matrix.file }}" | tee /dev/null | grep 'OF DISK SPACE' | cut -d'(' -f2 | cut -d' ' -f1,2)
-              Preversion=$(cat "results/log-${{ matrix.file }}" | tee /dev/null | grep '◆' | tail -2 | head -1)
+              Preversion=$(cat "results/log-${{ matrix.file }}" | tee /dev/null | grep '◆' | tail -1 | head -1)
               echo "pre version is $Preversion"
               version=$(echo "$Preversion" | awk '{print $3}')
               echo "version is $version"
@@ -591,6 +591,7 @@ jobs:
         with:
           name: ko-${{ matrix.file }}
           path: programs/x86_64/results/ko-${{ matrix.file }}
+          retention-days: 1
 
       - name: "Upload OK Results ⬆️"
         if: success()
@@ -598,6 +599,7 @@ jobs:
         with:
           name: ok-${{ matrix.file }}
           path: programs/x86_64/results/ok-${{ matrix.file }}
+          retention-days: 1
 
   update-results:
     name: "results 📰"
@@ -628,7 +630,7 @@ jobs:
 
       - name: "Process log results"
         run: |
-          mkdir -p results-var
+          mkdir -p results
           echo '-----------------------------------------------------------------'
           echo 'No GitHub/AppImage +'
           echo '-----------------------------------------------------------------'
@@ -654,40 +656,32 @@ jobs:
             fi
             KoFile="results/ko-$appname"
             if [[ -f "$KoFile" ]]; then
-              echo "$appname" | tee -a failing results-var/excluded
+              echo "$appname" | tee -a failing results/excluded
               rm -f "$KoFile"
-              cat "$LogFile" | grep -E '(^.*=.*$|^.*----.*$)' >> results-var/log
-              sort -u results-var/excluded -o results-var/excluded
+              cat "$LogFile" | grep -E '(^.*=.*$|^.*----.*$)' >> results/log
+              sort -u results/excluded -o results/excluded
               sort -u failing -o failing
-              git add results-var/excluded
+              git add results/excluded
             else
-              cat "$LogFile" | grep -E '(^.*=.*$|^.*----.*$)' >> results-var/log
-              echo "$appname" >> results-var/tested
+              cat "$LogFile" | grep -E '(^.*=.*$|^.*----.*$)' >> results/log
+              echo "$appname" >> results/tested
             fi
-            echo '-----------------------------------------------------------------' >> results-var/log
+            echo '-----------------------------------------------------------------' >> results/log
             rm -f "$LogFile"
           done
-          sort -u results-var/tested -o results-var/tested
-          git add results-var
-          echo '-----------------------------------------------------------------'
-          echo "Missed results:"
-          echo '-----------------------------------------------------------------'
-          ls -R results/
-          for rest in results/*; do
-            cat "$rest"
-          done
-          echo '-----------------------------------------------------------------'
+          sort -u results/tested -o results/tested
+          git add results
 
       - name: "Show results"
         if: (always() && needs.generate-matrix.outputs.skip != 'true' && github.event.inputs.reset_stats != 'true')
         run: |
-          if [[ -f results-var/tested ]]; then
-            tested=$(wc -l < results-var/tested 2>/dev/null || echo 0)
+          if [[ -f results/tested ]]; then
+            tested=$(wc -l < results/tested 2>/dev/null || echo 0)
           else
             tested='0'
           fi
-          if [[ -f results-var/excluded ]]; then
-            excluded=$(wc -l < results-var/excluded 2>/dev/null || echo 0)
+          if [[ -f results/excluded ]]; then
+            excluded=$(wc -l < results/excluded 2>/dev/null || echo 0)
           else
             excluded='0'
           fi
@@ -707,6 +701,16 @@ jobs:
             echo "😱 $excluded excluded" >> $GITHUB_STEP_SUMMARY
           fi
           echo "### 🛅 $remaining to test" >> $GITHUB_STEP_SUMMARY
+          rm -f appslist
+          rm -f results/ok-*
+          echo '-----------------------------------------------------------------'
+          echo "Missed results:"
+          echo '-----------------------------------------------------------------'
+          ls -R results/
+          for rest in results/*; do
+            cat "$rest"
+          done
+          echo '-----------------------------------------------------------------'
 
       - name: "Push"
         if: ${{ needs.generate-matrix.outputs.skip != 'true' }}
@@ -723,48 +727,48 @@ jobs:
             #git status
             #git log --oneline -5
             #git diff
-            git add results-var
+            git add results
             git commit -m "check"
             git push --force-with-lease && echo "sync successfull" >> $GITHUB_STEP_SUMMARY || (git diff && git status)
           fi
 
-  delete-all-artifacts:
-    name: "cleanup 🧹"
-    runs-on: ubuntu-22.04
-    needs: update-results
-    if: always()
-    steps:
-      - name: "Check out repository 🏃"
-        uses: actions/checkout@v4
-
-      - name: "Delete Artifacts 🙈"
-        env:
-          REPO_NAME: ${{ github.repository }}
-          RUN_ID: ${{ github.run_id }}
-          TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          echo "Fetching and deleting all artifacts for run ID: $RUN_ID"
-          PAGE=1
-          DELETED=0
-          while true; do
-            RESPONSE=$(curl -s -H "Authorization: token $TOKEN" \
-             "https://api.github.com/repos/$REPO_NAME/actions/runs/$RUN_ID/artifacts?per_page=1000&page=$PAGE")
-            ARTIFACT_IDS=$(echo "$RESPONSE" | jq -r '.artifacts[].id')
-            if [[ -z "$ARTIFACT_IDS" ]]; then
-              echo "No more artifacts to delete. Total deleted: $DELETED"
-              break
-            fi
-            for ARTIFACT_ID in $ARTIFACT_IDS; do
-              echo "Deleting artifact with ID: $ARTIFACT_ID"
-              curl -X DELETE -s -H "Authorization: token $TOKEN" \
-               "https://api.github.com/repos/$REPO_NAME/actions/artifacts/$ARTIFACT_ID"
-              ((DELETED+=1))
-            done
-            ((PAGE+=1))
-          done
-          echo "Successfully deleted $DELETED artifacts."
-          echo "Git clean"
-          git clean -f
+  # delete-all-artifacts:
+  #   name: "cleanup 🧹"
+  #   runs-on: ubuntu-22.04
+  #   needs: update-results
+  #   if: always()
+  #   steps:
+  #     - name: "Check out repository 🏃"
+  #       uses: actions/checkout@v4
+  #
+  #     - name: "Delete Artifacts 🙈"
+  #       env:
+  #         REPO_NAME: ${{ github.repository }}
+  #         RUN_ID: ${{ github.run_id }}
+  #         TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #       run: |
+  #         echo "Fetching and deleting all artifacts for run ID: $RUN_ID"
+  #         PAGE=1
+  #         DELETED=0
+  #         while true; do
+  #           RESPONSE=$(curl -s -H "Authorization: token $TOKEN" \
+  #            "https://api.github.com/repos/$REPO_NAME/actions/runs/$RUN_ID/artifacts?per_page=1000&page=$PAGE")
+  #           ARTIFACT_IDS=$(echo "$RESPONSE" | jq -r '.artifacts[].id')
+  #           if [[ -z "$ARTIFACT_IDS" ]]; then
+  #             echo "No more artifacts to delete. Total deleted: $DELETED"
+  #             break
+  #           fi
+  #           for ARTIFACT_ID in $ARTIFACT_IDS; do
+  #             echo "Deleting artifact with ID: $ARTIFACT_ID"
+  #             curl -X DELETE -s -H "Authorization: token $TOKEN" \
+  #              "https://api.github.com/repos/$REPO_NAME/actions/artifacts/$ARTIFACT_ID"
+  #             ((DELETED+=1))
+  #           done
+  #           ((PAGE+=1))
+  #         done
+  #         echo "Successfully deleted $DELETED artifacts."
+  #         echo "Git clean"
+  #         git clean -f
 
   already-tested:
     name: "all 🏁"
