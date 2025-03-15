@@ -841,4 +841,15 @@ jobs:
     if: ${{ needs.generate-matrix.outputs.skip == 'true' }}
     steps:
       - name: "Mark as Successful"
-        run: echo "All apps already tested..." >> $GITHUB_STEP_SUMMARY
+        run: |
+          echo "Everything tested"
+          echo "### stats RESET" >> $GITHUB_STEP_SUMMARY
+          cp results/log log.backup
+          rm -rf results
+          git config --global user.name "${{ github.repository_owner }}"
+          git config --global user.email "noreply@github.com"
+          git rm -r results
+          git add log.backup
+          git commit -m "reset stats"
+          git push --force
+          git clean -f
