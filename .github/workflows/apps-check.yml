@@ -526,7 +526,7 @@ jobs:
         run: |
           set -uo pipefail
           mkdir -p results
-          echo "Second try" >> $GITHUB_STEP_SUMMARY
+          #echo "Second try" >> $GITHUB_STEP_SUMMARY
           if [ -f results/excluded ]; then
             for failed in $(cat results/excluded); do
               # Define the content of the script
