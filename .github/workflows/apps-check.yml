@@ -648,6 +648,8 @@ jobs:
                   exit 1
                   fi
               fi
+            echo "$failed catched!"
+            echo "### $failed catched in second try!" >> $GITHUB_STEP_SUMMARY
             done
           else
             echo "All OK"
