@@ -604,6 +604,10 @@ jobs:
         working-directory: programs/x86_64
         run: |
           pwd
+          pushd .
+          cd ../../../../
+          find excluded
+          popd
           tree ../../ -d
           set -uo pipefail
           mkdir -p results
