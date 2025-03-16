@@ -14781,3 +14781,19 @@ downVer="https://github.com/Qv2ray/Qv2ray/releases/download/v2.7.0/Qv2ray-v2.7.0
 size=39 MB
 version=2.7.0
 -----------------------------------------------------------------
+APP="qview"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="jurplel/qView"
+downVer="https://github.com/jurplel/qView/releases/download/6.1/qView-6.1-x86_64.AppImage"
+size=43 MB
+version=6.1
+-----------------------------------------------------------------
+APP="qxgedit"
+APPIMAGE='yes'
+GITHUB='no'
+SITE="https://sourceforge.net/projects/qxgedit"
+downVer="https://sourceforge.net/projects/qxgedit/files/qxgedit/1.0.0/qxgedit-1.0.0-1.1.x86_64.AppImage/download"
+size=22 MB
+version=1.0.0
+-----------------------------------------------------------------
