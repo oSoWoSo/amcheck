@@ -10249,3 +10249,11 @@ APPIMAGE='yes'
 GITHUB='no'
 SITE="https://siril.org"
 -----------------------------------------------------------------
+APP="skanpage"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/KDE-utils-appimage"
+downVer="https://github.com/ivan-hc/KDE-utils-appimage/releases/download/continuous/KDE-utils_24.12-2-archimage4.3-x86_64.AppImage"
+size=368 MB
+version=24.12
+-----------------------------------------------------------------
