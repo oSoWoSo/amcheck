@@ -563,9 +563,11 @@ jobs:
             #git status
             #git log --oneline -5
             #git diff
+            rm -f results ok-*
             git add results
             git commit -m "check"
-            git push --force-with-lease && echo "sync successfull" >> $GITHUB_STEP_SUMMARY || (git diff && git status)
+            git push --force && echo "sync successfull" >> $GITHUB_STEP_SUMMARY || (git diff && git status)
+            git clean -f
           fi
 
   second-try:
@@ -625,6 +627,8 @@ jobs:
           set -uo pipefail
           mkdir -p results
           #echo "Second try" >> $GITHUB_STEP_SUMMARY
+          echo "${{ needs.second-try.outputs.retest }}"
+          echo "$retest"
           if [ -f results/excluded ]; then
             for failed in $(cat results/excluded); do
               # Define the content of the script
