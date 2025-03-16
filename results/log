@@ -57,3 +57,13 @@ APPIMAGE='no'
 GITHUB='yes'
 SITE="sharkdp/bat"
 -----------------------------------------------------------------
+APP="abiword"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/Abiword-appimage"
+-----------------------------------------------------------------
+APP="accessimap-lecteur-der"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="makinacorpus/accessimap-lecteur-der"
+-----------------------------------------------------------------
