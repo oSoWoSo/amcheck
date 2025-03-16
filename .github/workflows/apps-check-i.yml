@@ -194,6 +194,11 @@ jobs:
             echo "Testing excluded"
             if [ -f results/excluded ]; then
               FILES=$(cat results/excluded)
+              git config --global user.name "${{ github.repository_owner }}"
+              git config --global user.email "noreply@github.com"
+              rm -f results/excluded
+              git commit -m "retest"
+              git push --force
             else
               echo "Nothing excluded!"
               echo "Nothing excluded!" >> $GITHUB_STEP_SUMMARY
