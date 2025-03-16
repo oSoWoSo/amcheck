@@ -34,3 +34,13 @@ APPIMAGE='no'
 GITHUB='no'
 SITE="https://www.7-zip.org"
 -----------------------------------------------------------------
+APP="86box"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="86Box/86Box"
+-----------------------------------------------------------------
+APP="9launcher"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="wearrrrr/9Launcher"
+-----------------------------------------------------------------
