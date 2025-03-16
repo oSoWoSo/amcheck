@@ -13943,3 +13943,19 @@ downVer="https://github.com/zenghongtu/PPet/releases/download/v3.3.0/PPet3-3.3.0
 size=97 MB
 version=3.3.0
 -----------------------------------------------------------------
+APP="ppsspp"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="mantralunar/ppsspp"
+downVer="https://github.com/mantralunar/ppsspp/releases/download/ppsspp-60a2dd1-x86_64/ppsspp-x86_64.AppImage"
+size=27 MB
+version=60a2dd1
+-----------------------------------------------------------------
+APP="pragtical"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="pragtical/pragtical"
+downVer="https://github.com/pragtical/pragtical/releases/download/v3.5.2/Pragtical-v3.5.2-x86_64.AppImage"
+size=5 MB
+version=3.5.2
+-----------------------------------------------------------------
