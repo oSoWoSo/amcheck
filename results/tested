@@ -1804,6 +1804,7 @@ qaddapp
 qaterialgallery
 qaterialhotreload
 qawl
+qbittorrent
 qbittorrent-enhanced
 qdriverstation
 qelectrotech
@@ -1854,3 +1855,4 @@ quickredis
 quicktwitch
 quickviewer
 quiet
+quokkagit

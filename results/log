@@ -14749,3 +14749,19 @@ downVer="https://github.com/TryQuiet/quiet/releases/download/%40quiet/desktop%40
 size=135 MB
 version=4.0.3
 -----------------------------------------------------------------
+APP="qbittorrent"
+APPIMAGE='yes'
+GITHUB='no'
+SITE="https://sourceforge.net/projects/qbittorrent"
+downVer="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-appimage/qbittorrent-5.0.4/qbittorrent-5.0.4_x86_64.AppImage/download"
+size=89 MB
+version=5.0.4
+-----------------------------------------------------------------
+APP="quokkagit"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ballessay/quokkagit"
+downVer="https://github.com/ballessay/quokkagit/releases/download/v0.1.0/quokkagit-1da969d-x86_64.AppImage"
+size=24 MB
+version=1da969d
+-----------------------------------------------------------------
