@@ -607,9 +607,9 @@ jobs:
           pwd
           pushd .
           cd ../../../../
-          find excluded
+          tree -d
+          find excluded || echo "Not found"
           popd
-          tree ../../ -d
           set -uo pipefail
           mkdir -p results
           #echo "Second try" >> $GITHUB_STEP_SUMMARY
