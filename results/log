@@ -15037,3 +15037,19 @@ downVer="https://github.com/ekvedaras/redis-gui/releases/download/v2.3.0/redis-g
 size=88 MB
 version=2.3.0
 -----------------------------------------------------------------
+APP="redis-viewer"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="redisviewer/RedisViewer"
+downVer="https://github.com/redisviewer/RedisViewer/releases/download/v2.4.9/Redis.Viewer-2.4.9-linux.AppImage"
+size=105 MB
+version=2.4.9
+-----------------------------------------------------------------
+APP="remind-me-again"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="probablykasper/remind-me-again"
+downVer="https://github.com/probablykasper/remind-me-again/releases/download/v1.2.2/remind-me-again_1.2.2_amd64.AppImage"
+size=73 MB
+version=1.2.2
+-----------------------------------------------------------------
