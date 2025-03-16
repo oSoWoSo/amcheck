@@ -1427,3 +1427,11 @@ APPIMAGE='yes'
 GITHUB='yes'
 SITE="chrishham/BypassCors"
 -----------------------------------------------------------------
+APP="cabal-desktop"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="cabal-club/cabal-desktop"
+downVer="https://github.com/cabal-club/cabal-desktop/releases/download/v8.0.0/cabal-desktop-8.0.0-linux-x86_64.AppImage"
+size=115 MB
+version=8.0.0
+-----------------------------------------------------------------
