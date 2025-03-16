@@ -685,5 +685,19 @@ jobs:
     needs: generate-matrix
     if: ${{ needs.generate-matrix.outputs.skip == 'true' }}
     steps:
-      - name: "Mark as Successful"
-        run: echo "All apps already tested..." >> $GITHUB_STEP_SUMMARY
+      - name: "Git Config"
+        run: |
+           git config --global user.name "${{ github.repository_owner }}"
+           git config --global user.email "noreply@github.com"
+      - name: "Reset stats"
+        run: |
+          echo "Everything tested"
+          echo "### stats RESET" >> $GITHUB_STEP_SUMMARY
+          cp results/log log.old || echo "Log deleted without backup"
+          cp results/excluded excluded.old || echo "Excluded deleted without backup"
+          rm -rf results
+          git rm -r results
+          git add log.old
+          git add excluded.old
+          git commit -m "reset stats"
+          git push --force
