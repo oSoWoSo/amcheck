@@ -15181,3 +15181,19 @@ downVer="https://github.com/adil192/ricochlime/releases/download/v1.11.6/Ricochl
 size=97 MB
 version=1.11.6
 -----------------------------------------------------------------
+APP="ridereceipts"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ridereceipts/ridereceipts"
+downVer="https://github.com/hello-efficiency-inc/ridereceipts/releases/download/v1.5.5/ridereceipts-1.5.5-x86_64.AppImage"
+size=129 MB
+version=1.5.5
+-----------------------------------------------------------------
+APP="riichi-city"
+APPIMAGE='no'
+GITHUB='no'
+SITE="https://www.mahjong-jp.com"
+downVer="https://d3qgi0t347dz44.cloudfront.net/release/linuxpack/default_prod_Linux_2.1.9.zip"
+size=6005 MB
+version=2.1.9.zip
+-----------------------------------------------------------------
