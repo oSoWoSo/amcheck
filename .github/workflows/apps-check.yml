@@ -590,6 +590,9 @@ jobs:
           if [ -f results/excluded ]; then
             retest=$(cat results/excluded)
             echo "retest=$retest" >> GITHUB_OUTPUT
+          else
+            echo "Nothing found"
+          fi
 
       - name: "Checkout AM"
         uses: actions/checkout@v4
