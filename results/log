@@ -14973,3 +14973,19 @@ downVer="https://github.com/realm/realm-studio/releases/download/v20.0.0/Realm.S
 size=120 MB
 version=20.0.0
 -----------------------------------------------------------------
+APP="reaper"
+APPIMAGE='no'
+GITHUB='no'
+SITE="https://reaper.fm"
+downVer="https://www.reaper.fm/files/7.x/reaper734_linux_x86_64.tar.xz"
+size=127 MB
+version=2025.03.03
+-----------------------------------------------------------------
+APP="rebaslight"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="rebaslight/rebaslight"
+downVer="https://github.com/rebaslight/rebaslight/releases/download/v3.7.3/rebaslight-3.7.3.tar.bz2"
+size=318 MB
+version=3.7.3
+-----------------------------------------------------------------
