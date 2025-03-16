@@ -8983,3 +8983,11 @@ APPIMAGE='yes'
 GITHUB='yes'
 SITE="pulsedownloader/releases"
 -----------------------------------------------------------------
+APP="pulseview"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="sigrokproject/pulseview"
+downVer="https://github.com/sigrokproject/pulseview/releases/download/continuous/pulseview-NIGHTLY-x86_64-debug.appimage"
+size=48 MB
+version=2024.08.31
+-----------------------------------------------------------------
