@@ -14989,3 +14989,19 @@ downVer="https://github.com/rebaslight/rebaslight/releases/download/v3.7.3/rebas
 size=318 MB
 version=3.7.3
 -----------------------------------------------------------------
+APP="rebos"
+APPIMAGE='no'
+GITHUB='no'
+SITE="https://gitlab.com/Oglo12/rebos"
+downVer="r97.4818a33"
+size=3 MB
+version=r97.4818a33
+-----------------------------------------------------------------
+APP="recoll"
+APPIMAGE='yes'
+GITHUB='no'
+SITE="https://www.recoll.org"
+downVer="1.42.1"
+size=92 MB
+version=1.42.1
+-----------------------------------------------------------------
