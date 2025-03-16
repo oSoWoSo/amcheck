@@ -14829,3 +14829,19 @@ downVer="https://github.com/blackPantherOS/radioit/releases/download/1.0beta1/Ra
 size=36 MB
 version=1.0
 -----------------------------------------------------------------
+APP="radix-wallet"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="radixdlt/desktop-wallet"
+downVer="https://github.com/radixdlt/desktop-wallet/releases/download/1.4.0-beta/Radix.Wallet.1.4.0-beta.AppImage"
+size=63 MB
+version=Radix.Wallet.1.4.0
+-----------------------------------------------------------------
+APP="rainbow-board"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="harshkhandeparkar/rainbow-board"
+downVer="https://github.com/harshkhandeparkar/rainbow-board/releases/download/v0.8.1/Rainbow-Board-0.8.1.AppImage"
+size=78 MB
+version=0.8.1
+-----------------------------------------------------------------
