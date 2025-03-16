@@ -15069,3 +15069,19 @@ downVer="https://github.com/MartinBarker/RenderTune/releases/download/v2.0.7/Ren
 size=257 MB
 version=2.0.7
 -----------------------------------------------------------------
+APP="reor"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="reorproject/reor"
+downVer="https://github.com/reorproject/reor/releases/download/v0.2.26/Reor_0.2.26.AppImage"
+size=1836 MB
+version=0.2.26
+-----------------------------------------------------------------
+APP="repath-studio"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="repath-project/repath-studio"
+downVer="https://github.com/repath-project/repath-studio/releases/download/v0.4.5/repath-studio-linux.AppImage"
+size=132 MB
+version=0.4.5
+-----------------------------------------------------------------
