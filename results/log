@@ -263,3 +263,19 @@ downVer="https://aiming.pro//desktop-app/Aiming-Pro-1.0.4.AppImage"
 size=94 MB
 version=1.0.4
 -----------------------------------------------------------------
+APP="air-controller-desktop"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="air-controller/air-controller-desktop"
+downVer="https://github.com/air-controller/air-controller-desktop/releases/download/0.4.0/AirController_0.4.0.AppImage"
+size=13 MB
+version=0.4.0
+-----------------------------------------------------------------
+APP="airspaces"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="foucdeg/x-plane-map-electron"
+downVer="https://github.com/foucdeg/x-plane-map-electron/releases/download/v2.6.0/airspaces-electron-2.6.0-x86_64.AppImage"
+size=56 MB
+version=2.6.0
+-----------------------------------------------------------------
