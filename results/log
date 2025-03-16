@@ -2685,3 +2685,11 @@ APPIMAGE='yes'
 GITHUB='no'
 SITE="https://rsync.opensuse.org/repositories/home:/Alexx2000"
 -----------------------------------------------------------------
+APP="dra"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="devmatteini/dra"
+downVer="https://github.com/devmatteini/dra/releases/download/0.8.0/dra-0.8.0-x86_64-unknown-linux-gnu.tar.gz"
+size=3 MB
+version=0.8.0
+-----------------------------------------------------------------
