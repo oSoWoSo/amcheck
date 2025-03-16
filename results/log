@@ -24,3 +24,13 @@ downVer="https://github.com/mysteryx93/HanumanInstituteApps/releases/download/v3
 size=16 MB
 version=Player432Hz
 -----------------------------------------------------------------
+APP="3d-puzzles"
+APPIMAGE='yes'
+GITHUB='no'
+SITE="volatilflerovium/3D-Puzzles"
+-----------------------------------------------------------------
+APP="7zip"
+APPIMAGE='no'
+GITHUB='no'
+SITE="https://www.7-zip.org"
+-----------------------------------------------------------------
