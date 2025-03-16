@@ -563,7 +563,7 @@ jobs:
             #git status
             #git log --oneline -5
             #git diff
-            rm -f results ok-*
+            rm -f results/ok-*
             git add results
             git commit -m "check"
             git push --force && echo "sync successfull" >> $GITHUB_STEP_SUMMARY || (git diff && git status)
