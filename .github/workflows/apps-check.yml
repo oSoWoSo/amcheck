@@ -481,7 +481,7 @@ jobs:
           retention-days: 1
 
       - name: "ok ${{ matrix.file }}"
-        id: ok-${{ matrix.file }
+        id: ok-${{ matrix.file }}
         if: success()
         run: echo "tested_apps+=${{ matrix.file }}" >> $GITHUB_ENV
 
