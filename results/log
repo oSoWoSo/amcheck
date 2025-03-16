@@ -14941,3 +14941,19 @@ downVer="https://github.com/rclone/rclone/releases/download/v1.69.1/rclone-v1.69
 size=69 MB
 version=1.69.1
 -----------------------------------------------------------------
+APP="rclone-browser"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="kapitainsky/RcloneBrowser"
+downVer="https://github.com/kapitainsky/RcloneBrowser/releases/download/1.8.0/rclone-browser-1.8.0-a0b66c6-linux-x86_64.AppImage"
+size=29 MB
+version=1.8.0
+-----------------------------------------------------------------
+APP="reactotron"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="infinitered/reactotron"
+downVer="https://github.com/infinitered/reactotron/releases/download/reactotron-app%403.7.7/Reactotron-3.7.7.AppImage"
+size=125 MB
+version=403.7.7
+-----------------------------------------------------------------
