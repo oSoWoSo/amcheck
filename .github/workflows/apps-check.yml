@@ -510,7 +510,7 @@ jobs:
           mkdir -p results
           for LogFile in results/out-*; do
             echo '-----------------------------------------------------------------'
-            echo "$LogFile out"
+            echo "$LogFile"
             echo '-----------------------------------------------------------------'
             cat "$LogFile"
             echo '-----------------------------------------------------------------'
@@ -573,10 +573,15 @@ jobs:
     env:
       TIMEOUT: 23
     steps:
-      #- name: "Checkout AM"
-        #uses: actions/checkout@v4
-        #with:
-          #repository: ${{ env.REPO }}
+      - name: checkout
+        uses: actions/checkout@v4
+        with:
+          path: results
+
+      - name: "Checkout AM"
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ env.REPO }}
 
         # Added ripgrep for bat
       - name: "Cache dependencies"
