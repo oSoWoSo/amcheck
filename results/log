@@ -77,3 +77,11 @@ APPIMAGE='yes'
 GITHUB='yes'
 SITE="actualbudget/releases"
 -----------------------------------------------------------------
+APP="adb"
+APPIMAGE='no'
+GITHUB='no'
+SITE="https://developer.android.com"
+downVer="35.0.2"
+size=18 MB
+version=35.0.2
+-----------------------------------------------------------------
