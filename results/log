@@ -102,3 +102,13 @@ APPIMAGE='yes'
 GITHUB='yes'
 SITE="advanced-rest-client/arc-electron"
 -----------------------------------------------------------------
+APP="afetch"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="Asthowen/AFetch"
+-----------------------------------------------------------------
+APP="affine"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="toeverything/AFFiNE"
+-----------------------------------------------------------------
