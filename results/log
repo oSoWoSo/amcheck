@@ -15021,3 +15021,19 @@ downVer="https://github.com/Recordscript/recordscript/releases/download/v0.1.2/r
 size=84 MB
 version=0.0.1
 -----------------------------------------------------------------
+APP="redeclipse"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="redeclipse/deploy"
+downVer="https://github.com/redeclipse/deploy/releases/download/appimage_continuous_stable/redeclipse-server-stable-x86_64.AppImage"
+size=863 MB
+version=2021.12.08
+-----------------------------------------------------------------
+APP="redis-gui"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ekvedaras/redis-gui"
+downVer="https://github.com/ekvedaras/redis-gui/releases/download/v2.3.0/redis-gui-2.3.0.AppImage"
+size=88 MB
+version=2.3.0
+-----------------------------------------------------------------
