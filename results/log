@@ -215,3 +215,19 @@ downVer="https://github.com/AgregoreWeb/agregore-browser/releases/download/v2.8.
 size=166 MB
 version=2.8.2
 -----------------------------------------------------------------
+APP="ai-bot-workspace"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="jmerle/ai-bot-workspace"
+downVer="https://github.com/jmerle/ai-bot-workspace/releases/download/v2.4.3/ai-bot-workspace-2.4.3-x86_64.AppImage"
+size=54 MB
+version=2.4.3
+-----------------------------------------------------------------
+APP="aichat"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="sigoden/aichat"
+downVer="https://github.com/sigoden/aichat/releases/download/v0.28.0/aichat-v0.28.0-x86_64-unknown-linux-musl.tar.gz"
+size=12 MB
+version=0.28.0
+-----------------------------------------------------------------
