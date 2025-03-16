@@ -374,3 +374,11 @@ downVer="https://github.com/altair-graphql/altair/releases/download/v8.2.1/altai
 size=154 MB
 version=8.2.1
 -----------------------------------------------------------------
+APP="allusion"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="allusion-app/Allusion"
+downVer="https://github.com/allusion-app/Allusion/releases/download/v1.0.0-rc.10/Allusion-1.0.0-rc.10.AppImage"
+size=93 MB
+version=1.0.0
+-----------------------------------------------------------------
