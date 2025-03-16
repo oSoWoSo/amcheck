@@ -161,3 +161,11 @@ downVer="https://github.com/mihaigalos/aim/releases/download/1.8.6/aim-1.8.6-x86
 size=20 MB
 version=1.8.6
 -----------------------------------------------------------------
+APP="aiming-pro"
+APPIMAGE='yes'
+GITHUB='no'
+SITE="https://aiming.pro"
+downVer="https://aiming.pro//desktop-app/Aiming-Pro-1.0.4.AppImage"
+size=94 MB
+version=1.0.4
+-----------------------------------------------------------------
