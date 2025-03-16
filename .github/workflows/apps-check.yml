@@ -577,6 +577,7 @@ jobs:
         working-directory: programs/x86_64
         run: |
           pwd
+          find excluded
           tree ../../ -d
           set -uo pipefail
           mkdir -p results
