@@ -5195,3 +5195,11 @@ APPIMAGE='yes'
 GITHUB='yes'
 SITE="deathkiller/jazz2"
 -----------------------------------------------------------------
+APP="jddesktopentryedit"
+APPIMAGE='yes'
+GITHUB='no'
+SITE="https://sourceforge.net/projects/jddesktopentryedit"
+downVer="https://sourceforge.net/projects/jddesktopentryedit/files/1.5/jdDesktopEntryEdit-1.5-Linux.AppImage/download"
+size=94 MB
+version=1.5
+-----------------------------------------------------------------
