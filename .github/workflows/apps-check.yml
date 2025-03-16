@@ -887,12 +887,12 @@ jobs:
             echo "No changes to commit." >> $GITHUB_STEP_SUMMARY
             exit 0
           else
-            #git status
-            #git log --oneline -5
-            #git diff
+            git status
+            git log --oneline -5
+            git diff
             git add results
             git commit -m "check"
-            git push --force-with-lease && echo "sync successfull" >> $GITHUB_STEP_SUMMARY || (git diff && git status)
+            git push --force && echo "sync successfull" >> $GITHUB_STEP_SUMMARY || (git diff && git status)
           fi
 
   # delete-all-artifacts:
