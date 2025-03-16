@@ -2693,3 +2693,11 @@ downVer="https://github.com/devmatteini/dra/releases/download/0.8.0/dra-0.8.0-x8
 size=3 MB
 version=0.8.0
 -----------------------------------------------------------------
+APP="dragdrop"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="fernzi/dragdrop"
+downVer="https://github.com/fernzi/dragdrop/releases/download/v1.1.0/DragDrop-1.1.0-x86_64.AppImage"
+size=26 MB
+version=1.1.0
+-----------------------------------------------------------------
