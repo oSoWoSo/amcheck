@@ -15117,3 +15117,19 @@ downVer="https://github.com/JMBeresford/retrom/releases/download/retrom-v0.7.15-
 size=263 MB
 version=0.7.15
 -----------------------------------------------------------------
+APP="retroshare"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="RetroShare/RetroShare"
+downVer="https://github.com/RetroShare/RetroShare/releases/download/v0.6.7.2/RetroShare-0.6.7-2.glibc2.29-x86_64.AppImage"
+size=51 MB
+version=0.6.7
+-----------------------------------------------------------------
+APP="revealed"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="BunnyStrike/revealed"
+downVer="https://github.com/BunnyStrike/deck-revealed/releases/download/v2.0.0-alpha.15/Revealed.AppImage"
+size=244 MB
+version=2.0.0
+-----------------------------------------------------------------
