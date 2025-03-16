@@ -193,6 +193,11 @@ jobs:
             echo "Testing excluded"
             if [[ -f results/excluded ]]; then
               FILES=$(cat results/excluded)
+              rm -f results/excluded
+              git rm -f results/excluded
+              git commit -m "retest"
+              git push --force
+              git clean -f
             else
               echo "Nothing excluded!"
               echo "Nothing excluded!" >> $GITHUB_STEP_SUMMARY
@@ -581,21 +586,6 @@ jobs:
     outputs:
       retest: ${{ needs.step.excl.retest }}
     steps:
-      - name: checkout
-        uses: actions/checkout@v4
-        with:
-          path: results
-
-      - name: "get excluded"
-        id: excl
-        run: |
-          if [ -f results/excluded ]; then
-            retest=$(cat results/excluded)
-            echo "retest=$retest" >> GITHUB_OUTPUT
-          else
-            echo "Nothing found"
-          fi
-
       - name: "Checkout AM"
         uses: actions/checkout@v4
         with:
@@ -614,6 +604,21 @@ jobs:
           sudo systemctl restart tor.service || systemctl restart tor.service
           chmod +x ./INSTALL
           sudo ./INSTALL 2> /dev/null || ./INSTALL
+
+      - name: checkout
+        uses: actions/checkout@v4
+        with:
+          path: results
+
+      - name: "get excluded"
+        id: excl
+        run: |
+          if [ -f results/excluded ]; then
+            retest=$(cat results/excluded)
+            echo "retest=$retest" >> GITHUB_OUTPUT
+          else
+            echo "Nothing found"
+          fi
 
       - name: "Second try"
         working-directory: programs/x86_64
