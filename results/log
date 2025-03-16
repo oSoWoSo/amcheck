@@ -295,3 +295,19 @@ downVer="https://github.com/ivan-hc/Aisleriot-appimage/releases/download/continu
 size=66 MB
 version=3.22.35
 -----------------------------------------------------------------
+APP="akasha"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="AkashaProject/Community"
+downVer="https://github.com/AKASHAorg/Community/releases/download/0.7.2/AKASHA-0.7.2-x86_64.AppImage"
+size=71 MB
+version=0.7.2
+-----------------------------------------------------------------
+APP="akuse"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="akuse-app/akuse"
+downVer="https://github.com/akuse-app/akuse/releases/download/1.10.1/linux-akuse-1.10.1.AppImage"
+size=104 MB
+version=1.10.1
+-----------------------------------------------------------------
