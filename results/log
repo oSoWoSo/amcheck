@@ -146,3 +146,10 @@ downVer="https://github.com/CodeDead/Advanced-PassGen/releases/download/v2.5.2/a
 size=117 MB
 version=2.5.2
 -----------------------------------------------------------------
+APP="bat"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="sharkdp/bat"
+size=7 MB
+version=0.25.0
+-----------------------------------------------------------------
