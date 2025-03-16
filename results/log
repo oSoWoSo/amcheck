@@ -92,3 +92,13 @@ SITE="https://download.opensuse.org/repositories/home:/dmulder:/YaST:/AppImage/A
 size=84 MB
 version=2025.01.02
 -----------------------------------------------------------------
+APP="advanced-passgen"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="CodeDead/Advanced-PassGen"
+-----------------------------------------------------------------
+APP="advanced-rest-client"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="advanced-rest-client/arc-electron"
+-----------------------------------------------------------------
