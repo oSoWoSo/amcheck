@@ -231,3 +231,19 @@ downVer="https://github.com/sigoden/aichat/releases/download/v0.28.0/aichat-v0.2
 size=12 MB
 version=0.28.0
 -----------------------------------------------------------------
+APP="aidm"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="Alexsussa/AIDM"
+downVer="https://github.com/Alexsussa/AIDM/releases/download/v0.3/AppImage_Desktop_Maker_v0.3_x86_64.AppImage"
+size=147 MB
+version=0.3
+-----------------------------------------------------------------
+APP="aillio-ts"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="roastworld/roast-time-release"
+downVer="https://github.com/roastworld/roast-time-release/releases/download/v1.1.2/aillio-ts-1.1.2-x86_64.AppImage"
+size=62 MB
+version=1.1.2
+-----------------------------------------------------------------
