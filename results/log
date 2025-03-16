@@ -67,3 +67,13 @@ APPIMAGE='yes'
 GITHUB='yes'
 SITE="makinacorpus/accessimap-lecteur-der"
 -----------------------------------------------------------------
+APP="acreom"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="Acreom/releases"
+-----------------------------------------------------------------
+APP="actual"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="actualbudget/releases"
+-----------------------------------------------------------------
