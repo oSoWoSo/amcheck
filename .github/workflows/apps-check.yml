@@ -576,11 +576,20 @@ jobs:
     runs-on: ubuntu-22.04
     env:
       TIMEOUT: 23
+    outputs:
+      retest: ${{ needs.step.excl.retest }}
     steps:
       - name: checkout
         uses: actions/checkout@v4
-        #with:
-          #path: results
+        with:
+          path: results
+
+      - name: "get excluded"
+        id: excl
+        run: |
+          if [ -f results/excluded ]; then
+            retest=$(cat results/excluded)
+            echo "retest=$retest" >> GITHUB_OUTPUT
 
       - name: "Checkout AM"
         uses: actions/checkout@v4
@@ -608,13 +617,14 @@ jobs:
           pushd .
           cd ../../../../
           tree -d
-          find excluded || echo "Not found"
+          find excluded 2>/dev/null || echo "Not found"
           popd
+          echo "${{ needs.second-try.outputs.retest }}"
           set -uo pipefail
           mkdir -p results
           #echo "Second try" >> $GITHUB_STEP_SUMMARY
-          if [ -f ../../results/excluded ]; then
-            for failed in $(cat ../../results/excluded); do
+          if [ -f results/excluded ]; then
+            for failed in $(cat results/excluded); do
               # Define the content of the script
               if [ -f "$failed" ]; then
                 script_content=$(cat $failed)
