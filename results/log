@@ -334,3 +334,19 @@ SITE="sharkdp/bat"
 size=7 MB
 version=0.25.0
 -----------------------------------------------------------------
+APP="alephium-wallet"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="alephium/desktop-wallet"
+downVer="https://github.com/alephium/desktop-wallet/releases/download/v2.2.0/Alephium-2.2.0.AppImage"
+size=95 MB
+version=2.2.0
+-----------------------------------------------------------------
+APP="alexandria"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="btpf/Alexandria"
+downVer="https://github.com/btpf/Alexandria/releases/download/v0.13.1/alexandria_0.13.1_amd64.AppImage"
+size=78 MB
+version=0.13.1
+-----------------------------------------------------------------
