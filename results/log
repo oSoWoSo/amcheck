@@ -85,3 +85,10 @@ downVer="35.0.2"
 size=18 MB
 version=35.0.2
 -----------------------------------------------------------------
+APP="admin-tools"
+APPIMAGE='yes'
+GITHUB='no'
+SITE="https://download.opensuse.org/repositories/home:/dmulder:/YaST:/AppImage/AppImage/admin-tools-latest-x86_64.AppImage"
+size=84 MB
+version=2025.01.02
+-----------------------------------------------------------------
