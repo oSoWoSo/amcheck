@@ -115,3 +115,19 @@ SITE="sharkdp/bat"
 size=7 MB
 version=0.25.0
 -----------------------------------------------------------------
+APP="actual"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="actualbudget/releases"
+downVer="https://github.com/actualbudget/releases/releases/download/0.0.148/Actual-0.0.148-x86_64.AppImage"
+size=93 MB
+version=0.0.148
+-----------------------------------------------------------------
+APP="adb"
+APPIMAGE='no'
+GITHUB='no'
+SITE="https://developer.android.com"
+downVer="35.0.2"
+size=18 MB
+version=35.0.2
+-----------------------------------------------------------------
