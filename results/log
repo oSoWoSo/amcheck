@@ -62,3 +62,10 @@ downVer="https://github.com/wearrrrr/9Launcher/releases/download/v.1.3.1/9launch
 size=131 MB
 version=1.3.1
 -----------------------------------------------------------------
+APP="bat"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="sharkdp/bat"
+size=7 MB
+version=0.25.0
+-----------------------------------------------------------------
