@@ -13927,3 +13927,19 @@ downVer="https://github.com/mysteryx93/HanumanInstituteApps/releases/download/v3
 size=16 MB
 version=Player432Hz
 -----------------------------------------------------------------
+APP="powershell"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/PowerShell-appimage"
+downVer="https://github.com/ivan-hc/PowerShell-appimage/releases/download/continuous/PowerShell-v7.5.0-x86_64.AppImage"
+size=67 MB
+version=7.5.0
+-----------------------------------------------------------------
+APP="ppet3"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="zenghongtu/PPet"
+downVer="https://github.com/zenghongtu/PPet/releases/download/v3.3.0/PPet3-3.3.0.AppImage"
+size=97 MB
+version=3.3.0
+-----------------------------------------------------------------
