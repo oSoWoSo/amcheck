@@ -895,7 +895,7 @@ jobs:
             echo "This is a Pull Request. Not saving results."
             exit 0
           elif git diff-index --quiet HEAD; then
-            echo "No changes to commit." >> $GITHUB_STEP_SUMMARY
+            echo "No changes to commit."
             exit 0
           else
             git status
