@@ -158,7 +158,7 @@ jobs:
 
       - name: "Generate Matrix 🏆"
         id: set-matrix
-        if: github.event.inputs.retest_excluded != 'true'
+        if: github.event.inputs.reset_stats != 'true'
         run: |
           if [[ -f results/tested ]]; then
             echo "tested exist"
