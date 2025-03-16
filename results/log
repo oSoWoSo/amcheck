@@ -15085,3 +15085,19 @@ downVer="https://github.com/repath-project/repath-studio/releases/download/v0.4.
 size=132 MB
 version=0.4.5
 -----------------------------------------------------------------
+APP="reqable"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="reqable/reqable-app"
+downVer="https://github.com/reqable/reqable-app/releases/download/2.33.3/reqable-app-linux-x86_64.AppImage"
+size=33 MB
+version=2.33.3
+-----------------------------------------------------------------
+APP="responsively"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="responsively-org/responsively-app-releases"
+downVer="https://github.com/responsively-org/responsively-app-releases/releases/download/v1.16.0/ResponsivelyApp-1.16.0.AppImage"
+size=117 MB
+version=1.16.0
+-----------------------------------------------------------------
