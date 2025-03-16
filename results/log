@@ -14845,3 +14845,19 @@ downVer="https://github.com/harshkhandeparkar/rainbow-board/releases/download/v0
 size=78 MB
 version=0.8.1
 -----------------------------------------------------------------
+APP="rambox"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ramboxapp/download"
+downVer="https://github.com/ramboxapp/download/releases/download/v2.4.2-beta.2/Rambox-2.4.2-beta.2-linux-x64.AppImage"
+size=125 MB
+version=2.4.2
+-----------------------------------------------------------------
+APP="rare"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="Dummerle/Rare"
+downVer="https://github.com/RareDevs/Rare/releases/download/1.11.3.67/Rare-1.11.3.67.AppImage"
+size=55 MB
+version=1.11.3.67
+-----------------------------------------------------------------
