@@ -15133,3 +15133,19 @@ downVer="https://github.com/BunnyStrike/deck-revealed/releases/download/v2.0.0-a
 size=244 MB
 version=2.0.0
 -----------------------------------------------------------------
+APP="revealgo"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="yusukebe/revealgo"
+downVer="https://github.com/yusukebe/revealgo/releases/download/v1.2.2/revealgo_1.2.2_Linux-64bit.tar.gz"
+size=15 MB
+version=1.2.2
+-----------------------------------------------------------------
+APP="revolt"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="revoltchat/desktop"
+downVer="https://github.com/revoltchat/desktop/releases/download/v1.0.8/Revolt-1.0.8.AppImage"
+size=281 MB
+version=1.0.8
+-----------------------------------------------------------------
