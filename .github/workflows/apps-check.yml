@@ -711,7 +711,7 @@ jobs:
             done
             git add results
           else
-            echo "Something wrong"
+            echo "No excluded exist"
           fi
 
   update-results:
