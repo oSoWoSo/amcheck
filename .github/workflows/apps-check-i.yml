@@ -5,7 +5,7 @@ on:
     branches: main
     paths:
       - 'programs/x86_64/**'
-      - .github/workflows/apps-check.yml
+      - .github/workflows/apps-check-i.yml
 
   repository_dispatch:
     types: [check]
