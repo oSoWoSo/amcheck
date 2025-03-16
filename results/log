@@ -13863,3 +13863,19 @@ downVer="https://github.com/Postcatlab/postcat/releases/download/v0.5.1/Postcat-
 size=123 MB
 version=0.5.1
 -----------------------------------------------------------------
+APP="playbox"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="cjdenio/playbox"
+downVer="https://github.com/cjdenio/playbox/releases/download/v0.2.1/Playbox.0.2.1.AppImage"
+size=80 MB
+version=0.2.1
+-----------------------------------------------------------------
+APP="postman"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="showcheap/postman-appimage"
+downVer="https://github.com/suciptoid/postman-appimage/releases/download/continous/Postman-11.27.3-x86_64.AppImage"
+size=127 MB
+version=11.27.3
+-----------------------------------------------------------------
