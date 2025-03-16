@@ -52,3 +52,8 @@ downVer="https://github.com/divVerent/aaaaxy/releases/download/v1.6.0/AAAAXY-x86
 size=34 MB
 version=1.6.0
 -----------------------------------------------------------------
+APP="bat"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="sharkdp/bat"
+-----------------------------------------------------------------
