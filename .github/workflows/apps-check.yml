@@ -446,6 +446,7 @@ jobs:
 
             # Any other result is a failure
             else
+              echo "### ${{ matrix.file }} failed" >> $GITHUB_STEP_SUMMARY
               echo "${{ matrix.file }}" >> "results/ko-${{ matrix.file }}"
               echo "EXIT_CODE=9" >> $GITHUB_ENV
               exit 0
@@ -708,6 +709,7 @@ jobs:
             echo "$failed catched!"
             echo "### $failed catched in second try!" >> $GITHUB_STEP_SUMMARY
             done
+            git add results
           else
             echo "Something wrong"
           fi
