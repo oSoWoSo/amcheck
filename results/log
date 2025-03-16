@@ -6468,3 +6468,11 @@ downVer="https://github.com/mangband/mangband/releases/download/v1.5.3/MAngbandC
 size=4 MB
 version=1.5.3
 -----------------------------------------------------------------
+APP="manta"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="hql287/Manta"
+downVer="https://github.com/hql287/Manta/releases/download/v1.1.4/Manta-1.1.4-x86_64.AppImage"
+size=91 MB
+version=1.1.4
+-----------------------------------------------------------------
