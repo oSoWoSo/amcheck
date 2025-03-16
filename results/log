@@ -15101,3 +15101,19 @@ downVer="https://github.com/responsively-org/responsively-app-releases/releases/
 size=117 MB
 version=1.16.0
 -----------------------------------------------------------------
+APP="retroarch"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="hizzlekizzle/RetroArch-AppImage"
+downVer="1.20.0"
+size=57 MB
+version=1.20.0
+-----------------------------------------------------------------
+APP="retrom"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="JMBeresford/retrom"
+downVer="https://github.com/JMBeresford/retrom/releases/download/retrom-v0.7.15-pre.5ed75f5a985d386e96ced7e26dcb021b7b95d204/Retrom_0.7.15_amd64-debug.AppImage"
+size=263 MB
+version=0.7.15
+-----------------------------------------------------------------
