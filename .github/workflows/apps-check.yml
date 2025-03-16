@@ -466,7 +466,7 @@ jobs:
       - name: "out ${{ matrix.file }}"
         uses: actions/upload-artifact@v4
         with:
-          name: out
+          name: out-${{ matrix.file }}
           path: programs/x86_64/results/out-${{ matrix.file }}
           if-no-files-found: error
           retention-days: 1
@@ -476,7 +476,7 @@ jobs:
         if: failure()
         uses: actions/upload-artifact@v4
         with:
-          name: ko
+          name: ko-${{ matrix.file }}
           path: programs/x86_64/results/ko-${{ matrix.file }}
           retention-days: 1
 
@@ -489,7 +489,7 @@ jobs:
         if: success()
         uses: actions/upload-artifact@v4
         with:
-          name: up-ok
+          name: ok-${{ matrix.file }}
           path: programs/x86_64/results/ok-${{ matrix.file }}
           retention-days: 1
 
