@@ -15165,3 +15165,19 @@ downVer="https://github.com/ivan-hc/Rhythmbox-appimage/releases/download/continu
 size=92 MB
 version=3.4.8
 -----------------------------------------------------------------
+APP="ricochet"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="blueprint-freespeech/ricochet-refresh"
+downVer="https://github.com/blueprint-freespeech/ricochet-refresh/releases/download/v3.0.31-release/ricochet-refresh-3.0.31-x86_64.appimage"
+size=35 MB
+version=3.0.31
+-----------------------------------------------------------------
+APP="ricochlime"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="adil192/ricochlime"
+downVer="https://github.com/adil192/ricochlime/releases/download/v1.11.6/Ricochlime-1.11.6-x86_64.AppImage"
+size=97 MB
+version=1.11.6
+-----------------------------------------------------------------
