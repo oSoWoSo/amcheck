@@ -92,3 +92,19 @@ downVer="https://github.com/ivan-hc/Abiword-appimage/releases/download/continuou
 size=64 MB
 version=3.0.6
 -----------------------------------------------------------------
+APP="accessimap-lecteur-der"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="makinacorpus/accessimap-lecteur-der"
+downVer="https://github.com/makinacorpus/accessimap-lecteur-der/releases/download/0.0.35/accessimap-lecteur-der-0.0.34-x86_64.AppImage"
+size=52 MB
+version=0.0.34
+-----------------------------------------------------------------
+APP="acreom"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="Acreom/releases"
+downVer="https://github.com/Acreom/releases/releases/download/v1.20.2/acreom-1.20.2.AppImage"
+size=162 MB
+version=1.20.2
+-----------------------------------------------------------------
