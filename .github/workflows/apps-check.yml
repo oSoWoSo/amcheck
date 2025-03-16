@@ -136,7 +136,6 @@ jobs:
             echo " 🏁 ${{ steps.stats.outputs.tested }}" >> $GITHUB_STEP_SUMMARY
           fi
           if [[ "${{ steps.stats.outputs.excluded }}" != '0' ]]; then
-            echo "no GitHub/AppImage:" >> $GITHUB_STEP_SUMMARY
             echo " ❌ ${{ steps.stats.outputs.excluded }} (excluded)" >> $GITHUB_STEP_SUMMARY
           fi
 
