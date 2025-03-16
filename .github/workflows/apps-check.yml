@@ -628,7 +628,7 @@ jobs:
           mkdir -p results
           #echo "Second try" >> $GITHUB_STEP_SUMMARY
           echo "${{ needs.second-try.outputs.retest }}"
-          echo "$retest"
+          echo "$retest"  || echo "retest not exist"
           if [ -f results/excluded ]; then
             for failed in $(cat results/excluded); do
               # Define the content of the script
