@@ -14797,3 +14797,19 @@ downVer="https://sourceforge.net/projects/qxgedit/files/qxgedit/1.0.0/qxgedit-1.
 size=22 MB
 version=1.0.0
 -----------------------------------------------------------------
+APP="r2modman"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ebkr/r2modmanPlus"
+downVer="https://github.com/ebkr/r2modmanPlus/releases/download/v3.1.57/r2modman-3.1.57.AppImage"
+size=138 MB
+version=3.1.57
+-----------------------------------------------------------------
+APP="r3play"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="qier222/YesPlayMusic"
+downVer="https://github.com/qier222/YesPlayMusic/releases/download/v0.4.8-2/YesPlayMusic-0.4.8.AppImage"
+size=121 MB
+version=0.4.8
+-----------------------------------------------------------------
