@@ -63,13 +63,6 @@ jobs:
       - name: "Show payload"
         run: echo ${{ github.event.client_payload.sha }} >> $GITHUB_STEP_SUMMARY
 
-  git:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: qoomon/actions--setup-git@v1
-        with:
-          user: "${{ github.repository_owner }}
-
   show-stats:
     name: "stats 📝"
     needs: git
@@ -105,6 +98,8 @@ jobs:
 
       - name: "Checkout"
         uses: actions/checkout@v4
+      - name: "git"
+        uses: fregante/setup-git-user@v2
 
       - name: "Reset stats"
         if: github.event.inputs.reset_stats == 'true'
