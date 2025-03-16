@@ -14909,3 +14909,19 @@ downVer="https://rawtherapee.com/shared/builds/linux/RawTherapee_5.11_release.Ap
 size=122 MB
 version=5.11
 -----------------------------------------------------------------
+APP="rbdl-toolkit"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ORB-HD/rbdl-toolkit"
+downVer="https://github.com/rbdl/rbdl-toolkit/releases/download/v1.1.4/rbdl-toolkit-x86_64.AppImage"
+size=75 MB
+version=1.1.4
+-----------------------------------------------------------------
+APP="rbdoom-3"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="mantralunar/RBDOOM-3-BFG"
+downVer="https://github.com/mantralunar/RBDOOM-3-BFG/releases/download/RBDOOM-3-BFG-0a1a591-x86_64/RBDOOM-3-BFG-x86_64.AppImage"
+size=14 MB
+version=3
+-----------------------------------------------------------------
