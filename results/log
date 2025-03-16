@@ -279,3 +279,19 @@ downVer="https://github.com/foucdeg/x-plane-map-electron/releases/download/v2.6.
 size=56 MB
 version=2.6.0
 -----------------------------------------------------------------
+APP="aisap"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="mgord9518/aisap"
+downVer="https://github.com/mgord9518/aisap/releases/download/continuous/aisap-0.10.5-alpha-x86_64.AppImage"
+size=3 MB
+version=0.10.5
+-----------------------------------------------------------------
+APP="aisleriot"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/Aisleriot-appimage"
+downVer="https://github.com/ivan-hc/Aisleriot-appimage/releases/download/continuous/AisleRiot-Solitaire_3.22.35-1-archimage4.3-x86_64.AppImage"
+size=66 MB
+version=3.22.35
+-----------------------------------------------------------------
