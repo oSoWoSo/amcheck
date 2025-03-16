@@ -13879,3 +13879,19 @@ downVer="https://github.com/suciptoid/postman-appimage/releases/download/contino
 size=127 MB
 version=11.27.3
 -----------------------------------------------------------------
+APP="postybirb"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="mvdicarlo/postybirb"
+downVer="https://github.com/mvdicarlo/postybirb/releases/download/v4.0.1/PostyBirb-4.0.1.AppImage"
+size=150 MB
+version=4.0.1
+-----------------------------------------------------------------
+APP="postybirb-plus"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="mvdicarlo/postybirb-plus"
+downVer="https://github.com/mvdicarlo/postybirb-plus/releases/download/v3.1.56/postybirb-plus-3.1.56-x86_64.AppImage"
+size=120 MB
+version=3.1.56
+-----------------------------------------------------------------
