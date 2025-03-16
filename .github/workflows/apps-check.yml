@@ -381,7 +381,7 @@ jobs:
               echo "version=${version}" | tee -a results/out-"${{ matrix.file }}"
 
             elif [[ "$pure_arg" =~ (bat-extras) ]]; then
-              echo 1 | am -i "$pure_arg" --debug 2>&1 | tee -a results/log-"${{ matrix.file }}"
+              echo 1 | timeout "$TIMEOUT"m am -i "$pure_arg" --debug 2>&1 | tee -a results/log-"${{ matrix.file }}"
               size=$(cat "results/log-${{ matrix.file }}" | tee /dev/null | grep 'OF DISK SPACE' | cut -d'(' -f2 | cut -d' ' -f1,2 | tail -1)
               Preversion=$(cat "results/log-${{ matrix.file }}" | tee /dev/null | grep '◆' | tail -2 | head -1)
               echo "pre version is $Preversion"
@@ -391,7 +391,7 @@ jobs:
               echo "version=${version}" | tee -a results/out-"${{ matrix.file }}"
             else
 
-              echo y | am -i "${{ matrix.file }}" --debug 2>&1 | tee -a results/log-"${{ matrix.file }}"
+              echo y | timeout "$TIMEOUT"m am -i "${{ matrix.file }}" --debug 2>&1 | tee -a results/log-"${{ matrix.file }}"
               size=$(cat "results/log-${{ matrix.file }}" | tee /dev/null | grep 'OF DISK SPACE' | cut -d'(' -f2 | cut -d' ' -f1,2)
               Preversion=$(cat "results/log-${{ matrix.file }}" | tee /dev/null | grep '◆' | tail -1 | head -1)
               echo "pre version is $Preversion"
@@ -447,7 +447,8 @@ jobs:
             # Any other result is a failure
             else
               echo "${{ matrix.file }}" >> "results/ko-${{ matrix.file }}"
-              exit 9
+              echo "EXIT_CODE=9" >> $GITHUB_ENV
+              exit 0
             fi
           fi
 
@@ -615,10 +616,10 @@ jobs:
 
                   if [[ "$pure_arg" =~ (libreoffice|mpv|wine) ]]; then
 
-                  echo 1 | am -i "$failed" --debug 2>&1 \
+                  echo 1 | timeout "$TIMEOUT"m am -i "$failed" --debug 2>&1 \
                   | tee -a results/log-"$failed" \
                   || sudo systemctl restart tor.service && echo 1 \
-                  | am -i "$failed" --debug 2>&1 \
+                  | timeout "$TIMEOUT"m am -i "$failed" --debug 2>&1 \
                   | tee -a results/log-"$failed"
                   size=$(cat "results/log-$failed" | tee /dev/null | grep 'OF DISK SPACE' | cut -d'(' -f2 | cut -d' ' -f1,2)
                   Preversion=$(cat "results/log-$failed" | tee /dev/null | grep '◆' | tail -1)
@@ -629,10 +630,10 @@ jobs:
                   echo "version=${version}" | tee -a results/out-"$failed"
 
                   elif [[ "$pure_arg" =~ (bat-extras) ]]; then
-                  echo 1 | am -i "$pure_arg" --debug 2>&1 \
+                  echo 1 | timeout "$TIMEOUT"m am -i "$pure_arg" --debug 2>&1 \
                   | tee -a results/log-"$failed" \
                   || sudo systemctl restart tor.service && echo 1 \
-                  | am -i "$pure_arg" --debug 2>&1 \
+                  | timeout "$TIMEOUT"m am -i "$pure_arg" --debug 2>&1 \
                   | tee -a results/log-"$failed"
                   size=$(cat "results/log-$failed" | tee /dev/null | grep 'OF DISK SPACE' | cut -d'(' -f2 | cut -d' ' -f1,2)
                   Preversion=$(cat "results/log-$failed" | tee /dev/null | grep '◆' | tail -2 | head -1)
@@ -646,7 +647,7 @@ jobs:
                   echo y | timeout "$TIMEOUT"m am -i "$failed" --debug 2>&1 \
                   | tee -a results/log-"$failed" \
                   || sudo systemctl restart tor.service && echo y \
-                  | am -i "$failed" --debug 2>&1 \
+                  | timeout "$TIMEOUT"m am -i "$failed" --debug 2>&1 \
                   | tee -a results/log-"$failed"
                   size=$(cat "results/log-$failed" | tee /dev/null | grep 'OF DISK SPACE' | cut -d'(' -f2 | cut -d' ' -f1,2)
                   Preversion=$(cat "results/log-$failed" | tee /dev/null | grep '◆' | tail -1)
