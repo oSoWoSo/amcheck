@@ -6,3 +6,13 @@ downVer="https://github.com/0ad-matters/0ad-appimage/releases/download/v0.27.0/0
 size=1674 MB
 version=0ad
 -----------------------------------------------------------------
+APP="0ad"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="0ad-matters/0ad-appimage"
+-----------------------------------------------------------------
+APP="2ship"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="HarbourMasters/2ship2harkinian"
+-----------------------------------------------------------------
