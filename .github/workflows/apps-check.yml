@@ -68,8 +68,8 @@ jobs:
     steps:
       - name: "git config"
         run: |
-          git config --global user.name "${{ github.repository_owner }}"
-          git config --global user.email "noreply@github.com"
+          git config --local user.name "${{ github.repository_owner }}"
+          git config --local user.email "noreply@github.com"
 
   show-stats:
     name: "stats 📝"
