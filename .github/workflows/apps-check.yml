@@ -97,8 +97,6 @@ jobs:
 
       - name: "Checkout"
         uses: actions/checkout@v4
-      - name: "git"
-        uses: fregante/setup-git-user@v2
 
       - name: "Reset stats"
         if: github.event.inputs.reset_stats == 'true'
@@ -106,6 +104,9 @@ jobs:
           echo "### stats RESET" >> $GITHUB_STEP_SUMMARY
           rm -rf results
           git rm -r results
+
+      - name: "git"
+        uses: fregante/setup-git-user@v2
           git commit -m "reset stats"
           git push --force
           git clean -f
