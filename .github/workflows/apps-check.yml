@@ -579,8 +579,8 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v4
-        with:
-          path: results
+        #with:
+          #path: results
 
       - name: "Checkout AM"
         uses: actions/checkout@v4
