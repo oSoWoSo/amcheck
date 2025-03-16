@@ -358,3 +358,11 @@ downVer="https://sourceforge.net/projects/alien-tec-ui/files/Alien-Tec-UI-Linux-
 size=93 MB
 version=2021.12.12
 -----------------------------------------------------------------
+APP="alpine-flatimage"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ruanformigoni/flatimage"
+downVer="https://github.com/ruanformigoni/flatimage/releases/download/v1.0.8/alpine.flatimage"
+size=48 MB
+version=1.0.8
+-----------------------------------------------------------------
