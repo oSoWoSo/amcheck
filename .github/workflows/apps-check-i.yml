@@ -196,7 +196,7 @@ jobs:
               FILES=$(cat results/excluded)
               git config --global user.name "${{ github.repository_owner }}"
               git config --global user.email "noreply@github.com"
-              rm -f results/excluded
+              git rm -f results/excluded
               git commit -m "retest"
               git push --force
             else
