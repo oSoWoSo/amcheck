@@ -572,11 +572,6 @@ jobs:
           chmod +x ./INSTALL
           sudo ./INSTALL 2> /dev/null || ./INSTALL
 
-      - name: "Checkout repository"
-        uses: actions/checkout@v4
-        with:
-          path: results
-
       - name: "Second try"
         working-directory: programs/x86_64
         run: |
