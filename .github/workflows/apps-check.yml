@@ -66,15 +66,9 @@ jobs:
   git:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout
-        uses: actions/checkout@v4
-      - name: "git config"
-        run: |
-          git config --global user.name "${{ github.repository_owner }}"
-          git config --global user.email "noreply@github.com"
-          #git add .gitconfig
-          #git commit -m "gitconfig"
-          #git push
+      - uses: qoomon/actions--setup-git@v1
+        with:
+          user: "${{ github.repository_owner }}
 
   show-stats:
     name: "stats 📝"
