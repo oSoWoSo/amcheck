@@ -577,7 +577,7 @@ jobs:
         working-directory: programs/x86_64
         run: |
           pwd
-          ls -R ../../
+          tree ../../ -d
           set -uo pipefail
           mkdir -p results
           #echo "Second try" >> $GITHUB_STEP_SUMMARY
