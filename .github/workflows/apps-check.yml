@@ -535,13 +535,14 @@ jobs:
             if [[ -f "$KoFile" ]]; then
               echo "$appname" | tee -a failing results/excluded
               rm -f "$KoFile"
-              cat "$LogFile" | grep -E '(^.*=.*$|^.*----.*$)' >> results/log
+              #cat "$LogFile" | grep -E '(^.*=.*$|^.*----.*$)' >> results/log
               sort -u results/excluded -o results/excluded
               sort -u failing -o failing
               git add results/excluded
             else
               cat "$LogFile" | grep -E '(^.*=.*$|^.*----.*$)' >> results/log
               echo "$appname" >> results/tested
+              rm -f "ok-$appname"
             fi
             echo '-----------------------------------------------------------------' >> results/log
             rm -f "$LogFile"
