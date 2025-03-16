@@ -14925,3 +14925,19 @@ downVer="https://github.com/mantralunar/RBDOOM-3-BFG/releases/download/RBDOOM-3-
 size=14 MB
 version=3
 -----------------------------------------------------------------
+APP="rbw"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="doy/rbw"
+downVer="https://github.com/doy/rbw/releases/download/1.13.2/rbw_1.13.2_linux_amd64.tar.gz"
+size=16 MB
+version=1.13.2
+-----------------------------------------------------------------
+APP="rclone"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="rclone/rclone"
+downVer="https://github.com/rclone/rclone/releases/download/v1.69.1/rclone-v1.69.1-linux-amd64.zip"
+size=69 MB
+version=1.69.1
+-----------------------------------------------------------------
