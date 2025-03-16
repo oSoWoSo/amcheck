@@ -49,7 +49,6 @@ env:
   REPO: ${{ github.repository_owner }}/AM
   BRANCH: main
   TOTEST: 250
-  TIMEOUT: 23
 
 jobs:
   triggered:
@@ -362,7 +361,8 @@ jobs:
           fi
 
           # Install the application
-          if [ "$pure_arg" = suyu ]; then
+
+          if [[ "$pure_arg" =~ (suyu) ]]; then
 
             echo "This application cannot be installed on github actions" | tee -a results/log-"${{ matrix.file }}"
             echo "${{ matrix.file }}" >> results/ok-${{ matrix.file }}
