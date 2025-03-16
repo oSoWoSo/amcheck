@@ -76,3 +76,19 @@ SITE="sharkdp/bat"
 size=7 MB
 version=0.25.0
 -----------------------------------------------------------------
+APP="aaaaxy"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="divVerent/aaaaxy"
+downVer="https://github.com/divVerent/aaaaxy/releases/download/v1.6.0/AAAAXY-x86_64.AppImage"
+size=34 MB
+version=1.6.0
+-----------------------------------------------------------------
+APP="abiword"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/Abiword-appimage"
+downVer="https://github.com/ivan-hc/Abiword-appimage/releases/download/continuous/AbiWord_3.0.6-2-archimage4.3-x86_64.AppImage"
+size=64 MB
+version=3.0.6
+-----------------------------------------------------------------
