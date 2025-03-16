@@ -297,7 +297,7 @@ jobs:
           else
             #echo "EXIT_CODE=9" >> $GITHUB_ENV
             echo "GITHUB='no'" >> results/out-"${{ matrix.file }}"
-            touch results/out-"${{ matrix.file }}"
+            touch results/ko-"${{ matrix.file }}"
           fi
 
       - name: "SITE ${{ matrix.file }} 🚧"
@@ -334,7 +334,7 @@ jobs:
           if [[ "$pure_arg" =~ (suyu) ]]; then
 
             echo "This application cannot be installed on github actions" | tee -a results/log-"${{ matrix.file }}"
-            echo "${{ matrix.file }}" >> results/ok-${{ matrix.file }}
+            echo "${{ matrix.file }}" >> results/ko-${{ matrix.file }}
 
           else
           
@@ -393,7 +393,8 @@ jobs:
               printf "\n-------------------------------------------------------------\n\n"
 
               # Remove the application
-              am -R "$LASTDIR" && echo "${{ matrix.file }}" >> results/ok-${{ matrix.file }} || echo "${{ matrix.file }}" >> results/log-${{ matrix.file }}
+              am -R "$LASTDIR"
+              echo "${{ matrix.file }}" >> results/tested
 
             # Any other result is a failure
             else
@@ -426,7 +427,7 @@ jobs:
           if [[ "$pure_arg" =~ (suyu) ]]; then
 
             echo "This application cannot be installed on github actions" | tee -a results/log-"${{ matrix.file }}"
-            echo "${{ matrix.file }}" >> results/ok-${{ matrix.file }}
+            echo "${{ matrix.file }}" >> results/ko-${{ matrix.file }}
 
           else
           
@@ -485,7 +486,8 @@ jobs:
               printf "\n-------------------------------------------------------------\n\n"
 
               # Remove the application
-              am -R "$LASTDIR" && echo "${{ matrix.file }}" >> results/ok-${{ matrix.file }} || echo "${{ matrix.file }}" >> results/log-${{ matrix.file }}
+              am -R "$LASTDIR"
+              echo "${{ matrix.file }}" >> results/tested
 
             # Any other result is a failure
             else
@@ -510,14 +512,6 @@ jobs:
         with:
           name: ko-${{ matrix.file }}
           path: programs/x86_64/results/ko-${{ matrix.file }}
-          retention-days: 1
-
-      - name: "Upload OK Results ⬆️"
-        if: success()
-        uses: actions/upload-artifact@v4
-        with:
-          name: ok-${{ matrix.file }}
-          path: programs/x86_64/results/ok-${{ matrix.file }}
           retention-days: 1
 
   update-results:
@@ -551,11 +545,7 @@ jobs:
         run: |
           mkdir -p results
           for LogFile in results/out-*; do
-            echo '-----------------------------------------------------------------'
-            echo "$LogFile"
-            echo '-----------------------------------------------------------------'
             cat "$LogFile"
-            echo '-----------------------------------------------------------------'
             echo '-----------------------------------------------------------------'
             [ -f "$LogFile" ] || continue
             appname=$(basename "$LogFile" | cut -d'-' -f2-)
@@ -610,11 +600,11 @@ jobs:
             echo "😱 $excluded excluded" >> $GITHUB_STEP_SUMMARY
           fi
           echo "### 🛅 $remaining to test" >> $GITHUB_STEP_SUMMARY
-          rm -f appslist
-          rm -f results/ok-*
           echo '-----------------------------------------------------------------'
           echo "Missed results:"
           echo '-----------------------------------------------------------------'
+          rm -f results/appslist
+          rm -f appslist
           ls -R results/
           for rest in results/*; do
             cat "$rest"
