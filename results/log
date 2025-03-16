@@ -14957,3 +14957,19 @@ downVer="https://github.com/infinitered/reactotron/releases/download/reactotron-
 size=125 MB
 version=403.7.7
 -----------------------------------------------------------------
+APP="real-video-enhancer"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="TNTwise/REAL-Video-Enhancer"
+downVer="https://github.com/TNTwise/REAL-Video-Enhancer/releases/download/1.2.0/REAL-Video-Enhancer-NCNN-Linux-x86_64.AppImage"
+size=205 MB
+version=1.2.0
+-----------------------------------------------------------------
+APP="realm-studio"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="realm/realm-studio"
+downVer="https://github.com/realm/realm-studio/releases/download/v20.0.0/Realm.Studio-20.0.0.AppImage"
+size=120 MB
+version=20.0.0
+-----------------------------------------------------------------
