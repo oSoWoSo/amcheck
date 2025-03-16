@@ -13911,3 +13911,19 @@ downVer="https://github.com/thgier/PotatoPresenter/releases/download/v1.0.2/Pota
 size=41 MB
 version=1.0.2
 -----------------------------------------------------------------
+APP="powder-toy"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="mgord9518/Powder_Toy.AppImage"
+downVer="https://github.com/mgord9518/Powder_Toy.AppImage/releases/download/nightly/Powder_Toy-96.2-x86_64.AppImage"
+size=6 MB
+version=96.2
+-----------------------------------------------------------------
+APP="powerliminals-player"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="mysteryx93/NaturalGroundingPlayer"
+downVer="https://github.com/mysteryx93/HanumanInstituteApps/releases/download/v3.3.2/Player432Hz-3.3.2_Linux_x64.AppImage"
+size=16 MB
+version=Player432Hz
+-----------------------------------------------------------------
