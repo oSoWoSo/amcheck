@@ -7725,3 +7725,11 @@ APPIMAGE='no'
 GITHUB='yes'
 SITE="ollama/ollama"
 -----------------------------------------------------------------
+APP="omekasy"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="ikanago/omekasy"
+downVer="https://github.com/ikanago/omekasy/releases/download/v1.3.1/omekasy-v1.3.1-x86_64-unknown-linux-gnu.tar.gz"
+size=2 MB
+version=1.3.1
+-----------------------------------------------------------------
