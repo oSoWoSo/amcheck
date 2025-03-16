@@ -14861,3 +14861,19 @@ downVer="https://github.com/RareDevs/Rare/releases/download/1.11.3.67/Rare-1.11.
 size=55 MB
 version=1.11.3.67
 -----------------------------------------------------------------
+APP="raspirus"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="Raspirus/Raspirus"
+downVer="https://github.com/Raspirus/raspirus/releases/download/v2.2.0/raspirus_2.2.0_x86_64.AppImage"
+size=17 MB
+version=2.2.0
+-----------------------------------------------------------------
+APP="rasterdraw"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="humble-barnacle001/qt-raster-lines"
+downVer="https://github.com/humble-barnacle001/qt-raster-lines/releases/download/latest/RasterDraw-Linux-latest-x86_64.AppImage"
+size=42 MB
+version=2025.01.04
+-----------------------------------------------------------------
