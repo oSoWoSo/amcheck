@@ -575,6 +575,8 @@ jobs:
       - name: "Second try"
         working-directory: programs/x86_64
         run: |
+          pwd
+          ls -R ../../
           set -uo pipefail
           mkdir -p results
           #echo "Second try" >> $GITHUB_STEP_SUMMARY
@@ -707,7 +709,7 @@ jobs:
             echo "### $failed catched in second try!" >> $GITHUB_STEP_SUMMARY
             done
           else
-            echo "All OK"
+            echo "Something wrong"
           fi
 
   update-results:
