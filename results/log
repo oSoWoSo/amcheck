@@ -117,3 +117,13 @@ APPIMAGE='no'
 GITHUB='yes'
 SITE="sharkdp/bat"
 -----------------------------------------------------------------
+APP="affine-beta"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="toeverything/AFFiNE"
+-----------------------------------------------------------------
+APP="affine-canary"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="toeverything/AFFiNE"
+-----------------------------------------------------------------
