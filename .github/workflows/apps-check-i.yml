@@ -679,6 +679,11 @@ jobs:
     needs: generate-matrix
     if: ${{ needs.generate-matrix.outputs.skip == 'true' }}
     steps:
+      - name: "Checkout"
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
       - name: "Git Config"
         run: |
            git config --global user.name "${{ github.repository_owner }}"
@@ -687,8 +692,8 @@ jobs:
         run: |
           echo "Everything tested"
           echo "### stats RESET" >> $GITHUB_STEP_SUMMARY
-          cp results/log log.old || echo "Log deleted without backup"
-          cp results/excluded excluded.old || echo "Excluded deleted without backup"
+          cp results/log log.old 2>/dev/null || echo "Log deleted without backup"
+          cp results/excluded excluded.old 2>/dev/null || echo "Excluded deleted without backup"
           rm -rf results
           git rm -r results
           git add log.old
