@@ -576,7 +576,7 @@ jobs:
           git add results
 
       - name: "Show results"
-        if: (always() && needs.generate-matrix.outputs.skip != 'true' && github.event.inputs.reset_stats != 'true')
+        if: needs.generate-matrix.outputs.skip != 'true'
         run: |
           if [[ -f results/tested ]]; then
             tested=$(wc -l < results/tested 2>/dev/null || echo 0)
@@ -692,11 +692,9 @@ jobs:
         run: |
           echo "Everything tested"
           echo "### stats RESET" >> $GITHUB_STEP_SUMMARY
-          cp results/log log.old 2>/dev/null || echo "Log deleted without backup"
-          cp results/excluded excluded.old 2>/dev/null || echo "Excluded deleted without backup"
-          rm -rf results
+          cp results/log log.old 2>/dev/null && git add log.old || echo "Log deleted without backup"
+          cp results/excluded excluded.old 2>/dev/null && git add excluded.old || echo "Excluded deleted without backup"
+          #rm -rf results
           git rm -r results
-          git add log.old
-          git add excluded.old
           git commit -m "reset stats"
           git push --force
