@@ -37,9 +37,13 @@ jobs:
           git config user.email "noreply@github.com"
           git branch -D "${{ env.BRANCH }}" || true
           git checkout -b "${{ env.BRANCH }}"
+          AM=$(git rev-list --count HEAD)
           git rebase --force "${{ env.BRANCH }}" origin/main
           git push --force origin HEAD:refs/heads/"${{ env.BRANCH }}"
           #TODO: Use git-filter-repo to remove empty merge commits
           #git filter-repo --refs "${{ env.BRANCH }}" --prune-degenerate always --force
           git filter-branch -f --commit-filter ' if git show -s --format=%P $GIT_COMMIT | grep -q " "; then skip_commit "$@"; else git commit-tree "$@"; fi' HEAD
           git push --force origin HEAD:"${{ env.BRANCH }}" || (git diff && git status)
+          CLEAN=$(git rev-list --count HEAD)
+          DIF=( AM - CLEAN )
+          echo "# Removed  $DIF useless commits" >> $GITHUB_SPEP_SUMMARY
