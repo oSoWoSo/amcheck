@@ -46,5 +46,6 @@ jobs:
           git filter-branch -f --commit-filter ' if git show -s --format=%P $GIT_COMMIT | grep -q " "; then skip_commit "$@"; else git commit-tree "$@"; fi' HEAD
           git push --force origin HEAD:"${{ env.BRANCH }}" || (git diff && git status)
           CLEAN=$(git rev-list --count HEAD)
-          DIF=( AM - CLEAN )
-          echo "# Removed  $DIF useless commits" >> $GITHUB_STEP_SUMMARY
+          DIF=$((AM - CLEAN))
+          echo "# Removed  ${DIF} useless commits" >> $GITHUB_STEP_SUMMARY
+          echo "Commits now: $CLEAN" >> $GITHUB_STEP_SUMMARY
