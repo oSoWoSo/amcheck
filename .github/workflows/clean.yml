@@ -38,6 +38,7 @@ jobs:
           git branch -D "${{ env.BRANCH }}" || true
           git checkout -b "${{ env.BRANCH }}"
           AM=$(git rev-list --count HEAD)
+          echo "Commits in AM: $AM" >> $GITHUB_STEP_SUMMARY
           git rebase --force "${{ env.BRANCH }}" origin/main
           git push --force origin HEAD:refs/heads/"${{ env.BRANCH }}"
           #TODO: Use git-filter-repo to remove empty merge commits
@@ -46,4 +47,4 @@ jobs:
           git push --force origin HEAD:"${{ env.BRANCH }}" || (git diff && git status)
           CLEAN=$(git rev-list --count HEAD)
           DIF=( AM - CLEAN )
-          echo "# Removed  $DIF useless commits" >> $GITHUB_SPEP_SUMMARY
+          echo "# Removed  $DIF useless commits" >> $GITHUB_STEP_SUMMARY
