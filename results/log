@@ -12932,3 +12932,8 @@ APPIMAGE='yes'
 GITHUB='yes'
 SITE="Hunlongyu/ZY-Player"
 -----------------------------------------------------------------
+APP="vikunja"
+APPIMAGE='yes'
+GITHUB='no'
+SITE="https://vikunja.io"
+-----------------------------------------------------------------
