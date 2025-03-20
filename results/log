@@ -12922,3 +12922,8 @@ APPIMAGE='yes'
 GITHUB='no'
 SITE="https://vikunja.io"
 -----------------------------------------------------------------
+APP="gaiasky"
+APPIMAGE='yes'
+GITHUB='no'
+SITE="https://zah.uni-heidelberg.de"
+-----------------------------------------------------------------
