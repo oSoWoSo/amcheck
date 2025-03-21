@@ -12917,3 +12917,8 @@ APPIMAGE='no'
 GITHUB='yes'
 SITE="YouTubeDownload/YouTubeDownload"
 -----------------------------------------------------------------
+APP="eudic"
+APPIMAGE='yes'
+GITHUB='no'
+SITE="https://www.eudic.net"
+-----------------------------------------------------------------
