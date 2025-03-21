@@ -51,6 +51,10 @@ env:
   TOTEST: 250
 
 jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: m-s-abeer/update-gha-summary-with-workflow-inputs@v1
   triggered:
     if: github.event_name == 'repository_dispatch'
     runs-on: ubuntu-latest
