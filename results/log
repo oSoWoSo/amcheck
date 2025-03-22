@@ -12922,3 +12922,8 @@ APPIMAGE='yes'
 GITHUB='no'
 SITE="https://www.eudic.net"
 -----------------------------------------------------------------
+APP="citron-nightly"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="pkgforge-dev/Citron-AppImage"
+-----------------------------------------------------------------
