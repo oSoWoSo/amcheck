@@ -12927,3 +12927,13 @@ APPIMAGE='yes'
 GITHUB='yes'
 SITE="pkgforge-dev/Citron-AppImage"
 -----------------------------------------------------------------
+APP="sugarizer"
+APPIMAGE='yes'
+GITHUB='no'
+SITE="https://sugarizer.org"
+-----------------------------------------------------------------
+APP="vhc-viewer-wayland"
+APPIMAGE='yes'
+GITHUB='no'
+SITE="https://vulkan.gpuinfo.org"
+-----------------------------------------------------------------
