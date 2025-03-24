@@ -12947,3 +12947,13 @@ APPIMAGE='yes'
 GITHUB='no'
 SITE="https://www.eudic.net"
 -----------------------------------------------------------------
+APP="gimp"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="https://www.gimp.org"
+-----------------------------------------------------------------
+APP="vikunja"
+APPIMAGE='yes'
+GITHUB='no'
+SITE="https://vikunja.io"
+-----------------------------------------------------------------
