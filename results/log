@@ -2610,3 +2610,19 @@ APPIMAGE='yes'
 GITHUB='yes'
 SITE="Satharus/Disass"
 -----------------------------------------------------------------
+APP="discord"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="srevinsaju/discord-appimage"
+downVer="https://github.com/srevinsaju/discord-appimage/releases/download/stable/Discord-0.0.89-x86_64.AppImage"
+size=99 MB
+version=0.0.89
+-----------------------------------------------------------------
+APP="discord-qt"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ruslang02/discord-qt"
+downVer="https://github.com/ruslang02/discord-qt/releases/download/v0.5.1/DiscordQt-v0.5.1-linux-x64.AppImage"
+size=71 MB
+version=0.5.1
+-----------------------------------------------------------------
