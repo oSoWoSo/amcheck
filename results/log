@@ -1328,3 +1328,19 @@ downVer="https://github.com/ttalvitie/browservice/releases/download/v0.9.11.1/br
 size=258 MB
 version=0.9.11.1
 -----------------------------------------------------------------
+APP="brs-emu-app"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="lvcabral/brs-emu-app"
+downVer="https://github.com/lvcabral/brs-desktop/releases/download/v1.4.0/brs-desktop-1.4.0-linux-x86_64.AppImage"
+size=102 MB
+version=1.4.0
+-----------------------------------------------------------------
+APP="bruno"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="usebruno/bruno"
+downVer="https://github.com/usebruno/bruno/releases/download/v1.40.1/bruno_1.40.1_x86_64_linux.AppImage"
+size=125 MB
+version=1.40.1
+-----------------------------------------------------------------
