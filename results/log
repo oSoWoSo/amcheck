@@ -2626,3 +2626,19 @@ downVer="https://github.com/ruslang02/discord-qt/releases/download/v0.5.1/Discor
 size=71 MB
 version=0.5.1
 -----------------------------------------------------------------
+APP="diskonaut"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="imsnif/diskonaut"
+downVer="https://github.com/imsnif/diskonaut/releases/download/0.11.0/diskonaut-0.11.0-unknown-linux-musl.tar.gz"
+size=5 MB
+version=0.11.0
+-----------------------------------------------------------------
+APP="dissent"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="diamondburned/dissent"
+downVer="https://github.com/diamondburned/dissent/releases/download/nightly/dissent-linux-amd64.tar.zst"
+size=100 MB
+version=unknown
+-----------------------------------------------------------------
