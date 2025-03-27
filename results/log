@@ -12927,3 +12927,8 @@ APPIMAGE='yes'
 GITHUB='yes'
 SITE="Hunlongyu/ZY-Player"
 -----------------------------------------------------------------
+APP="microsoft-edge-dev"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/MS-Edge-appimage"
+-----------------------------------------------------------------
