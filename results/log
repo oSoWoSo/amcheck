@@ -1312,3 +1312,19 @@ APPIMAGE='no'
 GITHUB='yes'
 SITE="AminBhst/brisk"
 -----------------------------------------------------------------
+APP="brisqi"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="Brisqi/releases"
+downVer="https://github.com/Brisqi/releases/releases/download/v0.18.0/Brisqi-setup-0.18.0-linux-x86_64.AppImage"
+size=166 MB
+version=0.18.0
+-----------------------------------------------------------------
+APP="browservice"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ttalvitie/browservice"
+downVer="https://github.com/ttalvitie/browservice/releases/download/v0.9.11.1/browservice-v0.9.11.1-x86_64.AppImage"
+size=258 MB
+version=0.9.11.1
+-----------------------------------------------------------------
