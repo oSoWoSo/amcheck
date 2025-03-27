@@ -30,3 +30,19 @@ downVer="https://raw.githubusercontent.com/volatilflerovium/3D-Puzzles/main/3D-P
 size=2 MB
 version=3D
 -----------------------------------------------------------------
+APP="432hz-player"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="mysteryx93/NaturalGroundingPlayer"
+downVer="https://github.com/mysteryx93/HanumanInstituteApps/releases/download/v3.3.2/Player432Hz-3.3.2_Linux_x64.AppImage"
+size=16 MB
+version=Player432Hz
+-----------------------------------------------------------------
+APP="7zip"
+APPIMAGE='no'
+GITHUB='no'
+SITE="https://www.7-zip.org"
+downVer="https://www.7-zip.org/a/7z2409-linux-x64.tar.xz"
+size=7 MB
+version=7z2409
+-----------------------------------------------------------------
