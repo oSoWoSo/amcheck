@@ -3714,3 +3714,23 @@ downVer="https://github.com/enassi/enassi/releases/download/v2.1.1/enassi_2.1.1_
 size=125 MB
 version=2.1.1
 -----------------------------------------------------------------
+APP="ffwa-facebook"
+APPIMAGE='no'
+GITHUB='no'
+-----------------------------------------------------------------
+APP="ffwa-github"
+APPIMAGE='no'
+GITHUB='no'
+-----------------------------------------------------------------
+APP="ffwa-gmail"
+APPIMAGE='no'
+GITHUB='no'
+-----------------------------------------------------------------
+APP="ffwa-netflix"
+APPIMAGE='no'
+GITHUB='no'
+-----------------------------------------------------------------
+APP="ffwa-reddit"
+APPIMAGE='no'
+GITHUB='no'
+-----------------------------------------------------------------
