@@ -3815,3 +3815,18 @@ downVer="https://github.com/ivan-hc/KDE-utils-appimage/releases/download/continu
 size=369 MB
 version=24.12
 -----------------------------------------------------------------
+APP="filen"
+APPIMAGE='yes'
+GITHUB='no'
+SITE="https://filen.io"
+size=119 MB
+version=3.0.47
+-----------------------------------------------------------------
+APP="filen-cli"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="FilenCloudDienste/filen-cli"
+downVer="https://github.com/FilenCloudDienste/filen-cli/releases/download/v0.0.32/filen-cli-v0.0.32-linux-x64"
+size=127 MB
+version=0.0.32
+-----------------------------------------------------------------
