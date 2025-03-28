@@ -406,6 +406,7 @@ jobs:
 
             # Any other result is a failure
             else
+              echo "::error title=⛔ error 9:: I will try again"
               exit 9
             fi
           fi
