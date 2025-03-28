@@ -3425,3 +3425,19 @@ APPIMAGE='no'
 GITHUB='no'
 SITE="https://exodus.com"
 -----------------------------------------------------------------
+APP="explorook"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="Rookout/explorook"
+downVer="https://github.com/Rookout/explorook/releases/download/v1.16.5/Rookout-Desktop-App-1.16.5.AppImage"
+size=103 MB
+version=1.16.5
+-----------------------------------------------------------------
+APP="exportoo"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="NiklasMerz/exportoo"
+downVer="https://github.com/NiklasMerz/exportoo/releases/download/v1.2.0/exportoo-1.2.0-x86_64.AppImage"
+size=76 MB
+version=1.2.0
+-----------------------------------------------------------------
