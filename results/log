@@ -3799,3 +3799,19 @@ APPIMAGE='yes'
 GITHUB='yes'
 SITE="TimothySimon123/file-converter"
 -----------------------------------------------------------------
+APP="file-to-c"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="Wallby/file-to-c"
+downVer="https://github.com/Wallby/file-to-c/releases/download/1.0.0/file-to-c-x86_64.AppImage"
+size=1 MB
+version=1.0.0
+-----------------------------------------------------------------
+APP="filelight"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/KDE-utils-appimage"
+downVer="https://github.com/ivan-hc/KDE-utils-appimage/releases/download/continuous/KDE-utils_24.12-2-archimage4.3-x86_64.AppImage"
+size=369 MB
+version=24.12
+-----------------------------------------------------------------
