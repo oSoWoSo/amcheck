@@ -3234,3 +3234,19 @@ downVer="https://github.com/MaurycyLiebner/enve/releases/download/continuous-lin
 size=144 MB
 version=d919d4d
 -----------------------------------------------------------------
+APP="envkey"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="envkey/envkey-ui"
+downVer="https://github.com/envkey/envkey-app/releases/download/linux-x64-prod-v1.5.10/EnvKey-1.5.10.AppImage"
+size=61 MB
+version=1.5.10
+-----------------------------------------------------------------
+APP="eosvc"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="bedrich-schindler/e-osvc"
+downVer="https://github.com/bedrich-schindler/e-osvc/releases/download/v1.1.0/eOSVC-1.1.0.AppImage"
+size=89 MB
+version=1.1.0
+-----------------------------------------------------------------
