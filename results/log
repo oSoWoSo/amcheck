@@ -3514,3 +3514,10 @@ downVer="https://github.com/fairdataihub/FAIRshare/releases/download/v2.1.0/FAIR
 size=121 MB
 version=2.1.0
 -----------------------------------------------------------------
+APP="eudic"
+APPIMAGE='yes'
+GITHUB='no'
+SITE="https://www.eudic.net"
+size=231 MB
+version=13.5.2
+-----------------------------------------------------------------
