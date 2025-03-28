@@ -3177,3 +3177,19 @@ SITE="https://www.worldforge.org/"
 size=56 MB
 version=0.7.2
 -----------------------------------------------------------------
+APP="emoji-keyboard"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="OzymandiasTheGreat/emoji-keyboard"
+downVer="https://github.com/OzymandiasTheGreat/emoji-keyboard/releases/download/v4.0.0/emoji-keyboard_4.0.0_amd64.AppImage"
+size=72 MB
+version=4.0.0
+-----------------------------------------------------------------
+APP="emudeck"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="EmuDeck/emudeck-electron"
+downVer="https://github.com/EmuDeck/emudeck-electron/releases/download/v2.4.3/EmuDeck-2.4.3.AppImage"
+size=107 MB
+version=2.4.3
+-----------------------------------------------------------------
