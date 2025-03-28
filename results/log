@@ -3746,3 +3746,15 @@ GITHUB='no'
 size=1 MB
 version=WebApp
 -----------------------------------------------------------------
+APP="ffwa-wikipedia"
+APPIMAGE='no'
+GITHUB='no'
+size=1 MB
+version=WebApp
+-----------------------------------------------------------------
+APP="ffwa-youtube"
+APPIMAGE='no'
+GITHUB='no'
+size=1 MB
+version=WebApp
+-----------------------------------------------------------------
