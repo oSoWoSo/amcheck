@@ -3666,3 +3666,19 @@ APPIMAGE='no'
 GITHUB='yes'
 SITE="Ruturajn/fetchit"
 -----------------------------------------------------------------
+APP="ff-password-exporter"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="kspearrin/ff-password-exporter"
+downVer="https://github.com/kspearrin/ff-password-exporter/releases/download/v1.2.0/FF-Password-Exporter-1.2.0-x86_64.AppImage"
+size=56 MB
+version=1.2.0
+-----------------------------------------------------------------
+APP="ffdec"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="jindrapetrik/jpexs-decompiler"
+downVer="https://github.com/jindrapetrik/jpexs-decompiler/releases/download/version22.0.2/ffdec_22.0.2.zip"
+size=20 MB
+version=22.0.2.zip
+-----------------------------------------------------------------
