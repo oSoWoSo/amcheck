@@ -3375,3 +3375,12 @@ downVer="https://github.com/leo60228/everinst/releases/download/1.0/EverInst-0.1
 size=12 MB
 version=0.1.0.glibc2.18
 -----------------------------------------------------------------
+-----------------------------------------------------------------
+APP="evince"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/Evince-appimage"
+downVer="https://github.com/ivan-hc/Evince-appimage/releases/download/continuous/Document-Viewer_48.0-1-archimage4.3-x86_64.AppImage"
+size=61 MB
+version=48.0
+-----------------------------------------------------------------
