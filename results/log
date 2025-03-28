@@ -3498,3 +3498,19 @@ APPIMAGE='yes'
 GITHUB='yes'
 SITE="JustJoostNL/F1MV-Lights-Integration"
 -----------------------------------------------------------------
+APP="fafarunner"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="fafarunner/fafarunner"
+downVer="https://github.com/FaFaRunner/FaFaRunner/releases/download/v2.0.0%2B378/fafarunner_2.0.0%2B378_linux_amd64.AppImage"
+size=24 MB
+version=2.0.0%2B378
+-----------------------------------------------------------------
+APP="fairshare"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="fairdataihub/FAIRshare"
+downVer="https://github.com/fairdataihub/FAIRshare/releases/download/v2.1.0/FAIRshare-2.1.0.AppImage"
+size=121 MB
+version=2.1.0
+-----------------------------------------------------------------
