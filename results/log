@@ -3734,3 +3734,15 @@ APP="ffwa-reddit"
 APPIMAGE='no'
 GITHUB='no'
 -----------------------------------------------------------------
+APP="ffwa-twitter"
+APPIMAGE='no'
+GITHUB='no'
+size=1 MB
+version=WebApp
+-----------------------------------------------------------------
+APP="ffwa-whatsapp"
+APPIMAGE='no'
+GITHUB='no'
+size=1 MB
+version=WebApp
+-----------------------------------------------------------------
