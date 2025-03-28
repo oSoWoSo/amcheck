@@ -2733,3 +2733,19 @@ APPIMAGE='yes'
 GITHUB='yes'
 SITE="jgraph/drawio-desktop"
 -----------------------------------------------------------------
+APP="drawpile"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="drawpile/Drawpile"
+downVer="https://github.com/drawpile/Drawpile/releases/download/continuous/Drawpile-2.2.2-68-g864d16be2-x86_64.AppImage"
+size=51 MB
+version=2.2.2
+-----------------------------------------------------------------
+APP="drill"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="yatima1460/Drill"
+downVer="https://github.com/yatima1460/Drill/releases/download/v566/Drill-v566-x86_64.AppImage"
+size=2 MB
+version=566
+-----------------------------------------------------------------
