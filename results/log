@@ -2975,3 +2975,19 @@ downVer="https://github.com/Electron-Store/electron-app-store/releases/download/
 size=97 MB
 version=0.0.4
 -----------------------------------------------------------------
+APP="electron-cash"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="Electron-Cash/Electron-Cash"
+downVer="https://github.com/Electron-Cash/Electron-Cash/releases/download/4.4.2/Electron-Cash-4.4.2-x86_64.AppImage"
+size=93 MB
+version=4.4.2
+-----------------------------------------------------------------
+APP="electron-mail"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="vladimiry/ElectronMail"
+downVer="https://github.com/vladimiry/ElectronMail/releases/download/v5.3.0/electron-mail-5.3.0-linux-x86_64.AppImage"
+size=209 MB
+version=5.3.0
+-----------------------------------------------------------------
