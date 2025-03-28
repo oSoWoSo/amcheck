@@ -3162,3 +3162,18 @@ downVer="https://github.com/blahgeek/emacs-appimage/releases/download/github-act
 size=182 MB
 version=x11
 -----------------------------------------------------------------
+APP="embedded-ide"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="martinribelotta/embedded-ide"
+downVer="https://github.com/martinribelotta/embedded-ide/releases/download/continuous/Embedded_IDE-6961d5f-x86_64.AppImage"
+size=50 MB
+version=6961d5f
+-----------------------------------------------------------------
+APP="ember"
+APPIMAGE='yes'
+GITHUB='no'
+SITE="https://www.worldforge.org/"
+size=56 MB
+version=0.7.2
+-----------------------------------------------------------------
