@@ -3073,3 +3073,19 @@ APPIMAGE='yes'
 GITHUB='yes'
 SITE="titenko/elementary-code"
 -----------------------------------------------------------------
+APP="elements"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="FlorianFe/Elements"
+downVer="https://github.com/FlorianFe/Elements/releases/download/v1.2.1/Elements.AppImage"
+size=77 MB
+version=1.2.1
+-----------------------------------------------------------------
+APP="elk"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="elk-zone/elk-native"
+downVer="https://github.com/elk-zone/elk-native/releases/download/elk-native-v0.4.0/Elk_0.4.0_linux_x86_64.AppImage"
+size=77 MB
+version=0.4.0
+-----------------------------------------------------------------
