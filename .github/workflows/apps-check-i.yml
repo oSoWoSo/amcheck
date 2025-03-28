@@ -51,7 +51,7 @@ env:
   TOTEST: 250
 
 jobs:
-  deploy:
+  Inputs:
     runs-on: ubuntu-latest
     steps:
       - uses: m-s-abeer/update-gha-summary-with-workflow-inputs@v1
