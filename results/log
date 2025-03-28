@@ -3105,3 +3105,19 @@ downVer="https://github.com/SpookyPool/elphyre-wallet-electron/releases/download
 size=76 MB
 version=2.0.4
 -----------------------------------------------------------------
+APP="elvish"
+APPIMAGE='no'
+GITHUB='no'
+SITE="https://elv.sh"
+downVer="https://dl.elv.sh/linux-amd64/elvish-v0.21.0.tar.gz"
+size=10 MB
+version=0.21.0
+-----------------------------------------------------------------
+APP="elzabrowser"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="elzabrowser/elza"
+downVer="https://github.com/elzabrowser/elza/releases/download/v0.6.1/ElzaBrowser.Setup.AppImage"
+size=114 MB
+version=0.6.1
+-----------------------------------------------------------------
