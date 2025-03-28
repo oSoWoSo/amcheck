@@ -3609,3 +3609,19 @@ SITE="sharkdp/fd"
 size=5 MB
 version=10.2.0
 -----------------------------------------------------------------
+APP="fdc3-sail"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="finos/FDC3-Sail"
+downVer="https://github.com/finos/FDC3-Sail/releases/download/v22.12.6-1030/FDC3-Sail-22.12.6-1030.AppImage"
+size=106 MB
+version=FDC3
+-----------------------------------------------------------------
+APP="fdm"
+APPIMAGE='yes'
+GITHUB='no'
+SITE=""
+downVer="6.26.1"
+size=56 MB
+version=6.26.1
+-----------------------------------------------------------------
