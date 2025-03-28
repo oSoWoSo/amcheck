@@ -2959,3 +2959,19 @@ downVer="https://github.com/tympanix/Electorrent/releases/download/v2.8.3/Electo
 size=82 MB
 version=2.8.3
 -----------------------------------------------------------------
+APP="electrocrud"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="garrylachman/ElectroCRUD"
+downVer="https://github.com/garrylachman/ElectroCRUD/releases/download/2.8.0/ElectroCRUD-2.8.0.AppImage"
+size=228 MB
+version=2.8.0
+-----------------------------------------------------------------
+APP="electron-app-store"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="Electron-Store/electron-app-store"
+downVer="https://github.com/Electron-Store/electron-app-store/releases/download/v0.0.4/Electron-Store-0.0.4.AppImage"
+size=97 MB
+version=0.0.4
+-----------------------------------------------------------------
