@@ -3146,3 +3146,19 @@ APPIMAGE='yes'
 GITHUB='yes'
 SITE="blahgeek/emacs-appimage"
 -----------------------------------------------------------------
+APP="emacs-x11"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="blahgeek/emacs-appimage"
+downVer="https://github.com/blahgeek/emacs-appimage/releases/download/github-action-build-13644002952/Emacs-30.1-x11-x86_64.AppImage"
+size=182 MB
+version=30.1
+-----------------------------------------------------------------
+APP="emacs-x11-daily"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="blahgeek/emacs-appimage"
+downVer="https://github.com/blahgeek/emacs-appimage/releases/download/github-action-build-14119050850/Emacs-master-x11-x86_64.AppImage"
+size=182 MB
+version=x11
+-----------------------------------------------------------------

@@ -598,3 +598,5 @@ emacs-nox
 emacs-nox-daily
 emacs-pgtk
 emacs-pgtk-daily
+emacs-x11
+emacs-x11-daily
