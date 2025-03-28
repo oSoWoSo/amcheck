@@ -3537,3 +3537,19 @@ downVer="https://github.com/ivan-hc/Database-of-pkg2appimaged-packages/releases/
 size=346 MB
 version=24.12.3
 -----------------------------------------------------------------
+APP="fantascene-dynamic-wallpaper"
+APPIMAGE='yes'
+GITHUB='no'
+SITE="https://github.com/dependon/fantascene-dynamic-wallpaper"
+downVer="https://sourceforge.net/projects/fantascene-dynamic-wallpaper/files/1.9.8/fantacy_x86-64-1.9.8.AppImage/download"
+size=150 MB
+version=1.9.8
+-----------------------------------------------------------------
+APP="fantasia-archive"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="Elvanos/fantasia-archive"
+downVer="https://github.com/vishiri/fantasia-archive-v1/releases/download/v0.1.15/Fantasia.Archive-0.1.15-linux-appImage.zip"
+size=174 MB
+version=0.1.15
+-----------------------------------------------------------------
