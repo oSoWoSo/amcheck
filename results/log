@@ -3359,3 +3359,11 @@ APPIMAGE='yes'
 GITHUB='yes'
 SITE="MTDonovan/Evalit"
 -----------------------------------------------------------------
+APP="everdo"
+APPIMAGE='yes'
+GITHUB='no'
+SITE="https://everdo.net"
+downVer="https://release.everdo.net/1.9.0/Everdo-1.9.0.AppImage"
+size=119 MB
+version=1.9.0
+-----------------------------------------------------------------
