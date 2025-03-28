@@ -3625,3 +3625,19 @@ downVer="6.26.1"
 size=56 MB
 version=6.26.1
 -----------------------------------------------------------------
+APP="feather-wallet"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="feather-wallet/feather"
+downVer="https://github.com/feather-wallet/feather/releases/download/2.7.0/feather-2.7.0.AppImage"
+size=26 MB
+version=2.7.0
+-----------------------------------------------------------------
+APP="feebas"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="timzatko/feebas"
+downVer="https://github.com/timzatko/feebas/releases/download/v0.3.0/feebas-desktop-app-0.3.0.AppImage"
+size=90 MB
+version=0.3.0
+-----------------------------------------------------------------
