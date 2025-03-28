@@ -2667,3 +2667,19 @@ APPIMAGE='yes'
 GITHUB='yes'
 SITE="PerBothner/DomTerm"
 -----------------------------------------------------------------
+APP="dooit"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="kraanzu/dooit"
+downVer="https://github.com/dooit-org/dooit/releases/download/v3.1.0/linux-dooit"
+size=30 MB
+version=3.1.0
+-----------------------------------------------------------------
+APP="dopamine-preview"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="digimezzo/dopamine"
+downVer="https://github.com/digimezzo/dopamine/releases/download/v3.0.0-preview.37/Dopamine-3.0.0-preview.37.AppImage"
+size=139 MB
+version=3.0.0
+-----------------------------------------------------------------
