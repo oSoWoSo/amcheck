@@ -3521,3 +3521,19 @@ SITE="https://www.eudic.net"
 size=231 MB
 version=13.5.2
 -----------------------------------------------------------------
+APP="fakedata"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="lucapette/fakedata"
+downVer="https://github.com/lucapette/fakedata/releases/download/v1.5.0/fakedata_1.5.0_linux_amd64.tar.gz"
+size=4 MB
+version=1.5.0
+-----------------------------------------------------------------
+APP="falkon"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/Database-of-pkg2appimaged-packages"
+downVer="https://github.com/ivan-hc/Database-of-pkg2appimaged-packages/releases/download/falkon/Falkon_24.12.3-1-archimage4.3-x86_64.AppImage"
+size=346 MB
+version=24.12.3
+-----------------------------------------------------------------
