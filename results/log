@@ -3698,3 +3698,19 @@ downVer="https://github.com/RPGLogs/Uploaders-fflogs/releases/download/v8.16.25/
 size=108 MB
 version=8.16.25
 -----------------------------------------------------------------
+APP="ffsend"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="timvisee/ffsend"
+downVer="https://github.com/timvisee/ffsend/releases/download/v0.2.77/ffsend-v0.2.77-linux-x64"
+size=12 MB
+version=0.2.77
+-----------------------------------------------------------------
+APP="ffvim"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="fivim/fivim"
+downVer="https://github.com/enassi/enassi/releases/download/v2.1.1/enassi_2.1.1_amd64.AppImage"
+size=125 MB
+version=2.1.1
+-----------------------------------------------------------------
