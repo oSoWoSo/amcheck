@@ -2902,3 +2902,19 @@ downVer="https://github.com/SpartanJ/ecode/releases/download/ecode-0.7.0/ecode-l
 size=23 MB
 version=0.7.0
 -----------------------------------------------------------------
+APP="edex-ui"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="GitSquared/edex-ui"
+downVer="https://github.com/GitSquared/edex-ui/releases/download/v2.2.8/eDEX-UI-Linux-x86_64.AppImage"
+size=93 MB
+version=2.2.8
+-----------------------------------------------------------------
+APP="effer"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="Merkoba/Effer"
+downVer="https://github.com/Merkoba/Effer/releases/download/v2.0.3/effer"
+size=12 MB
+version=2.0.3
+-----------------------------------------------------------------
