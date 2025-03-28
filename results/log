@@ -3339,3 +3339,23 @@ downVer="https://github.com/raduprv/Eternal-Lands/releases/download/1.9.7.0-4/Et
 size=210 MB
 version=1.9.7.0
 -----------------------------------------------------------------
+APP="eternalmodmanager"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="PowerBall253/EternalModManager-Avalonia"
+-----------------------------------------------------------------
+APP="etherealengine-cc"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="EtherealEngine/etherealengine-control-center"
+-----------------------------------------------------------------
+APP="etichetta"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="trikko/etichetta"
+-----------------------------------------------------------------
+APP="evalit"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="MTDonovan/Evalit"
+-----------------------------------------------------------------
