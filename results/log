@@ -2815,3 +2815,18 @@ APPIMAGE='yes'
 GITHUB='yes'
 SITE="cpuuntery/dukto"
 -----------------------------------------------------------------
+APP="dune"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="adam-mcdaniel/dune"
+downVer="https://github.com/adam-mcdaniel/dune/releases/download/v0.1.9/dune_linux_v0.1.9"
+size=8 MB
+version=0.1.9
+-----------------------------------------------------------------
+APP="dunst"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="Samueru-sama/dunst-AppImage"
+size=7 MB
+version=2025
+-----------------------------------------------------------------
