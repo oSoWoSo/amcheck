@@ -3553,3 +3553,19 @@ downVer="https://github.com/vishiri/fantasia-archive-v1/releases/download/v0.1.1
 size=174 MB
 version=0.1.15
 -----------------------------------------------------------------
+APP="farmhand"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="jeremyckahn/farmhand"
+downVer="https://github.com/jeremyckahn/farmhand/releases/download/1.18.26/Farmhand-1.18.26.AppImage"
+size=230 MB
+version=1.18.26
+-----------------------------------------------------------------
+APP="fastboot"
+APPIMAGE='no'
+GITHUB='no'
+SITE="https://developer.android.com"
+downVer="35.0.2"
+size=19 MB
+version=35.0.2
+-----------------------------------------------------------------
