@@ -3682,3 +3682,19 @@ downVer="https://github.com/jindrapetrik/jpexs-decompiler/releases/download/vers
 size=20 MB
 version=22.0.2.zip
 -----------------------------------------------------------------
+APP="ffdec-nightly"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="jindrapetrik/jpexs-decompiler"
+downVer="https://github.com/jindrapetrik/jpexs-decompiler/releases/download/version22.0.2/ffdec_22.0.2.zip"
+size=20 MB
+version=22.0.2.zip
+-----------------------------------------------------------------
+APP="fflogs-uploader"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="RPGLogs/Uploaders-fflogs"
+downVer="https://github.com/RPGLogs/Uploaders-fflogs/releases/download/v8.16.25/fflogs-v8.16.25.AppImage"
+size=108 MB
+version=8.16.25
+-----------------------------------------------------------------
