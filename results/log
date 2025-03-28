@@ -3758,3 +3758,19 @@ GITHUB='no'
 size=1 MB
 version=WebApp
 -----------------------------------------------------------------
+APP="ficus"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="Thysrael/Ficus"
+downVer="https://github.com/Thysrael/Ficus/releases/download/v0.2.1/ficus-0.2.1.AppImage"
+size=119 MB
+version=0.2.1
+-----------------------------------------------------------------
+APP="fidias-database-migration-app"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="open-fidias/db-migration-app"
+downVer="https://github.com/open-fidias/db-migration-app/releases/download/v0.1.4/db-migration-app-0.1.4-x86_64.AppImage"
+size=58 MB
+version=0.1.4
+-----------------------------------------------------------------
