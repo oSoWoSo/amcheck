@@ -3218,3 +3218,19 @@ APPIMAGE='yes'
 GITHUB='yes'
 SITE="ente-io/ente"
 -----------------------------------------------------------------
+APP="ente-photos"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ente-io/photos-desktop"
+downVer="https://github.com/ente-io/photos-desktop/releases/download/v1.7.11/ente-1.7.11-x86_64.AppImage"
+size=424 MB
+version=1.7.11
+-----------------------------------------------------------------
+APP="enve"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="MaurycyLiebner/enve"
+downVer="https://github.com/MaurycyLiebner/enve/releases/download/continuous-linux/enve-d919d4d-9_25_22-x86_64.AppImage"
+size=144 MB
+version=d919d4d
+-----------------------------------------------------------------
