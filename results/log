@@ -3441,3 +3441,19 @@ downVer="https://github.com/NiklasMerz/exportoo/releases/download/v1.2.0/exporto
 size=76 MB
 version=1.2.0
 -----------------------------------------------------------------
+APP="exsplode.re"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="AmarOk1412/Eksplode.re"
+downVer="https://github.com/AmarOk1412/Eksplode.re/releases/download/v0.0.0/Eksplode.re-x86_64.AppImage"
+size=107 MB
+version=0.0.0
+-----------------------------------------------------------------
+APP="extraterm"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="sedwards2009/extraterm"
+downVer="https://github.com/sedwards2009/extraterm/releases/download/v0.81.0/ExtratermQt-0.81.0.glibc2.34-x86_64.AppImage"
+size=59 MB
+version=0.81.0.glibc2.34
+-----------------------------------------------------------------
