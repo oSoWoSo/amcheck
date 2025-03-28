@@ -3089,3 +3089,19 @@ downVer="https://github.com/elk-zone/elk-native/releases/download/elk-native-v0.
 size=77 MB
 version=0.4.0
 -----------------------------------------------------------------
+APP="ellas-war"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="V-Paranoiaque/Ellas-War"
+downVer="https://github.com/V-Paranoiaque/Ellas-War/releases/download/v2.1.5/EllasWar-2.1.5.AppImage"
+size=115 MB
+version=2.1.5
+-----------------------------------------------------------------
+APP="elphyre-walletshell"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="elphyrecoin/elphyre-wallet-electron"
+downVer="https://github.com/SpookyPool/elphyre-wallet-electron/releases/download/2.0.4/Elphyre-WalletShell-v2.0.4-linux.AppImage"
+size=76 MB
+version=2.0.4
+-----------------------------------------------------------------
