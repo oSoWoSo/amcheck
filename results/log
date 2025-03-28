@@ -3250,3 +3250,19 @@ downVer="https://github.com/bedrich-schindler/e-osvc/releases/download/v1.1.0/eO
 size=89 MB
 version=1.1.0
 -----------------------------------------------------------------
+APP="eplee"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="Janglee123/eplee"
+downVer="https://github.com/Janglee123/eplee/releases/download/%24%28tagName%29/eplee-x86_64-0.4.0.AppImage"
+size=83 MB
+version=0.4.0
+-----------------------------------------------------------------
+APP="eqonomize"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="Eqonomize/Eqonomize"
+downVer="https://github.com/Eqonomize/Eqonomize/releases/download/v1.5.9/Eqonomize-1.5.9.AppImage"
+size=28 MB
+version=1.5.9
+-----------------------------------------------------------------
