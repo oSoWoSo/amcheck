@@ -3594,3 +3594,18 @@ APPIMAGE='yes'
 GITHUB='no'
 SITE="https://wiki.f-list.net"
 -----------------------------------------------------------------
+APP="fcp"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="Svetlitski/fcp"
+downVer="https://github.com/Svetlitski/fcp/releases/download/v0.2.1/fcp-0.2.1-x86_64-unknown-linux-gnu.zip"
+size=1 MB
+version=0.2.1
+-----------------------------------------------------------------
+APP="fd"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="sharkdp/fd"
+size=5 MB
+version=10.2.0
+-----------------------------------------------------------------
