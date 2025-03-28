@@ -3291,3 +3291,19 @@ APPIMAGE='yes'
 GITHUB='yes'
 SITE="viarotel-org/escrcpy"
 -----------------------------------------------------------------
+APP="esearch"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="xushengfeng/eSearch"
+downVer="https://github.com/xushengfeng/eSearch/releases/download/14.6.1/eSearch-14.6.1-linux-x64.AppImage"
+size=369 MB
+version=14.6.1
+-----------------------------------------------------------------
+APP="espanso"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="espanso/espanso"
+downVer="https://github.com/espanso/espanso/releases/download/v2.2.1/Espanso-X11.AppImage"
+size=16 MB
+version=2.2.1
+-----------------------------------------------------------------
