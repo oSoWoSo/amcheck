@@ -2870,3 +2870,19 @@ APPIMAGE='yes'
 GITHUB='yes'
 SITE="ctlcltd/e2-sat-editor"
 -----------------------------------------------------------------
+APP="eaglemode"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="probonopd/eaglemode"
+downVer="https://github.com/probonopd/eaglemode/releases/download/continuous/Eagle_Mode-ba297f6-x86_64.AppImage"
+size=24 MB
+version=ba297f6
+-----------------------------------------------------------------
+APP="easymercurial"
+APPIMAGE='yes'
+GITHUB='no'
+SITE="https://easyhg.org"
+downVer="https://code.soundsoftware.ac.uk/attachments/download/2430/EasyMercurial-1.4-x86_64.AppImage"
+size=22 MB
+version=1.4
+-----------------------------------------------------------------
