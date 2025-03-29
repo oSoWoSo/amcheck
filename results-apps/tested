@@ -347,6 +347,7 @@ cinny
 circle-z
 circuitblocks
 citron
+citron-nightly
 city-hub
 clamtk
 clash-verge
@@ -836,6 +837,7 @@ gimp-hybrid
 gingko
 git-cliff
 git-good
+gitbutler
 githoard
 github-desktop
 gitify
@@ -1044,6 +1046,8 @@ jellyfin
 jetbrains-toolbox
 jexiftoolgui
 jfcord
+jgenesis
+jgenesis-cli
 jgrasp
 jimud
 jira-timer
@@ -1883,6 +1887,7 @@ rbdoom-3
 rbw
 rclone
 rclone-browser
+rclone-ui
 reactotron
 real-video-enhancer
 realm-studio
