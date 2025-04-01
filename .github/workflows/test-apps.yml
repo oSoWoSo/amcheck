@@ -258,6 +258,7 @@ jobs:
     if: ${{ needs.generate-matrix.outputs.skip != 'true' }}
     strategy:
       fail-fast: false
+      max-parallel: 23
       matrix: ${{ fromJson(needs.generate-matrix.outputs.matrix) }}
     env:
       TIMEOUT: 10
