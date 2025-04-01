@@ -700,3 +700,19 @@ SITE="gennaro-tedesco/archimede"
 size=4 MB
 version=0.0.2
 -----------------------------------------------------------------
+APP="archipel"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="arso-project/archipel"
+downVer="https://github.com/arso-project/archipel/releases/download/v0.1.0/archipel-0.1.0.AppImage"
+size=93 MB
+version=0.1.0
+-----------------------------------------------------------------
+APP="archipelago"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ArchipelagoMW/Archipelago"
+downVer="https://github.com/ArchipelagoMW/Archipelago/releases/download/0.6.0/Archipelago_0.6.0_linux-x86_64.AppImage"
+size=94 MB
+version=0.6.0
+-----------------------------------------------------------------
