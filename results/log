@@ -394,3 +394,19 @@ APPIMAGE='no'
 GITHUB='yes'
 SITE="pystardust/ani-cli"
 -----------------------------------------------------------------
+APP="animashooter-junior"
+APPIMAGE='yes'
+GITHUB='no'
+SITE="http://www.animashooter.com"
+downVer="https://www.animatech.ru/download/AnimaShooter_Junior_3.9.9.3-x86_64.AppImage"
+size=51 MB
+version=3.9.9.3
+-----------------------------------------------------------------
+APP="animashooter-pioneer"
+APPIMAGE='yes'
+GITHUB='no'
+SITE="http://www.animashooter.com"
+downVer="https://www.animatech.ru/download/AnimaShooter_Pioneer_3.9.9.3-x86_64.AppImage"
+size=53 MB
+version=3.9.9.3
+-----------------------------------------------------------------
