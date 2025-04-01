@@ -426,3 +426,18 @@ downVer="https://github.com/progzone122/AniShip/releases/download/v0.0.4.2night/
 size=96 MB
 version=0.0.4
 -----------------------------------------------------------------
+APP="ankama-launcher"
+APPIMAGE='yes'
+GITHUB='no'
+SITE="https://ankama.com"
+size=166 MB
+version=3.12.38
+-----------------------------------------------------------------
+APP="anki"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="ankitects/anki"
+downVer="https://github.com/ankitects/anki/releases/download/25.02/anki-25.02-linux-qt6.tar.zst"
+size=473 MB
+version=25.02
+-----------------------------------------------------------------
