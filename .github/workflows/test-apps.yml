@@ -515,6 +515,7 @@ jobs:
           path: programs/x86_64/results/ko-${{ matrix.file }}
           if-no-files-found: ignore
           retention-days: 1
+          compression-level: 0
 
       - name: "Upload OK Results ⬆️"
         # if: success()
@@ -524,6 +525,7 @@ jobs:
           path: programs/x86_64/results/ok-${{ matrix.file }}
           if-no-files-found: ignore
           retention-days: 1
+          compression-level: 0
 
   check-failed:
     name: "trigger retest if needed"
@@ -570,6 +572,7 @@ jobs:
           path: failing
           if-no-files-found: ignore
           retention-days: 1
+          compression-level: 0
 
   test-failed:
     name: "test failed"
@@ -706,6 +709,7 @@ jobs:
           path: programs/x86_64/results/ko-*
           if-no-files-found: warn
           retention-days: 1
+          compression-level: 0
 
       - name: "Upload OK Results ⬆️"
         # if: success()
@@ -714,6 +718,7 @@ jobs:
           path: programs/x86_64/results/ok-*
           if-no-files-found: ignore
           retention-days: 1
+          compression-level: 0
 
   update-results:
     name: "results 📰"
@@ -809,18 +814,24 @@ jobs:
         if: (always() && needs.generate-matrix.outputs.skip != 'true' && github.event.inputs.reset_stats != 'true')
         run: |
           if [[ -f results/tested ]]; then
+            echo "tested found"
             tested=$(wc -l < results/tested 2>/dev/null || echo 0)
           else
+            echo "tested not found"
             tested='0'
           fi
           if [[ -f results/excluded ]]; then
+            echo "excluded found"
             excluded=$(wc -l < results/excluded 2>/dev/null || echo 0)
           else
+            echo "excluded not found"
             excluded='0'
           fi
           if [[ -f failed ]]; then
+            echo "failed found"
             fail=$(wc -l < failed 2>/dev/null || echo 0)
           else
+            echo "failed not found"
             fail='0'
           fi
           count=$(wc -l < appslist)
@@ -836,7 +847,7 @@ jobs:
           echo "### 🛅 $remaining to test" >> $GITHUB_STEP_SUMMARY
           rm -f appslist
           rm -f results/appslist
-          #rm -f results/ok-*
+          rm -f results/ok-*
           echo '-----------------------------------------------------------------'
           echo "Missed results:"
           echo '-----------------------------------------------------------------'
