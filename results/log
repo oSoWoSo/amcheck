@@ -782,3 +782,19 @@ APPIMAGE='yes'
 GITHUB='no'
 SITE="http://www.bitbreeds.com"
 -----------------------------------------------------------------
+APP="artisan"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="artisan-roaster-scope/artisan"
+downVer="https://github.com/artisan-roaster-scope/artisan/releases/download/continuous/artisan-linux-3.1.1.AppImage"
+size=301 MB
+version=3.1.1
+-----------------------------------------------------------------
+APP="artix"
+APPIMAGE='yes'
+GITHUB='no'
+SITE="https://www.artix.com"
+downVer="2.1.2"
+size=79 MB
+version=2.1.2
+-----------------------------------------------------------------
