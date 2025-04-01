@@ -685,3 +685,18 @@ downVer="https://github.com/ruanformigoni/flatimage/releases/download/v1.0.8/arc
 size=381 MB
 version=1.0.8
 -----------------------------------------------------------------
+APP="archimage-cli"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="ivan-hc/ArchImage"
+downVer="https://api.github.com/repos/ivan-hc/ArchImage/zipball/4.3"
+size=1 MB
+version=4.3
+-----------------------------------------------------------------
+APP="archimede"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="gennaro-tedesco/archimede"
+size=4 MB
+version=0.0.2
+-----------------------------------------------------------------
