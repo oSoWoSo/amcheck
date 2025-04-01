@@ -482,8 +482,8 @@ jobs:
                 echo "No version!"
                 #exit 1
               fi
-
-              git add "programs/x86_64/${{ matrix.file }}"
+              find -name "${{ matrix.file }}"
+              git add "programs/x86_64/results/${{ matrix.file }}"
               git commit -m "injected latest info into ${{ matrix.file }}"
               # Remove the application
               am -R "$LASTDIR"
