@@ -1115,3 +1115,19 @@ APPIMAGE='yes'
 GITHUB='yes'
 SITE="beekeeper-studio/beekeeper-studio"
 -----------------------------------------------------------------
+APP="beeper"
+APPIMAGE='yes'
+GITHUB='no'
+SITE="https://www.beeper.com"
+downVer="https://beeper-desktop.download.beeper.com/builds/Beeper-4.0.570.AppImage"
+size=178 MB
+version=4.0.570
+-----------------------------------------------------------------
+APP="bemoji"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="marty-oehme/bemoji"
+downVer="https://github.com/marty-oehme/bemoji/releases/download/v/bemoji-0.4.0.tar.gz"
+size=1 MB
+version=0.4.0
+-----------------------------------------------------------------
