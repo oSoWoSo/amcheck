@@ -110,3 +110,43 @@ link="https://github.com/CodeDead/Advanced-PassGen/releases/download/v2.5.2/adva
 size=117 MB
 version=2.5.2
 -----------------------------------------------------------------
+APP="admin-tools"
+APPIMAGE='yes'
+GITHUB='no'
+SITE="https://download.opensuse.org/repositories/home:/dmulder:/YaST:/AppImage/AppImage/admin-tools-latest-x86_64.AppImage"
+link=--2025-04-01 02:38:46--  https://download.opensuse.org/repositories/home:/dmulder:/YaST:/AppImage/AppImage/admin-tools-latest-x86_64.AppImage
+size=84 MB
+version=2025.01.02
+-----------------------------------------------------------------
+APP="advanced-rest-client"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="advanced-rest-client/arc-electron"
+link=--2025-04-01 02:38:47--  https://github.com/advanced-rest-client/arc-electron/releases/download/v17.0.9/arc-linux-17.0.9-x86_64.AppImage
+size=121 MB
+version=17.0.9
+-----------------------------------------------------------------
+APP="afetch"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="Asthowen/AFetch"
+link=--2025-04-01 02:38:47--  https://github.com/Asthowen/AFetch/releases/download/0.0.7/afetch-0.0.7-x86_64-unknown-linux-gnu
+size=3 MB
+version=0.0.7
+-----------------------------------------------------------------
+APP="affine"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="toeverything/AFFiNE"
+link=--2025-04-01 02:38:51--  https://github.com/toeverything/AFFiNE/releases/download/v0.20.5/affine-0.20.5-stable-linux-x64.appimage
+size=178 MB
+version=0.20.5
+-----------------------------------------------------------------
+APP="affine-beta"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="toeverything/AFFiNE"
+link=--2025-04-01 02:38:47--  https://github.com/toeverything/AFFiNE/releases/download/v0.20.5-beta.1/affine-0.20.5-beta.1-beta-linux-x64.appimage
+size=178 MB
+version=0.20.5
+-----------------------------------------------------------------
