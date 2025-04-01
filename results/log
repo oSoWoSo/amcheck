@@ -296,3 +296,19 @@ downVer="https://github.com/amanharwara/altus/releases/download/5.6.0/Altus-5.6.
 size=104 MB
 version=5.6.0
 -----------------------------------------------------------------
+APP="alvr"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="elpinguinoopensource/alvr-appimage"
+downVer="https://github.com/elpinguinoopensource/alvr-appimage/releases/download/v18.2.6/ALVR-x86_64.AppImage"
+size=17 MB
+version=18.2.6
+-----------------------------------------------------------------
+APP="amarok"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/Amarok-appimage"
+downVer="https://github.com/ivan-hc/Amarok-appimage/releases/download/continuous/Amarok_3.2.2-1.2-archimage4.3-x86_64.AppImage"
+size=310 MB
+version=3.2.2
+-----------------------------------------------------------------
