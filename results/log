@@ -839,3 +839,19 @@ APPIMAGE='yes'
 GITHUB='no'
 SITE="https://get.atomicwallet.io/download"
 -----------------------------------------------------------------
+APP="atuin"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="atuinsh/atuin"
+downVer="https://github.com/atuinsh/atuin/releases/download/v18.5.0-beta.1/atuin-x86_64-unknown-linux-musl.tar.gz"
+size=34 MB
+version=18.5.0
+-----------------------------------------------------------------
+APP="audacious"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/Database-of-pkg2appimaged-packages"
+downVer="https://github.com/ivan-hc/Database-of-pkg2appimaged-packages/releases/download/audacious/Audacious_4.4.2-1-archimage4.3-x86_64.AppImage"
+size=100 MB
+version=4.4.2
+-----------------------------------------------------------------
