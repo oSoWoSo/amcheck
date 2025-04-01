@@ -580,6 +580,9 @@ jobs:
     runs-on: ubuntu-22.04
     if: needs.check-failed.outputs.failed == 'true'
     steps:
+      - name: "checkout"
+        uses: actions/checkout@v4
+
       - name: "Checkout AM"
         uses: actions/checkout@v4
         with:
@@ -613,25 +616,23 @@ jobs:
             echo "failing exist"
             for fail in $(cat failing); do
               echo "$fail"
-              cd programs/x86_64
+              cd programs/x86_64 || echo "Dir not found" && exit 1
               echo "APP=\"$fail\"" | tee -a results/out-"$fail"
               if grep -qe "appimage-extract\|mage\$\|tmp/\*mage" "$fail" 1>/dev/null; then
                 echo "APPIMAGE='yes'" | tee -a results/out-"$fail"
               else
                 #echo "EXIT_CODE=99" >> $GITHUB_ENV
-                echo "APPIMAGE='no'" >> results/out-"$fail"
-                touch results/out-"$fail"
+                echo "APPIMAGE='no'" >> "results/out-$fail"
               fi
               if grep -q "api.github.com" "$fail" 2>/dev/null; then
-                echo "GITHUB='yes'" | tee -a results/out-"$fail"
+                echo "GITHUB='yes'" | tee -a "results/out-$fail"
               else
                 #echo "EXIT_CODE=9" >> $GITHUB_ENV
-                echo "GITHUB='no'" >> results/out-"$fail"
-                touch results/out-"$fail"
+                echo "GITHUB='no'" >> "results/out-$fail"
               fi
               if grep -q "^SITE=" "$fail" 2>/dev/null; then
                 SITE=$(eval echo "$(grep -i '^SITE=' "$fail" | head -1 | sed 's/SITE=//g')")
-                echo "SITE=\"$SITE\"" | tee -a results/out-"$fail"
+                echo "SITE=\"$SITE\"" | tee -a "results/out-$fail"
               fi
               if grep -q "^version=" "$fail" 2>/dev/null; then
                 link=$(eval echo "$(grep -i '^version=' "$fail" | head -1 | sed 's/version=//g')")
@@ -752,7 +753,7 @@ jobs:
         if: (always() && needs.generate-matrix.outputs.skip != 'true' && github.event.inputs.reset_stats != 'true')
         run: |
           mkdir -p results
-
+          find -name 'out-*'
           for LogFile in results/out-*; do
 
             appname=$(basename "$LogFile" | cut -d'-' -f2-)
