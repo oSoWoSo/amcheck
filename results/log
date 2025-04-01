@@ -871,3 +871,19 @@ downVer="https://github.com/bugbakery/audapolis/releases/download/v0.3.0/audapol
 size=282 MB
 version=0.3.0
 -----------------------------------------------------------------
+APP="audiomoth"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="OpenAcousticDevices/AudioMoth-Configuration-App"
+downVer="https://github.com/OpenAcousticDevices/AudioMoth-Configuration-App/releases/download/1.12.1/AudioMothConfigurationAppSetup1.12.1.AppImage"
+size=97 MB
+version=1.12.1
+-----------------------------------------------------------------
+APP="audiorelay"
+APPIMAGE='no'
+GITHUB='no'
+SITE="https://audiorelay.net"
+downVer="https://dl.audiorelay.net/setups/linux/audiorelay-0.27.5.tar.gz"
+size=97 MB
+version=0.27.5
+-----------------------------------------------------------------
