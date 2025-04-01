@@ -454,7 +454,7 @@ jobs:
               fi
 
               rawlink=$(grep 'https://' < "results/log-${{ matrix.file }}" | head -1)
-              echo "link=${rawlink} | tee -a results/out-"${{ matrix.file }}"
+              echo "link=${rawlink}" | tee -a results/out-"${{ matrix.file }}"
 
               echo "size=${size}" | tee -a results/out-"${{ matrix.file }}"
               echo "version=${version}" | tee -a results/out-"${{ matrix.file }}"
