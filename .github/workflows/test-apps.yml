@@ -287,6 +287,11 @@ jobs:
         with:
           path: results
 
+      - name: "git config"
+        run: |
+          git config --global user.name "${{ github.repository_owner }}"
+          git config --global user.email "noreply@github.com"
+
       - name: "Create directory"
         working-directory: programs/x86_64
         run: |
@@ -471,6 +476,23 @@ jobs:
               exit 0 # Don't fail now, we will try again
             fi
           fi
+
+      - name: "inject latest info"
+        run: |
+          echo "Injecting info to programs/x86_64/${{ matrix.file }}"
+          if [ -z "$size" ]; then
+            echo "--- LATEST INFO ---" | tee -a programs/x86_64/"${{ matrix.file }}"
+            echo "size=${size}" | tee -a results/out-"${{ matrix.file }}" | tee -a programs/x86_64/"${{ matrix.file }}"
+            echo "--- last check: $(date -u) ---" | tee -a programs/x86_64/"${{ matrix.file }}"
+          fi
+          if [ -z "$version" ]; then
+            echo "--- LATEST INFO ---" | tee -a programs/x86_64/"${{ matrix.file }}"
+            echo "version=${version}" | tee -a programs/x86_64/"${{ matrix.file }}"
+            echo "--- last check: $(date -u) ---" | tee -a programs/x86_64/"${{ matrix.file }}"
+          fi
+          git add programs/x86_64/${{ matrix.file }}
+          git commit -m "injected latest info into ${{ matrix.file }}"
+          
 
       - name: "Upload out ⬆️"
         uses: actions/upload-artifact@v4
