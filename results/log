@@ -280,3 +280,19 @@ downVer="https://github.com/altair-graphql/altair/releases/download/v8.2.1/altai
 size=154 MB
 version=8.2.1
 -----------------------------------------------------------------
+APP="altitude"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="TheLindaProjectInc/Altitude"
+downVer="https://github.com/TheLindaProjectInc/Altitude/releases/download/3.4.2/Altitude-Metrix-Wallet-linux-x64.AppImage"
+size=340 MB
+version=3.4.2
+-----------------------------------------------------------------
+APP="altus"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="amanharwara/altus"
+downVer="https://github.com/amanharwara/altus/releases/download/5.6.0/Altus-5.6.0.AppImage"
+size=104 MB
+version=5.6.0
+-----------------------------------------------------------------
