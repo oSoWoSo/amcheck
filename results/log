@@ -928,3 +928,19 @@ downVer="https://github.com/mean00/avidemux2/releases/download/2.8.1/avidemux_2.
 size=43 MB
 version=2.8.1
 -----------------------------------------------------------------
+APP="avidemux-qt"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/Avidemux-unofficial-appimage"
+downVer="https://github.com/ivan-hc/Avidemux-unofficial-appimage/releases/download/continuous/Avidemux_2.8.1-6-archimage4.3-x86_64.AppImage"
+size=81 MB
+version=2.8.1
+-----------------------------------------------------------------
+APP="avocado"
+APPIMAGE='yes'
+GITHUB='no'
+SITE="https://avocado-builds.czekanski.info"
+downVer="https://bitfighter.org/files/bitfighter-022-Build0.glibc2.14-x86_64.AppImage"
+size=12 MB
+version=022
+-----------------------------------------------------------------
