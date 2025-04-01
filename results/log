@@ -353,3 +353,19 @@ downVer="https://github.com/learningmedia/anavis/releases/download/v2.0.0-beta.2
 size=85 MB
 version=2.0.0
 -----------------------------------------------------------------
+APP="anchor"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="greymass/anchor"
+downVer="https://github.com/greymass/anchor/releases/download/v1.3.12/linux-anchor-wallet-1.3.12-x86_64.AppImage"
+size=96 MB
+version=1.3.12
+-----------------------------------------------------------------
+APP="android-knot"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ic005k/Knot"
+downVer="https://github.com/ic005k/Knot/releases/download/1.2.19/Knot-Linux-x86_64.AppImage"
+size=122 MB
+version=1.2.19
+-----------------------------------------------------------------
