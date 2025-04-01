@@ -337,3 +337,19 @@ APPIMAGE='no'
 GITHUB='yes'
 SITE="makew0rld/amfora"
 -----------------------------------------------------------------
+APP="amusiz"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="mirkobrombin/Amusiz"
+downVer="https://github.com/mirkobrombin/Amusiz/releases/download/1.3.4/Amusiz-1.3.3-x86_64.AppImage"
+size=199 MB
+version=1.3.3
+-----------------------------------------------------------------
+APP="anavis"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="learningmedia/anavis"
+downVer="https://github.com/learningmedia/anavis/releases/download/v2.0.0-beta.20/anavis-2.0.0-beta.20-linux-x86_64.AppImage"
+size=85 MB
+version=2.0.0
+-----------------------------------------------------------------
