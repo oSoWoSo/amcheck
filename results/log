@@ -466,3 +466,19 @@ APPIMAGE='no'
 GITHUB='yes'
 SITE="doron-cohen/antidot"
 -----------------------------------------------------------------
+APP="antimicrox"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="AntiMicroX/antimicrox"
+downVer="https://github.com/AntiMicroX/antimicrox/releases/download/3.5.1/AntiMicroX-debug-x86_64.AppImage"
+size=48 MB
+version=3.5.1
+-----------------------------------------------------------------
+APP="anydesk"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/Anydesk-appimage"
+downVer="https://github.com/ivan-hc/Anydesk-appimage/releases/download/continuous/Anydesk_6.4.2-x86_64.AppImage"
+size=15 MB
+version=6.4.2
+-----------------------------------------------------------------
