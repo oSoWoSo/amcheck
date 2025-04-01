@@ -464,6 +464,27 @@ jobs:
               echo "size=${size}" | tee -a results/out-"${{ matrix.file }}"
               echo "version=${version}" | tee -a results/out-"${{ matrix.file }}"
 
+              echo "Injecting info into programs/x86_64/${{ matrix.file }}"
+              if [ -n "$size" ]; then
+                echo "--- LATEST INFO ---" | tee -a programs/x86_64/"${{ matrix.file }}"
+                echo "size=${size}" | tee -a results/out-"${{ matrix.file }}" | tee -a programs/x86_64/"${{ matrix.file }}"
+                echo "--- last check: $(date -u) ---" | tee -a programs/x86_64/"${{ matrix.file }}"
+              else
+                echo "No size!"
+                #exit 1
+              fi
+
+              if [ -n "$version" ]; then
+                echo "--- LATEST INFO ---" | tee -a programs/x86_64/"${{ matrix.file }}"
+                echo "version=${version}" | tee -a programs/x86_64/"${{ matrix.file }}"
+                echo "--- last check: $(date -u) ---" | tee -a programs/x86_64/"${{ matrix.file }}"
+              else
+                echo "No version!"
+                #exit 1
+              fi
+
+              git add "programs/x86_64/${{ matrix.file }}"
+              git commit -m "injected latest info into ${{ matrix.file }}"
               # Remove the application
               am -R "$LASTDIR"
               echo "${{ matrix.file }}" >> results/tested
@@ -476,23 +497,6 @@ jobs:
               exit 0 # Don't fail now, we will try again
             fi
           fi
-
-      - name: "inject latest info"
-        run: |
-          echo "Injecting info to programs/x86_64/${{ matrix.file }}"
-          if [ -z "$size" ]; then
-            echo "--- LATEST INFO ---" | tee -a programs/x86_64/"${{ matrix.file }}"
-            echo "size=${size}" | tee -a results/out-"${{ matrix.file }}" | tee -a programs/x86_64/"${{ matrix.file }}"
-            echo "--- last check: $(date -u) ---" | tee -a programs/x86_64/"${{ matrix.file }}"
-          fi
-          if [ -z "$version" ]; then
-            echo "--- LATEST INFO ---" | tee -a programs/x86_64/"${{ matrix.file }}"
-            echo "version=${version}" | tee -a programs/x86_64/"${{ matrix.file }}"
-            echo "--- last check: $(date -u) ---" | tee -a programs/x86_64/"${{ matrix.file }}"
-          fi
-          git add programs/x86_64/${{ matrix.file }}
-          git commit -m "injected latest info into ${{ matrix.file }}"
-          
 
       - name: "Upload out ⬆️"
         uses: actions/upload-artifact@v4
