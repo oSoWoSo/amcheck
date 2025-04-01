@@ -150,3 +150,43 @@ link=--2025-04-01 02:38:47--  https://github.com/toeverything/AFFiNE/releases/do
 size=178 MB
 version=0.20.5
 -----------------------------------------------------------------
+APP="affine-canary"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="toeverything/AFFiNE"
+link=
+size=184 MB
+version=0.21.0
+-----------------------------------------------------------------
+APP="agregore"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="AgregoreWeb/agregore-browser"
+link=
+size=166 MB
+version=2.8.2
+-----------------------------------------------------------------
+APP="ai-bot-workspace"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="jmerle/ai-bot-workspace"
+link=
+size=54 MB
+version=2.4.3
+-----------------------------------------------------------------
+APP="aichat"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="sigoden/aichat"
+link=
+size=12 MB
+version=0.29.0
+-----------------------------------------------------------------
+APP="aidm"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="Alexsussa/AIDM"
+link=
+size=147 MB
+version=0.3
+-----------------------------------------------------------------
