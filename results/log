@@ -944,3 +944,19 @@ downVer="https://bitfighter.org/files/bitfighter-022-Build0.glibc2.14-x86_64.App
 size=12 MB
 version=022
 -----------------------------------------------------------------
+APP="avogadro2"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="OpenChemistry/avogadroapp"
+downVer="https://github.com/OpenChemistry/avogadroapp/releases/download/1.100.0/Avogadro2-x86_64.AppImage"
+size=136 MB
+version=1.100.0
+-----------------------------------------------------------------
+APP="awakened-poe-trade"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="SnosMe/awakened-poe-trade"
+downVer="https://github.com/SnosMe/awakened-poe-trade/releases/download/v3.25.104/Awakened-PoE-Trade-3.25.104.AppImage"
+size=111 MB
+version=3.25.104
+-----------------------------------------------------------------
