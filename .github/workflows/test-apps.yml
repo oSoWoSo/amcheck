@@ -326,23 +326,6 @@ jobs:
             echo "SITE=\"$SITE\"" | tee -a results/out-"${{ matrix.file }}"
           fi
 
-      - name: "link ${{ matrix.file }} 🚧"
-        working-directory: programs/x86_64
-        run: |
-          if grep -q "^version=" "${{ matrix.file }}" 2>/dev/null; then
-            link=$(eval echo "$(grep -i '^version=' "${{ matrix.file }}" | head -1 | sed 's/version=//g')")
-            if [ -z "$link" ]; then
-              sed -i 's/curl -Ls/torsocks curl -Ls/g' "${{ matrix.file }}"
-              link=$(eval echo "$(grep -i '^version=' "${{ matrix.file }}" | head -1 | sed 's/version=//g')")
-              if [ -z "$version" ]; then
-                sudo systemctl start tor.service || systemctl start tor.service
-                wait
-                link=$(eval echo "$(grep -i '^version=' "${{ matrix.file }}" | head -1 | sed 's/version=//g')")
-              fi
-            fi
-            [ -n "$link" ] && echo "link=\"$link\"" | tee -a results/out-"${{ matrix.file }}"
-          fi
-
       - name: "test ${{ matrix.file }} 🚧"
         id: test
         working-directory: programs/x86_64
@@ -469,6 +452,9 @@ jobs:
                 echo "version is $version"
 
               fi
+
+              rawlink=$(grep 'https://' < "results/log-${{ matrix.file }}" | head -1)
+              echo "link=${rawlink} | tee -a results/out-"${{ matrix.file }}"
 
               echo "size=${size}" | tee -a results/out-"${{ matrix.file }}"
               echo "version=${version}" | tee -a results/out-"${{ matrix.file }}"
