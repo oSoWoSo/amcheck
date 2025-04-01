@@ -335,7 +335,7 @@ jobs:
               sed -i 's/curl -Ls/torsocks curl -Ls/g' "${{ matrix.file }}"
               link=$(eval echo "$(grep -i '^version=' "${{ matrix.file }}" | head -1 | sed 's/version=//g')")
               if [ -z "$version" ]; then
-                sudo systemctl restart tor.service || systemctl restart tor.service
+                sudo systemctl start tor.service || systemctl start tor.service
                 wait
                 link=$(eval echo "$(grep -i '^version=' "${{ matrix.file }}" | head -1 | sed 's/version=//g')")
               fi
