@@ -218,3 +218,8 @@ downVer="https://github.com/ivan-hc/Aisleriot-appimage/releases/download/continu
 size=66 MB
 version=3.22.35
 -----------------------------------------------------------------
+APP="albafetch"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="alba4k/albafetch"
+-----------------------------------------------------------------
