@@ -539,3 +539,19 @@ downVer="https://github.com/AppOutlet/AppOutlet/releases/download/v2.1.0/App.Out
 size=112 MB
 version=2.1.0
 -----------------------------------------------------------------
+APP="appflowy"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="AppFlowy-IO/AppFlowy"
+downVer="https://github.com/AppFlowy-IO/AppFlowy/releases/download/0.8.7/AppFlowy-0.8.7-linux-x86_64.AppImage"
+size=74 MB
+version=0.8.7
+-----------------------------------------------------------------
+APP="apphub"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="francesco-gaglione/AppHub"
+downVer="https://github.com/cosmic-utils/app-hub/releases/download/v0.2.0-beta.1/app-hub_0.2.0-beta.1_amd64.AppImage"
+size=91 MB
+version=0.2.0
+-----------------------------------------------------------------
