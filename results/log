@@ -1074,3 +1074,19 @@ downVer="https://github.com/bbg-contributors/bbg/releases/download/20250311/bbg-
 size=110 MB
 version=20250311
 -----------------------------------------------------------------
+APP="bdash"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="bdash-app/bdash"
+downVer="https://github.com/bdash-app/bdash/releases/download/v1.17.1/Bdash-1.17.1.AppImage"
+size=93 MB
+version=1.17.1
+-----------------------------------------------------------------
+APP="beam-wallet"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="BeamMW/beam-ui"
+downVer="https://github.com/BeamMW/beam-ui/releases/download/beam-7.5.13840.5763/Linux-Beam-Wallet-7.5.13840.5763.zip"
+size=168 MB
+version=7.5.13840.5763.zip
+-----------------------------------------------------------------
