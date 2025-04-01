@@ -596,3 +596,19 @@ APPIMAGE='no'
 GITHUB='yes'
 SITE="ivan-hc/AppImaGen"
 -----------------------------------------------------------------
+APP="appimagepool"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="prateekmedia/appimagepool"
+downVer="https://github.com/prateekmedia/appimagepool/releases/download/5.1.0/appimagepool-5.1.0-x86_64.AppImage"
+size=11 MB
+version=5.1.0
+-----------------------------------------------------------------
+APP="appimagetool"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="AppImage/appimagetool"
+downVer="https://github.com/AppImage/appimagetool/releases/download/continuous/appimagetool-x86_64.AppImage"
+size=15 MB
+version=2025.03.10
+-----------------------------------------------------------------
