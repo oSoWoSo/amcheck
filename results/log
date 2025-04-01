@@ -798,3 +798,19 @@ downVer="2.1.2"
 size=79 MB
 version=2.1.2
 -----------------------------------------------------------------
+APP="asarui"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="myazarc/AsarUI"
+downVer="https://github.com/myazarc/AsarUI/releases/download/v1.0.2/asarui-1.0.2-x86_64.AppImage"
+size=51 MB
+version=1.0.2
+-----------------------------------------------------------------
+APP="asgardex"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="asgardex/asgardex-desktop"
+downVer="https://github.com/asgardex/asgardex-desktop/releases/download/v1.30.3/ASGARDEX-1.30.3-linux.AppImage"
+size=351 MB
+version=1.30.3
+-----------------------------------------------------------------
