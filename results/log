@@ -985,3 +985,19 @@ APPIMAGE='yes'
 GITHUB='yes'
 SITE="shizkun/manga-viewer"
 -----------------------------------------------------------------
+APP="bambustudio"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="bambulab/BambuStudio"
+downVer="https://github.com/bambulab/BambuStudio/releases/download/v02.00.01.50/Bambu_Studio_linux_fedora-v02.00.01.50.AppImage"
+size=123 MB
+version=02.00.01.50
+-----------------------------------------------------------------
+APP="banban"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="HubertK05/banban"
+downVer="https://github.com/HubertK05/banban/releases/download/v0.2.0/banban_0.2.0_amd64.AppImage"
+size=94 MB
+version=0.2.0
+-----------------------------------------------------------------
