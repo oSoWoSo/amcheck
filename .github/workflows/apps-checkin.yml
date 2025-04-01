@@ -1,4 +1,4 @@
-name: "Apps check"
+name: "Apps checkin"
 
 on:
   push:
