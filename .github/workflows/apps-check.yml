@@ -1,4 +1,4 @@
-name: "Apps check v"
+name: "Apps check"
 
 on:
   push:
