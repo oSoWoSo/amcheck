@@ -1001,3 +1001,19 @@ downVer="https://github.com/HubertK05/banban/releases/download/v0.2.0/banban_0.2
 size=94 MB
 version=0.2.0
 -----------------------------------------------------------------
+APP="bandwhich"
+APPIMAGE='no'
+GITHUB='yes'
+SITE="imsnif/bandwhich"
+downVer="https://github.com/imsnif/bandwhich/releases/download/v0.23.1/bandwhich-v0.23.1-x86_64-unknown-linux-gnu.tar.gz"
+size=4 MB
+version=0.23.1
+-----------------------------------------------------------------
+APP="baobab-gtk3"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ivan-hc/Database-of-pkg2appimaged-packages"
+downVer="https://github.com/ivan-hc/Database-of-pkg2appimaged-packages/releases/download/baobab3/Disk_Usage_Analyzer-3.38.0-x86_64.AppImage"
+size=4 MB
+version=3.38.0
+-----------------------------------------------------------------
