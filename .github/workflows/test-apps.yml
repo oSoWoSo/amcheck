@@ -46,13 +46,15 @@ permissions:
   contents: write
 
 env:
-  REPO: ${{ github.repository }}
-  BRANCH: main-clean
-  RESULTS_REPO: ${{ github.repository_owner }}/amcheck
-  RESULTS_BRANCH: main
-  TOTEST: 5
+  REPO: ${{ github.repository_owner }}/AM
+  BRANCH: main
+  TOTEST: 5 # 250 # testing
 
 jobs:
+  Inputs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: m-s-abeer/update-gha-summary-with-workflow-inputs@v1
   triggered:
     if: github.event_name == 'repository_dispatch'
     runs-on: ubuntu-latest
@@ -258,7 +260,7 @@ jobs:
       fail-fast: false
       matrix: ${{ fromJson(needs.generate-matrix.outputs.matrix) }}
     env:
-      TIMEOUT: 23
+      TIMEOUT: 10
     steps:
       - name: "Checkout AM"
         uses: actions/checkout@v4
@@ -279,6 +281,11 @@ jobs:
           chmod +x ./INSTALL
           sudo ./INSTALL 2> /dev/null || ./INSTALL
 
+      - name: "Checkout repository"
+        uses: actions/checkout@v4
+        with:
+          path: results
+
       - name: "Create directory"
         working-directory: programs/x86_64
         run: |
@@ -298,7 +305,6 @@ jobs:
           else
             #echo "EXIT_CODE=99" >> $GITHUB_ENV
             echo "APPIMAGE='no'" >> results/out-"${{ matrix.file }}"
-            touch results/out-"${{ matrix.file }}"
           fi
 
       - name: "Is ${{ matrix.file }} on GitHub? 🚧"
@@ -308,9 +314,7 @@ jobs:
           if grep -q "api.github.com" "${{ matrix.file }}" 2>/dev/null; then
             echo "GITHUB='yes'" | tee -a results/out-"${{ matrix.file }}"
           else
-            #echo "EXIT_CODE=9" >> $GITHUB_ENV
             echo "GITHUB='no'" >> results/out-"${{ matrix.file }}"
-            touch results/out-"${{ matrix.file }}"
           fi
 
       - name: "SITE ${{ matrix.file }} 🚧"
@@ -337,7 +341,6 @@ jobs:
             fi
             [ -n "$link" ] && echo "link=\"$link\"" | tee -a results/out-"${{ matrix.file }}"
           fi
-          echo '-----------------------------------------------------------------' | tee -a results/out-"${{ matrix.file }}"
 
       - name: "test ${{ matrix.file }} 🚧"
         id: test
@@ -349,7 +352,7 @@ jobs:
           TEST='0'
 
           # Define the content of the script || Alow testing non existent (for workflow tests)
-          script_content=$(cat ${{ matrix.file }})
+          script_content=$(cat ${{ matrix.file }}) || echo "Testing non exist file! (for workflow test only)"
           # Define the pure name of the app
           pure_arg=$(echo "${{ matrix.file }}" | sed 's/\-appimage$//g' | sed 's:.*/::')
 
@@ -368,27 +371,39 @@ jobs:
             echo "This application is excluded. Cannot be installed in github actions" >> $GITHUB_STEP_SUMMARY
             echo "${{ matrix.file }}" >> results/ok-${{ matrix.file }}
           else
+          
             if [[ "$pure_arg" =~ (gimp|libreoffice|mpv|wine) ]]; then
-              echo 1 | am -i "${{ matrix.file }}" --debug 2>&1 | tee "results/log-${{ matrix.file }}"
+
+              echo 1 | timeout "$TIMEOUT"m am -i "${{ matrix.file }}" --debug 2>&1 | tee "results/log-${{ matrix.file }}"
+
             elif [[ "$pure_arg" =~ (bat-extras) ]]; then
-              echo y | am -i bat --debug 2>/dev/null | tee /dev/null
-              echo y | am -i "${{ matrix.file }}" --debug 2>&1 | tee "results/log-${{ matrix.file }}"
+
+              echo y | timeout "$TIMEOUT"m am -i bat --debug 2>/dev/null | tee /dev/null
+              echo y | timeout "$TIMEOUT"m am -i "${{ matrix.file }}" --debug 2>&1 | tee "results/log-${{ matrix.file }}"
+
             else
-              echo y | am -i "${{ matrix.file }}" --debug 2>&1 | tee "results/log-${{ matrix.file }}"
+
+              echo y | timeout "$TIMEOUT"m am -i "${{ matrix.file }}" --debug 2>&1 | tee "results/log-${{ matrix.file }}"
+
             fi
 
             LASTDIR=$(ls -td /opt/* | head -1 | sed 's:.*/::')
 
             # If an application is blacklisted, ignore it
             if [ "$LASTDIR" = am ]; then
+
               if [ "$TEST" == 0 ]; then
+
                 echo "### 💀 ${{ matrix.file }}" >> $GITHUB_STEP_SUMMARY
                 echo "${{ matrix.file }}" >> results/ko-${{ matrix.file }}
                 exit 0
+
               elif  [ "$TEST" == 1 ]; then
+
                 echo "Testing non exist file! (for test 2nd test)"
                 echo "${{ matrix.file }}" >> results/ko-${{ matrix.file }}
                 exit 0
+
               fi
 
             # If the last modified directory contains a file named "remove", check the installed files
@@ -413,12 +428,19 @@ jobs:
               # Check launchers in /usr/local/share/applications
               echo " Launchers in /usr/local/share/applications" | tee -a results/log-"${{ matrix.file }}"
               echo ""
+
               if test -f /usr/local/share/applications/*AM.desktop 2>/dev/null; then
+
                  ls /usr/local/share/applications | grep "AM.desktop$" | tee -a results/log-"${{ matrix.file }}"
+
               elif echo "$script_content" | grep -q -- '^./"$APP" --appimage-extract.*./"$APP".desktop$'; then
+
                  ls /usr/local/share/applications | grep "AM.desktop$" | tee -a results/log-"${{ matrix.file }}"
+
               else
+
                  echo "No .desktop file available" | tee -a results/log-"${{ matrix.file }}"
+
               fi
 
               printf "\n-------------------------------------------------------------\n\n"
@@ -430,6 +452,7 @@ jobs:
                 #echo "version is $version"
 
               if [[ "$pure_arg" =~ (gimp|libreoffice|mpv|wine) ]]; then
+         
                 size=$(cat "results/log-${{ matrix.file }}" | tee /dev/null | grep 'OF DISK SPACE' | cut -d'(' -f2 | cut -d' ' -f1,2 | tail -1)
                 Preversion=$(cat "results/log-${{ matrix.file }}" | tee /dev/null | grep '◆' | tail -2 | head -1)
                 echo "pre version is $Preversion"
@@ -437,23 +460,27 @@ jobs:
                 echo "version is $version"
 
               else
+
                 size=$(cat "results/log-${{ matrix.file }}" | tee /dev/null | grep 'OF DISK SPACE' | cut -d'(' -f2 | cut -d' ' -f1,2)
                 Preversion=$(cat "results/log-${{ matrix.file }}" | tee /dev/null | grep '◆' | tail -1)
                 echo "pre version is $Preversion"
                 version=$(cat "results/log-${{ matrix.file }}" | tee /dev/null | grep '◆' | tail -1 | awk '{print $3}')
                 echo "version is $version"
+
               fi
 
               echo "size=${size}" | tee -a results/out-"${{ matrix.file }}"
               echo "version=${version}" | tee -a results/out-"${{ matrix.file }}"
 
               # Remove the application
-              am -R "$LASTDIR" && echo "${{ matrix.file }}" >> results/ok-${{ matrix.file }} || echo "${{ matrix.file }}" >> results/log-${{ matrix.file }}
+              am -R "$LASTDIR"
+              echo "${{ matrix.file }}" >> results/tested
 
             # Any other result is a failure
             else
               echo "${{ matrix.file }}" >> results/ko-"${{ matrix.file }}"
-              echo "${{ matrix.file }} failed" >> $GITHUB_STEP_SUMMARY
+              echo "::error title=⛔ error 9:: I will try again"
+              #echo "${{ matrix.file }} failed" >> $GITHUB_STEP_SUMMARY
               exit 0 # Don't fail now, we will try again
             fi
           fi
@@ -660,11 +687,11 @@ jobs:
           compression-level: 0
 
       - name: "Upload KO Results ☝️"
-        # if: failure()
+        if: failure()
         uses: actions/upload-artifact@v4
         with:
           path: programs/x86_64/results/ko-*
-          if-no-files-found: ignore
+          if-no-files-found: warn
           retention-days: 1
 
       - name: "Upload OK Results ⬆️"
@@ -707,41 +734,62 @@ jobs:
         if: (always() && needs.generate-matrix.outputs.skip != 'true' && github.event.inputs.reset_stats != 'true')
         run: |
           mkdir -p results
+
           for LogFile in results/out-*; do
-            [ -f "$LogFile" ] || continue
+
             appname=$(basename "$LogFile" | cut -d'-' -f2-)
             echo '_________________________________________________________________'
             echo "$appname"
             echo '-----------------------------------------------------------------'
             cat "$LogFile"
             echo '-----------------------------------------------------------------'
+
             if [ -z "$size" ]; then
+
               size=$(cat "$LogFile" | grep 'size' | cut -d'=' -f2)
               echo "size is $size"
+
             fi
+
             if [ -z "$version" ]; then
+
               version=$(cat "$LogFile" | grep 'version' | cut -d'=' -f2)
               echo "version is $version"
+
             fi
+
             cat "$LogFile" | grep -E '(^.*=.*$|^.*----.*$)' >> results/log
             echo "$appname" >> results/tested
             echo '-----------------------------------------------------------------' >> results/log
             rm -f "$LogFile"
+
           done
+
           if [ -f failed ]; then
+
             for fail in failed; do
+
               echo ":x: $fail excluded now" >> $GITHUB_STEP_SUMMARY
+
             done
+
           fi
+
           if [ -f results/tested ]; then
+
             sort -u results/tested -o results/tested
             git add results/tested
             git add results/log
+
           fi
+
           if [ -f results/excluded ]; then
+
               sort -u results/excluded -o results/excluded
               git add results/excluded
+
           fi
+
           git add results
 
       - name: "Show results"
@@ -775,7 +823,7 @@ jobs:
           echo "### 🛅 $remaining to test" >> $GITHUB_STEP_SUMMARY
           rm -f appslist
           rm -f results/appslist
-          rm -f results/ok-*
+          #rm -f results/ok-*
           echo '-----------------------------------------------------------------'
           echo "Missed results:"
           echo '-----------------------------------------------------------------'
@@ -847,16 +895,21 @@ jobs:
     needs: generate-matrix
     if: ${{ needs.generate-matrix.outputs.skip == 'true' }}
     steps:
-      - name: "Checkout results"
+      - name: "Checkout"
         uses: actions/checkout@v4
+
+      - name: "Git Config"
+        run: |
+           git config --global user.name "${{ github.repository_owner }}"
+           git config --global user.email "noreply@github.com"
 
       - name: "Reset all tested"
         run: |
           echo "All apps already tested..." >> $GITHUB_STEP_SUMMARY
           echo "### stats RESET" >> $GITHUB_STEP_SUMMARY
-          rm -rf results
-          git config --global user.name "${{ github.repository_owner }}"
-          git config --global user.email "noreply@github.com"
+          cp results/log log.old 2>/dev/null && git add log.old || echo "Log deleted without backup"
+          cp results/excluded excluded.old 2>/dev/null && git add excluded.old || echo "Excluded deleted without backup"
+          #rm -rf results
           git rm -r results
           git commit -m "reset stats"
           git push --force
