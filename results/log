@@ -741,3 +741,19 @@ APPIMAGE='yes'
 GITHUB='yes'
 SITE="ivan-hc/KDE-utils-appimage"
 -----------------------------------------------------------------
+APP="ark.desktop.wallet"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="ArkEcosystem/desktop-wallet"
+downVer="https://github.com/ArkEcosystem/desktop-wallet/releases/download/2.9.5/ark-desktop-wallet-linux-x86_64-2.9.5.AppImage"
+size=102 MB
+version=2.9.5
+-----------------------------------------------------------------
+APP="arkaway"
+APPIMAGE='yes'
+GITHUB='yes'
+SITE="son-link/arkaway"
+downVer="https://github.com/son-link/arkaway/releases/download/20230301/Arkaway-20230301-x86_64.AppImage"
+size=18 MB
+version=20230301
+-----------------------------------------------------------------
