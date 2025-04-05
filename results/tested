@@ -593,3 +593,7 @@ elvish
 elzabrowser
 emacs
 emacs-nox
+emacs-nox-daily
+emacs-pgtk
+emacs-pgtk-daily
+emacs-x11
