@@ -1,4 +1,4 @@
-name: "Add Changes to Branch"
+name: 🛟 clean-main
 
 on:
   repository_dispatch:
@@ -14,12 +14,12 @@ permissions:
   contents: write
 
 env:
-  REPO: ${{ github.repository_owner }}/AM
-  BRANCH: main-clean
+  REPO: ${{ github.repository_owner }}/monorepo
+  BRANCH: clean-main
 
 jobs:
-  add-changes-to-branch:
-    name: "Add changes to branch"
+  clean-branch:
+    name: 🛟 clean-main
     runs-on: ubuntu-22.04
     steps:
       - name: "Checkout AM repository"
@@ -52,7 +52,7 @@ jobs:
           echo "Finding and adding non-merge, non-empty commits"
           
           # Find and cherry-pick non-merge, non-empty commits
-          commits=$(git log origin/main --not $(git rev-parse --abbrev-ref HEAD) --pretty=format:"%H" --merges=no --no-empty)
+          commits=$(git log origin/main --not $(git rev-parse --abbrev-ref HEAD) --pretty=format:"%H" --no-merges --no-empty)
           for commit in $commits; do
             echo "Cherry-picking commit $commit"
             git cherry-pick $commit || echo "Failed to cherry-pick commit $commit"
